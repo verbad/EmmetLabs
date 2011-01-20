@@ -1,0 +1,7 @@
+<ul>
+<% for user in @users %>
+  <li>
+    <%= link_to user.to_s, user_path(user) %>
+  </li>
+<% end %>
+</ul>

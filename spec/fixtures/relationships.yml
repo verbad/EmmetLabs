@@ -1,0 +1,165 @@
+janis_and_jim:
+  id: 1
+  summary: some text
+
+elvis_and_jim:
+  id: 2
+  summary: some text
+
+jim_and_marilyn:
+  id: 3
+  summary: some text
+
+jfk_and_jim:
+  id: 4
+  summary: some text
+
+jfk_and_marilyn:
+  id: 5
+  summary: some text
+
+janis_and_marilyn:
+  id: 6
+  summary: some text
+
+elvis_and_marilyn:
+  id: 7
+  summary: some text
+
+elvis_and_jfk:
+  id: 8
+  summary: some text
+
+abe_and_marilyn:
+  id: 9
+  summary: some text
+
+josephine_and_mcdonald:
+  id: 20
+  summary: some text
+
+carson_and_josephine:
+  id: 21
+  summary: some text
+
+grace_and_josephine:
+  id: 22
+  summary: grace and josephine relationship summary
+  bibliography: grace and jospehine relationship bibliography
+
+fitzgerald_and_josephine:
+  id: 23
+  summary: some text
+
+hemingway_and_josephine:
+  id: 24
+  summary: some text
+
+hughes_and_josephine:
+  id: 25
+  summary: some text
+
+josephine_and_picasso:
+  id: 26
+  summary: some text
+
+alex_and_josephine:
+  id: 27
+  summary: some text
+
+josephine_and_winchell:
+  id: 28
+  summary: some text
+
+akio_and_josephine:
+  id: 29
+  summary: some text
+
+janot_and_josephine:
+  id: 30
+  summary: some text
+
+josephine_and_luis:
+  id: 31
+  summary: some text
+
+jarry_and_josephine:
+  id: 32
+  summary: some text
+
+jean_claude_and_josephine:
+  id: 33
+  summary: some text
+
+josephine_and_moise:
+  id: 34
+  summary: some text
+
+brahim_and_josephine:
+  id: 35
+  summary: some text
+
+josephine_and_marianne:
+  id: 36
+  summary: some text
+
+josephine_and_koffi:
+  id: 37
+  summary: some text
+
+josephine_and_mara:
+  id: 38
+  summary: some text
+
+josephine_and_noel:
+  id: 39
+  summary: some text
+
+josephine_and_stellina:
+  id: 40
+  summary: some text
+
+brady_and_josephine:
+  id: 41
+  summary: some text
+
+abatino_and_josephine:
+  id: 42
+  summary: some text
+
+josephine_and_wells:
+  id: 43
+  summary: some text
+
+baker_and_josephine:
+  id: 44
+  summary: some text
+
+bouillion_and_josephine:
+  id: 45
+  summary: some text
+
+angela_martin_and_grace:
+  id: 46
+  summary: some text
+
+grace_and_jackie_o:
+  id: 47
+  summary: some text
+
+grace_and_prince_rainier:
+  id: 48
+  summary: some text
+
+grace_and_rock_hudson:
+  id: 49
+  summary: some text
+
+garvey_and_hughes:
+  id: 50
+  summary: some text
+
+prince_albert_and_prince_rainier:
+  id: 51
+  summary: some text
+  

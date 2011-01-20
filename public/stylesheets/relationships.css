@@ -1,0 +1,323 @@
+.relationship_buttons {
+  font-size: 0.9em;
+}
+
+#relationship_stub {
+  background-color: #F3E2DC;
+  padding: 0.9em 0.5em 0.9em 0.5em;
+  margin-bottom: 1.3em;
+  font-size: 1.2em;
+}
+
+.after_h {
+  padding-top: 0.5em;
+  padding-bottom: 0.8em;
+}
+
+.be_the_first {
+  font-size: 1.2em;
+}
+#left_column {
+  float: left;
+  margin-right: 2em;
+}
+
+#directed_relationship #right_column {
+  float: right;
+  width: 250px;
+  margin-left: 10px;
+	margin-top: 20px;
+}
+
+#directed_relationship #directed_relationship_content {
+  width: 700px;
+}
+#new_relationship #directed_relationship_content {
+	width: auto;
+}
+#directed_relationship #directed_relationship_content_inner {
+  margin-right: 2em;
+}
+
+#directed_relationship #print_this_page {
+  margin-bottom: 0.4em;
+}
+
+#directed_relationship_title {
+  padding-top: 1.4em;  
+}
+#directed_relationship textarea {
+  width: 100%;
+}
+
+#directed_relationship #summary_column {
+  width: 90%;
+  float: left;
+  margin-right: 0.5em;
+}
+#directed_relationship_content h2 { font-size: 1.6em;}
+#article #article_spinner {
+  float: left;
+}
+
+#article #article_revisions {
+  border: 1px solid gray;
+  padding: 1em;
+  line-height: 1.3em;
+}
+
+#article #article_revisions h2 {
+  margin-bottom: 0.5em;  
+}
+
+#article #selected_revision {
+  margin-top: 1em;
+}
+
+#article #revision_differences {
+  color: #666;
+}
+
+#article .edit_link#revisions_link {
+  margin-left: 0;
+}
+
+#article #close_revisions_link {
+  width: 14px;
+  height: 14px;
+  float: right;
+}
+
+#article .revision_changes_link {
+  float: right;
+  width: 100px;
+}
+
+#relationship_comments_field_editable, #relationship_comments_field_list, #relationship_comments_field_readonly, #relationship_comments_field_errors {
+  margin-left: 1.7em;
+}
+
+#relationship_comments ul {
+  margin-top: 1em;
+}
+
+#relationship_comments li {
+  margin-bottom: 2em;
+  line-height: 1.3em;
+}
+
+#relationship_comments .unique_name {
+  color: #B9532E
+}
+
+#relationship_comments .title_with_icon {
+  margin-top: 0.5em;
+}
+
+#article_stub  {
+  min-height: 16em;
+}
+
+#article_readonly h1, #article_readonly h2, #article_readonly h3, #article_readonly h4, #article_readonly h5, #article_readonly h6 {
+  line-height: 1.1em;
+  margin-bottom: 0.1em;
+}
+
+#article_readonly p {
+  line-height: 1.3em;
+  font-size: 1.1em;
+}
+
+#article_readonly .field_edit_link {
+  width: 9em;
+}
+
+.title_with_icon img {
+  display: inline;
+}
+
+.title_with_icon h1{
+  display: inline;
+  vertical-align: bottom;
+  margin-left: 0.2em;
+}
+
+#article #article_column, #directed_relationship_body #relationship_comments_column,
+#directed_relationship_body #bibliography_column {
+  width: 90%;
+  margin-right: 0.5em;
+  float: left;
+}
+
+#bibliography {
+  min-height: 11.5em;
+}
+
+#bibliography #bibliography_body {
+  line-height: 1.3em;
+}
+
+#bibliography textarea {
+  height: 6em;
+}
+
+#relationship_comments textarea {
+  height: 4.5em;  
+}
+
+#relationship_comments .spinner {
+  float: left;
+}
+
+#bibliography .spinner {
+  float: left;
+}
+
+#article textarea {
+  height: 355px;
+}
+
+
+.synopsis, #synopses {
+  margin-bottom: 1em;
+}
+
+#synopses {
+  width: 100%;
+  float: left;
+}
+
+.synopsis  {
+  background: #F1F1F1;
+}
+
+.synopsis_inner {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.synopsis_inner h1 {
+  font-size: 1.4em;
+  margin-top: 0.5em;
+}
+
+.synopsis_inner ul {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.4em;  
+}
+#bibliography_field_readonly .field_edit_link {
+  margin-right: 20px;
+}
+
+.title_with_icon {
+  margin-top: 0.5em;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+}
+
+#new_relationship_title ul#new_relationships {
+  margin-bottom: 1em;
+}
+
+#new_relationship_title li.new_relationship_li {
+  margin-top: 1em;
+}
+
+#relationship_summary textarea {
+  width:100%;
+  height: 5.5em;
+}
+#add_relationship_for  .tile {
+  margin-right: 0;
+}
+
+#add_relationship_for #directed_relationship_content {
+  float: left;
+}
+
+#add_relationship_for #directed_relationship_content_inner {
+  margin-left: 2em;
+  margin-right: 0;
+}
+
+select#category_id {
+  width: 100%;
+}
+
+#relationship_details #relationship_details_buttons input {
+  float: left;
+  width: 25%;
+  margin-right: 1em;
+}
+
+#add_relationship_for #new_person_container {
+  margin: 2em 5em 0em 5em;
+}
+
+#add_relationship_for #new_person  {
+  width: 66%;
+  background: #F1F1F1;
+}
+
+#add_relationship_for .hd2 {
+  font-size: 1.4em;
+}
+
+#add_relationship_for #new_person_inner {
+  margin: 1em 2em 1em 2em;
+}
+
+#add_relationship_for #new_person_inner #alias_description {
+  margin-top: 0.5em;
+  color: #999999; 
+}
+
+#add_relationship_for #new_person_inner input#person_common_name {
+  width: 100%;
+}
+
+#relationship_category label, #add_relationship_summary label {
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+#add_relationship_for .milestone_column {
+  width: 33%;
+  float: left;
+}
+
+#add_relationship_for .milestone_column input {
+  margin-left: 1em;
+}
+
+#add_relationship_for #add_connection_spinner {
+  padding-right: 2em;
+}
+
+.category_links a {
+  color: black;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.category_links a.category_selected, .category_links a:hover {
+  color: white;
+  background: #0099CC;
+  text-decoration: none;
+}
+
+#select_categories {
+  line-height: 1.2em;
+}
+
+#select_categories .category_column {
+  float: left;
+  width: 33%;
+  margin-right: 4em;
+}
+
+#directed_relationship_categories_spinner {
+  float: right;
+}
+#relationships { border: 1px solid #900;}

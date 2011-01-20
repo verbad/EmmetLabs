@@ -1,0 +1,12 @@
+!!! XML
+
+%wander{:logged_in => current_user_valid? ? 'true' : false }
+  %nodes
+    - @people.each do |person|
+      = person.to_xml(:skip_instruct => true)
+
+  %directed_relationships
+    - @directed_relationships.each do |directed_relationship|
+      = directed_relationship.to_xml(:skip_instruct => true)
+
+  %selected_directed_relationship{:id => @directed_relationship.id}

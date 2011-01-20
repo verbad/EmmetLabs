@@ -1,0 +1,18 @@
+%h1 Edit Home Page Relationship
+- form_for :home_page_relationship, :url => admin_home_page_relationships_path, :html => {:method => :put} do |f|
+  %table
+    %tr
+      %th
+        %label{:for => "dashified_from_name"} Dashified from name
+      %th
+        %label{:for => "dashified_to_name"} Dashified to name        
+      %th Actions
+
+    %tr
+      %td= f.text_field :from_param, :value => @directed_relationship.from.to_param
+      %td= f.text_field :to_param, :value => @directed_relationship.to.to_param
+      %td.actions
+        = link_to 'Cancel', admin_home_page_relationships_path, :class => 'view'
+        =submit_tag "Save", :id=>"submit"
+
+

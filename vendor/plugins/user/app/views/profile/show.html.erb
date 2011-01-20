@@ -1,0 +1,12 @@
+<div>
+  <p>Primary Photo:</p>
+  <%= image_tag @profile.primary_photo.versions[:original].url, :size => '100x100' %>
+</div>
+<div>
+  <% unless @profile.photos.empty? %>
+  Personal Photos:
+    <%= render :partial => 'profile/profile_photos',
+          :locals => {:photos => @profile.photos}
+    %>
+  <% end %>
+</div>

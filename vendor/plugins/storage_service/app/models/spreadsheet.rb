@@ -1,0 +1,3 @@
+class Spreadsheet < Asset
+  
+end

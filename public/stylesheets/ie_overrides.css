@@ -1,0 +1,46 @@
+/* -----------------------------------------------------------------------
+
+   Blueprint CSS Framework 0.7.1
+   http://blueprintcss.googlecode.com
+
+   * Copyright (c) 2007-2008. See LICENSE for more info.
+   * See README for instructions on how to use Blueprint.
+   * For credits and origins, see AUTHORS.
+   * This is a compressed file. See the sources in the 'src' directory.
+
+----------------------------------------------------------------------- */
+
+/* Blueprint IE fixes */
+body {text-align:center;}
+.container {text-align:left;}
+* html .column {overflow-x:hidden;}
+* html legend {margin:-18px -8px 16px 0;padding:0;}
+ol {margin-left:2em;}
+sup {vertical-align:text-top;}
+sub {vertical-align:text-bottom;}
+html>body p code {*white-space:normal;}
+hr {margin:-8px auto 11px;}
+
+/* Emmet IE Fixes */
+body #container { height: 100%; }
+#directed_relationship #directed_relationship_content { width: 680px; }
+#directed_relationship #directed_relationship_content_inner { margin: 0; }
+#amazon_ads_container { height: 400px; }
+#choose_to_person { height: 400px; }
+#right_column { margin: 0; padding: 0; width: 240px;}
+
+#welcome div#main { text-align: center;}
+div#welcome_body { text-align: left; position :relative; z-index: -1; margin-top: -60px;}
+fieldset#login { width: 420px; }
+#home h2 { width: 11.6em; text-align: center; margin-left: 1em; margin-top: 0;}
+#welcome #subscriber_sign_up { text-align: left;}
+#welcome #subscriber_sign_up input { position: absolute; left: 12em; top: 0em;}
+
+ol.clean { margin: 0; padding: 0;}
+div#stories ol.clean { margin-right: -60px;}
+#find fieldset input.text { width: 250px; }
+
+#flashcontent { margin-top: 0;}
+input.text {padding-top: 0!important; padding-bottom: 0!important;}
+ol.inline li a,
+ol.inline li span { line-height: 14px; }

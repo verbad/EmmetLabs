@@ -1,0 +1,15 @@
+%h1= @person.full_name
+.control
+  = link_to "Delete #{@person.full_name}?", admin_person_path(@person), :id => "delete_#{@person.to_param}", :method => :delete, :confirm => "You won't be able to undo this. Are you sure?", :class => 'delete'
+  = link_to "Convert #{@person.full_name} to Entity?", migrate_to_entity_admin_person_path(@person), :method => :post, :id => "migrate_to_entity_#{@person.to_param}", :confirm => "You won't be able to undo this. Are you sure?", :class => 'icon delete'
+%table
+  %tr
+    %th Relationship To
+    %th Relationship Type
+    %th Actions        
+    - @person.directed_relationships.each do |dr|
+      %tr{:id => "delete_#{dr.relationship.id}" }
+        %td= dr.to
+        %td= dr.category.name
+        %td.actions
+          = link_to_remote "Delete Relationship", {:url =>  admin_relationship_path(dr.relationship), :id => "delete_#{h(@person.to_param)}", :method => :delete, :confirm => 'You will not be able to undo this. Are you sure?'}, :class => 'delete'

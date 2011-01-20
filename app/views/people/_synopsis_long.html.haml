@@ -1,0 +1,16 @@
+.synopsis
+  .box
+    %ul
+      %li.milestone= milestone_label(person.birth_milestone, 'b.')
+      %li.milestone= milestone_label(person.death_milestone, 'd.')
+      
+    %h4 Aliases
+    - if !person.common_name.blank? and person.full_name != person.common_name
+      %p= "#{person.common_name}"
+    
+    %h4 Tags
+    %p= person.tag_list
+          
+    - unless @hide_navigation
+      %ol
+        %li= link_to 'View Network', network_path(person).to_s, :class => 'network'

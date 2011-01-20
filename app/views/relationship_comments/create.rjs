@@ -1,0 +1,4 @@
+page.replace 'relationship_comments', :partial => 'index', :locals => {:relationship => @relationship}
+if @relationship.has_comments? && @relationship.comments.last.errors.empty?
+  page.visual_effect :highlight, "relationship_comment_#{@relationship.comments.last.id}"
+end

@@ -1,0 +1,9 @@
+if @first
+  page.visual_effect :fade, 'choose_first_person', {:duration => 0.3}
+  page.replace_html "show_first_person_panel", :partial => 'people/new_person',  :locals => { :index => 'first'}
+  page.visual_effect :appear, "show_first_person_panel", {:duration => 0.3, :delay => 0.3}
+else
+  page.visual_effect :fade, 'choose_second_person'
+  page.replace_html "show_second_person_panel", :partial => 'people/new_person', :locals => { :index => 'second'}
+  page.visual_effect :appear, "show_second_person_panel", {:duration => 0.3}
+end

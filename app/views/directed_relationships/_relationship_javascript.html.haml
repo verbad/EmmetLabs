@@ -1,0 +1,25 @@
+- content_for(:head) do
+  :javascript
+    var current_request = null;
+    function ajaxRequest(url, callback) {
+      if (current_request) {
+        current_request.transport.abort();
+      }
+      current_request = new Ajax.Request(url, {asynchronous:true, evalScripts:true, method:'get'});
+    }    
+    function amazon_search(directed_relationship_id) {
+      ajaxRequest('/amazon_search_results/' + directed_relationship_id);
+    }
+    var relationship_id = #{@directed_relationship.relationship.id};
+    function notify_structure_changed() {
+      ajaxRequest("/relationships/" + relationship_id + ".js");
+    }
+    function edit_article(has_text) {
+      if (has_text) new Effect.Fade('article_readonly', {duration:0.3});
+      new Effect.Appear(has_text ? 'article_editable' : 'article', {duration: 0.3, delay: 0.3});
+      setTimeout('$("relationship_article_text").focus();', 650)
+    }
+    function unedit_article(has_text) {
+      new Effect.Fade(has_text ? 'article_editable' : 'article', {duration: 0.3});
+      if (has_text) new Effect.Appear('article_readonly', {duration:0.3, delay: 0.3});
+    }

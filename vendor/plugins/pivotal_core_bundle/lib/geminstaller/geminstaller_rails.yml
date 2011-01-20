@@ -1,0 +1,11 @@
+- name: rails
+  <% if ENV['RAILS_GEM_VERSION'] %>
+  # To see more recent preview gems, run 'gem list rails --source=http://gems.rubyonrails.org --remote'
+  # To see which of these correspond to a tag, run 'svn log http://svn.rubyonrails.org/rails/tags'
+  version: <%= ENV['RAILS_GEM_VERSION'] %>
+  install_options: -y --source=http://gems.rubyonrails.org
+  <% else %>
+  # NOTE: this version should be kept in sync with the default template project Rails version in sandbox/config/geminstaller.yml
+  version: 1.99.0
+  install_options: -y --source=http://gems.rubyonrails.org
+  <% end %>

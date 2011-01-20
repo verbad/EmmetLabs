@@ -1,0 +1,25 @@
+#relationship_details
+  %p
+    %span.heading3 'Type of Relationship'
+    = link_to_function 'edit', nil, :class => 'edit_link' do |page|
+      - page.replace_html 'directed_relationship_content_inner', :partial => 'edit_relationship', :locals => {:edit => true}
+      - page.call 'show_start_over_link'
+
+  %p
+    %h1
+      %b
+        = "#{@directed_relationship.category.metacategory.name}: "  unless @directed_relationship.category.metacategory.blank?
+        = @directed_relationship.category.name
+
+  %p
+    %p
+      %h3 Summary of their relationship
+    %p= @directed_relationship.relationship.summary
+
+  #relationship_details_buttons
+    = button_to '&larr; View Network', network_path(@directed_relationship.from).to_s, :method => 'get'
+    = button_to_function 'New Relationship', nil do |page|
+      - page.replace_html 'choose_first_person', :partial => 'stories/choose_first_person'
+      - page.call "$('suggestable_query_first').focus"
+    = button_to 'View Relationship &rarr;', pretty_directed_relationship_path(@directed_relationship).to_s
+    .clear_both 

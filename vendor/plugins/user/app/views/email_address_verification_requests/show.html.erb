@@ -1,0 +1,10 @@
+Welcome back!
+You have registered with the email address <i><%= @token.email_address %>.</i>
+<% if @token.tokenable.verified? %>
+    Your address has already been verified! Congratulations. <%= link_to 'Click here', new_login_path %> to log in.
+<% else %>
+  To start using your address, just click the button below.
+  <% form_for :email_address_verification_token, :url => email_address_verification_request_path(@user, @email_address, @token), :html => {:method => :put} do |form| %>
+    <%= submit_tag 'Complete the registration process', :id => 'complete_process_button' %>
+  <% end %>
+<% end %>

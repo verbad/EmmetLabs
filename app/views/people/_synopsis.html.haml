@@ -1,0 +1,15 @@
+- person ||= @person
+
+.synopsis
+  .box
+    %h3= person.full_name
+    %ul
+      %li.milestone= milestone_label(person.birth_milestone, 'b.')
+      %li.milestone= milestone_label(person.death_milestone, 'd.')
+
+    %p.summary= person.summary
+
+    - unless @hide_navigation
+      %ol
+        %li= link_to 'View Network', network_path(person).to_s, :class => 'network'
+        %li= link_to 'View Profile', person_path(person).to_s, :class => 'profile'

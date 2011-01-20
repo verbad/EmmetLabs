@@ -1,0 +1,19 @@
+stylesheets:
+- application:
+  - application
+  - diff
+  - header
+  - people
+  - amazon
+  - relationships
+  - photos
+  - start
+  - welcome
+
+javascripts:
+- application:
+  - prototype
+  - effects
+  - swfobject
+  - application
+  - controls

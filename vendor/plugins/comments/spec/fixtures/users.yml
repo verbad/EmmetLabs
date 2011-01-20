@@ -1,0 +1,11 @@
+me:
+  id: 1
+  unique_name: me
+
+myself:
+  id: 2
+  unique_name: myself
+
+eye:
+  id: 3
+  unique_name: eye

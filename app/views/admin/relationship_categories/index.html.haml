@@ -1,0 +1,25 @@
+#admin
+
+  %h1 Relationships
+  %ul.buttons
+    %li= link_to('Edit Metacategories', admin_relationship_metacategories_path, :class => 'edit icon')
+    %li= link_to('New Category', new_admin_relationship_category_path, :class =>'add icon')
+    
+  - @relationship_metacategories.each do |meta|
+    %h2= meta.name
+    %table
+      %tr
+        %th Count
+        %th Category
+        %th Actions
+
+      - meta.categories.each do |category|
+        %tr
+          %td= category.directed_relationships.size
+          %td.cat= category.name
+          %td.actions
+            = link_to('Edit Category', edit_admin_relationship_category_path(category), :class => 'icon edit')
+            = link_to('Delete', admin_relationship_category_path(category), :confirm => 'You will not be able to undo this. Are you sure?', :method => :delete, :class => 'icon delete')
+
+    
+

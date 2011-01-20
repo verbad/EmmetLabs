@@ -1,0 +1,9 @@
+<% @page_title = 'Create terms of service' %>
+<h1>Create terms of service</h1>
+
+<%= error_messages_for :tos_revision %>
+<% form_for :tos_revision, :url => tos_revisions_path do |form| %>
+    Text: <%= form.text_area :text %><br/>
+    <%= submit_tag "Create", :id => "create_tos_revisions" %>
+<% end %>
+

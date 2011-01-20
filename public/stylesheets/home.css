@@ -1,0 +1,99 @@
+#home h1 {
+	margin: .6em 0 .2em 0;
+	font-size: 3.8em;
+	font-weight: normal;
+	font-family: Georgia, serif;
+	letter-spacing: -.01em;
+	padding-right: 10px;
+}
+#home #brace {
+	font-size: 29em;
+	font-family: Georgia, serif;
+	float: right;
+	font-weight: normal;
+	margin-top: -.60em;
+	margin-right: -.01em;
+	color: #eee;
+}
+#home h2 { 
+	margin: -1.4em 6em 2em 0;
+	font-size: 1.7em;
+	font-family: Arial, Verdana, sans-serif;
+}
+#home h2 a {
+	padding: 4px 52px 4px 0;
+	background: url(/images/home_h2_a_bg.gif) no-repeat right center;
+}
+#home h3 {
+	font-size: 1.4em;
+	margin: .6em 0 .2em 0;
+}
+#home h3 a {
+	font-weight: bold;
+}
+p#intro {
+	font-size: 1.65em;
+	font-family: Georgia, serif;
+	line-height: 1.3em;
+	padding-bottom: .15em;
+	color: #999;
+	margin: 1.8em 1.6em 1em 0;
+}
+#explore {
+	margin-top: .4em;
+}
+#home h4 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+/* explore block */
+div#rotate {
+	margin-top: 5.8em;
+	position: relative;
+}
+div#rotate div.thumb {
+	position: absolute;
+	top: 20px;
+	left: 46px;
+	text-align: center;
+	width: 75px;
+	height: 75px;
+}
+div#rotate div#rotate_right {
+	left: 186px;
+}
+div#text {
+	clear: left;
+	margin-top: .4em;
+	line-height: 1.3em;
+}
+#stories li {
+	padding: 2px 3px 6px 3px;
+	font-size: .95em;
+}
+#stories li strong,
+.person strong {
+	font-size: 1.1em;
+	background-image: url(/images/stories_strong_bg.gif);
+	background-repeat: no-repeat;
+	background-position: right 6px;
+	padding-right: 13px;
+	margin-right: 2px;
+}
+
+#stories li strong.last,
+.person strong.last {
+	background-position: 0 6px;
+	padding-left: 13px;
+	margin-left: 2px;
+}
+.person form strong 			{ font-weight: normal;background-image: url(/images/person_strong_bg.gif); margin: 0 4px 0 0; }
+.person form strong.last { margin-left: 4px;}
+#r { padding-top: 2.6em;}
+#now dt { font-weight: bold;color: #333; font-size: 1.2em;}
+#now dd { margin-bottom: 1.6em;}
+#now dd a { font-weight: bold; font-size: 1.4em; letter-spacing: -.01em;}
+#recent ol { line-height: 1.3em; padding-left: 2.4em;}
+#recent ol span.label { font-size: .95em; display: block; float: left; width: 4em; text-align: right; color: #999; margin-left: -4.7em;}
+#recent ol span.credit { font-weight: normal; font-size: 1em; font-style: italic; color: #666; display: block;}
+#recent ol span.connection { background: url(/images/icon_connection_bg.gif) no-repeat right center; padding-right: 13px; margin-right: 3px;}

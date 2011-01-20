@@ -1,0 +1,91 @@
+#story
+  #secondary_column
+    :margin-top 80px
+  .synopsis
+    +span(8)
+    h3
+      :font-weight bold
+  ul.radio
+    +bold
+    +clean
+    li
+      +clean
+      :position relative
+      :margin-left 20px
+      a
+        +bold
+        :padding
+          :left 25px
+          :top 2px
+        :position absolute
+        :left 0
+        :color #333
+      a:hover
+        :text-decoration none
+#person_suggestions_container
+  +span(12)
+  :border
+    :bottom 0 0 1px 0
+    :style solid
+    :color= !light_gray
+  .spinner
+    :position absolute
+    :top 12px
+    :right 12px
+  li.new_person
+    +bold
+    +medium
+    :border-top 1px solid #ddd
+    span
+      +small    
+#start_over
+  :clear both
+  :margin-bottom 8px
+  :float right
+  :font-weight bold
+.autocomplete
+  :position absolute
+  :left 0!important
+  :top 0
+  :z-index 9999
+  ul
+    +clean
+    :background #eee
+    :width 630px!important
+    :padding 0
+    :margin 10px 0
+    :border
+      :width 1px 0
+      :style solid
+      :color= !light_gray
+    li
+      :padding
+        :left 120px
+        :right 5px
+        :top 2px
+        :bottom 2px
+      :cursor pointer
+      a:hover
+        :text-decoration none
+        :color= !link_color
+    li:hover
+      :background #fff
+    li.view_all
+      +bold
+      +small 
+#relationship_panel
+  li.people
+    :width 100%
+    :padding-left 9px
+  #add_relationship_summary
+    label 
+      :text-align left
+      :width 100%
+      :padding 16px 0 4px 9px
+#new_person 
+  li
+    :width 400px
+    em
+      :float left
+      :margin-left 105px
+      :width 300px

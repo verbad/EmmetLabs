@@ -1,0 +1,13 @@
+- entity ||= @entity
+
+.synopsis
+  .box
+
+    %h3= entity.full_name
+    %ul
+      %li= entity.summary
+
+    - unless @hide_navigation
+      %ol
+        %li= link_to 'View Network', network_path(entity), :class => 'icon network'
+        %li= link_to 'View Profile', entity_path(entity), :class => 'icon profile'

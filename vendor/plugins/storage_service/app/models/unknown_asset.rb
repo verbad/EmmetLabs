@@ -1,0 +1,2 @@
+class UnknownAsset < Asset
+end

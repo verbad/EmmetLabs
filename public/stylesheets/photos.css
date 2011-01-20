@@ -1,0 +1,111 @@
+#photo .photo_comment {
+  margin-top: 0.5em;
+}
+
+.photo_comment {
+  vertical-align: top;
+}
+
+.thumbnail_photo_image {
+  float: left;
+  margin-right: 0.25em;
+}
+
+#primary_photo p, #photos p {
+  display: inline;
+  margin-bottom: 0;
+}
+
+#primary_photo_comment {
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+#photos .field_links {
+  margin-top: 0;
+}
+
+#photos_readonly .edit_link {
+  width: 95%;
+  text-align: right;
+  display: block;
+}
+
+.photos_widget img {
+  margin-right: 0.2em;
+}
+
+.photos_widget label, .photos_widget img {
+  display: inline;
+  color: #B9532E;
+}
+
+#photos .thumbnail_photo_image {
+  margin-bottom: 0.25em;
+}
+
+#primary_photo_image {
+  margin-bottom: 1em;
+}
+#primary_photo_image img,
+.thumbnail_photo_image img {
+	padding: 2px;
+	border: 1px solid #ccc;
+}
+.thumbnail_photo_buttons {
+  margin-bottom: 0.5em;
+  height: 16px;
+}
+
+.photos_widget .spinner {
+  float: right;
+  margin-right: 0.5em;
+}
+
+.thumbnail_photo .field_edit_link a {
+  color: #B9532E;
+}
+
+.photo_comment #comments_column {
+  width: 45%;
+  float: left;
+  margin-right: 0.5em;  
+}
+
+.photo_comment #comments_column textarea {
+  width: 100%;
+  height: 3.5em;
+}
+
+.new_photo_inner {
+  background-color: #D5EDF6;
+  border-top: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+  padding: 0.5em 0.5em 1em 0.5em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.photos_widget input {
+  margin-right: 0.5em;
+}
+
+.new_photo_inner h2 {
+  margin-bottom: 0.5em;
+  display: inline;
+}
+
+.new_photo_inner .spinner {
+  float: right;
+}
+
+.new_photo_header {
+  min-height: 16px;
+}
+
+.new_photo_header .error_message {
+  margin-left: 1em;
+}
+.thumbnail_photo {
+  clear: both;
+}

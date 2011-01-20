@@ -1,0 +1,4 @@
+page.replace_html 'new_relationship', :partial => 'relationship'
+page.visual_effect :fade, 'suggestable_name_fields', :duration => 0.3
+page.visual_effect :appear, 'new_relationship', :duration => 0.3, :delay => 0.3
+page.call :update_summary_characters_remaining_relationship_summary

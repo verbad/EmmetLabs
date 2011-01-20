@@ -1,0 +1,44 @@
+#welcome
+  #hero
+    %img{:src => "images/welcome_img_#{rand(4) + 1}.jpg"}
+
+  %h1 Stories bring us together. Emmet helps you tell them.
+
+  #left
+    %p
+      When you can see the connections between
+      people, things are a little bit clearer. Emmet
+      Labs is making it easier than ever to tell stories
+      about how we're all connected, and to let people
+      browse, search and add to those stories.
+    %p
+      Today, we're collecting personal
+      connections between the workaday, the world famous
+      and all kinds of people in between.
+    %p
+      Tomorrow, we'll help you and your audience tell
+      the type of stories we don't ever want to end.
+  
+  %hr
+  
+  #right
+    .box
+      %h2 Emmet Labs is&hellip;
+      %ul
+        %li Building a database of personal stories, making relationships visible
+        %li Co-producing special relationship archives with prominent publishers
+        %li Providing our unique connection platform to power a new type of community content site
+
+  #subscriber_sign_up
+    = render :partial => 'subscribers/welcome'
+
+:javascript
+  function focus_on_subscriber() {
+    $('subscriber_email_address').focus();
+  }
+
+  function focus_on_login() {
+    $('login_email_address').focus();
+  }
+  onload_functions.push(#{@login.errors.empty? ? 'focus_on_subscriber' : 'focus_on_login'});
+  

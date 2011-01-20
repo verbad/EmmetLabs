@@ -1,0 +1,9 @@
+.new_photo{:id => id, :style => ("display: none" unless show)}
+  .box
+    - form_for(:photoable, :url => {:controller => 'photos', :action=>'create', :params => {:id => photoable.id, :type=>photoable.class.to_s}}, :html => { :multipart => true, :name => 'photos_form', :target=>'photo_upload_iframe', :onsubmit=>"$('#{id}_spinner').show();"}) do |f|
+      %fieldset
+        %legend Add a new picture      
+        = f.file_field(:photo, :id => 'photo_file_field', :size=>22)
+        %span.upload
+          .spinner{:id=>"#{id}_spinner", :style => 'display: none'}
+          = submit_tag 'Upload'

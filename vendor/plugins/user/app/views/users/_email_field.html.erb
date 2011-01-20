@@ -1,0 +1,4 @@
+<% if user.new_record? || EmailAddress.verifies_first? %>
+  <p><label for="user_email_address">Email Address</label><br/>
+    <%= f.text_field :email_address  %></p>
+<% end %>

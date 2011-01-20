@@ -1,0 +1,26 @@
+%h1= "Editing #{@content_page.name}"
+
+.error= error_messages_for :content_page
+
+= link_to 'View', admin_content_page_path(@content_page), :class => 'View'
+= link_to 'Cancel', admin_content_pages_path, :class => 'delete'
+- form_for :content_page, :url => admin_content_page_path(@content_page), :html => {:method => :put}  do |f|
+  %p
+    %div
+      %label{:for => 'content_page_name'} Name
+      = f.text_field(:name)
+
+  %p
+    %div
+      %label{:for => 'content_page_text'}
+        Content
+        = markdown_link
+      = f.text_area(:text, :rows => 40, :cols => 60  )
+
+  %p
+    %label{:for => "display_in_footer"} Display in footer?
+    = f.check_box(:display_in_footer)
+
+  %p.field_edit_link
+    %button{:name => 'content_page[draft]', :type => 'submit', :value => false} Publish
+    %button{:name => 'content_page[draft]', :type => 'submit', :value => true}  Save as Draft

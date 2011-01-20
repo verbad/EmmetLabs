@@ -1,0 +1,29 @@
+- relatives = @from_person ? @from_person.relatives : []
+
+%ul
+  - @person_suggestions.each do |person|
+    - directed_relationship = @from_person.directed_relationship_to(person) if @from_person
+    - related = relatives.include?(person)
+    %li{:id => "#{related ? 'unselectable' : 'selectable'}_#{person.to_param}"}
+      .person_name
+        - if related
+          %b= person.full_name
+        - else
+          = link_to "<b>#{person.full_name}</b>", "#"
+      
+      .summary
+        - if related
+          = "#{@from_person.full_name} and #{person.full_name} are already related. "
+          = link_to "See relationship &hellip; ", pretty_directed_relationship_path(directed_relationship).to_s
+      
+        = person.summary unless person.summary.blank?
+        
+      .clear_both
+  
+  %li#add_new_person_link= link_to 'This is a New Person', '#'
+  
+  - if @person_suggestions.size >= 5 && ! @show_all
+    %li.view_all
+      #more_results.extra
+        = link_to_function "See All #{@person_suggestions_count}&hellip;", "var query_parameters = 'query='+$('suggestable_query_#{@index}').value + '&from_person_id=#{@from_person.nil? ? nil : @from_person.id}&&from_person=#{@from_person.class}&show_all=true'; new Ajax.Request('/person_suggestions', {asynchronous:true, evalScripts:true, parameters:query_parameters, method:'get', onSuccess:autocompleter_#{@index}_updateChoices});"
+

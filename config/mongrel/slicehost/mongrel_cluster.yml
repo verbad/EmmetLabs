@@ -1,0 +1,9 @@
+--- 
+cwd: /u/apps/emmet/current/
+port: "8100"
+environment: production
+address: 127.0.0.1
+pid_file: log/mongrel.pid
+servers: 4
+user: emmet
+group: emmet

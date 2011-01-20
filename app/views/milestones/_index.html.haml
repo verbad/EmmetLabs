@@ -1,0 +1,37 @@
+- node_path_type = node.class.name.downcase
+:javascript
+  var distinguisher = 0;
+  function add_milestone() {
+    new Ajax.Request('#{new_polymorphic_path([node, Milestone.new])}?distinguisher='+(distinguisher++), {asynchronous:true, evalScripts:true, method:'get', onLoaded:function(request){$("timeline_field_editable_spinner").hide();}, onLoading:function(request){$("timeline_field_editable_spinner").show();}});
+    return false;
+  }
+
+#milestones
+  - if current_user_valid?
+    #timeline_field_editable.editable.active{:style => @errors ? 'display:block' : 'display:none'}
+      .hd
+        %h2 Milestones
+      - if @errors
+        #milestone_errors.errors Some milestones have errors!
+      
+      - remote_form_for(:node, node, :url => polymorphic_path([node, Milestone.new]), :html => {:name => 'edit_milestone_form'}) do |f|
+        %fieldset
+          %ol{:id => "milestones_for_#{node_path_type}"}
+            - node.milestones.each_with_index do |milestone, index|
+              - prefix = milestone.new_record? ? "milestone_new_-#{index}" : "milestone_id_#{milestone.id}"
+              = render :partial => 'milestones/form_fields', :locals => {:milestone => milestone, :prefix => prefix, :show_errors => true}
+
+        #timeline_links
+          = link_to_function 'add milestone', 'add_milestone()', :class => 'add'
+
+          .ft
+            #timeline_field_editable_spinner.spinner{:style => 'display: none'}
+            = link_to_function 'Save', '$("timeline_field_editable_spinner").show(); document.edit_milestone_form.onsubmit()', :class => 'save primary'
+            = link_to_function 'cancel', 'new Effect.Fade("timeline_field_editable", {duration: 0.3}); document.edit_milestone_form.reset(); new Effect.Appear("timeline_field_readonly", {duration: 0.3, delay: 0.3})', :class => 'cancel tertiary'
+   
+  #timeline_field_readonly.editable{:style => @errors ? 'display:none' : 'display:block'}
+    .hd
+      %h2 Milestones
+      - if current_user_valid?
+        = link_to_function 'edit', 'new Effect.Fade("timeline_field_readonly", {duration: 0.3}); new Effect.Appear("timeline_field_editable", {duration: 0.3, delay: 0.3})', :class => 'edit'
+    = flash_object_tag('/flash/TimelineApp.swf', 650, 200, {:xml_url => milestones_xml_path(node)}, "FFFFFF", false)

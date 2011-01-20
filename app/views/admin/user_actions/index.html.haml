@@ -1,0 +1,34 @@
+%h1  User Actions
+
+-if params[:user_id]
+  %p
+    = link_to "See all user actions", admin_user_actions_path
+  
+%table
+  %tr
+    %th Time
+    %th User Name
+    %th Action
+    %th Type
+    %th Link
+  - @user_actions.each do |ua|
+    %tr
+      %td= ua.created_at.strftime("%m/%d/%Y %H:%M")
+      %td= link_to ua.user.nil? ? "SYSTEM" : ua.user.unique_name, admin_user_actions_path(:user_id => ua.user_id)
+      %td= ua.action
+      %td= ua.loggable_type
+      - if ua.loggable_type == 'Relationship'
+        - dr = ua.loggable.directed_relationships.find(:first)
+        %td= link_to dr.to_s, pretty_directed_relationship_path(dr)
+      - elsif ua.loggable_type == 'User'
+        %td= ua.loggable.to_display_name
+      - else
+        %td= link_to ua.loggable.to_display_name, pretty_person_or_entity_path(ua.loggable)
+
+
+= will_paginate @user_actions
+
+%ul#show_counts
+  %li= show_pagination_count(25, @per_page, @page_number, 1)
+  %li= show_pagination_count(50, @per_page, @page_number, 1)
+  %li= show_pagination_count(100, @per_page, @page_number, 1)

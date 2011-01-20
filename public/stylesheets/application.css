@@ -1,0 +1,493 @@
+/* 	------- Global Styles for EmmetLabs.com ------ */
+		
+@import 'home.css';
+@import 'admin.css';
+
+/*  ------- Set base typography and element styles */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #333;
+  margin: 0 0 1px 0;
+  position :relative;
+  padding: 0;
+  height: 100%
+}
+#wrap { position: relative;min-height: 100%;}
+h1, h2, h3, h4, h5, h6, a, form, p {
+ 	margin: 0;
+  font-weight: normal;
+}
+hr {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #D2D2D2;
+}
+input { font-family: Arial, Helvetica, sans-serif;}
+fieldset,
+img {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+a {
+  color: #0099CC;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+td {
+  margin: 0;
+  padding: 0;
+}
+ul,
+dl,
+dd,
+dt {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.field_header {
+  display: inline;
+}
+dt { font-weight: bold;}
+blockquote { font-style: italic; margin: .4em 0 1.2em 0; color: #999; font-size: 1.8em; font-family: Georgia, Times, serif;}
+p,.paragraph {margin-bottom:1em;}
+h1,.heading1 {font-size:2.6em; font-family: Georgia, Times, serif; margin-bottom: .4em; }
+h2,.heading2 {font-size:1.3em; font-weight: bold; margin-bottom: .4em;}
+h3,.heading3 {font-size:1.2em;}
+h4,.heading4 {font-size:1.1em;}
+h5,.heading5 {font-size:1em;}
+h6,.heading6 {font-size:1em;}
+
+.wander_interface span {
+  margin-right: 1em;
+  font-weight: bold;
+}
+
+.wander_interface a {
+  margin-right: 1em;
+}
+.asset_area {
+  float: left;
+  width: 430px;
+  padding-bottom: 20px;
+}
+
+/*	--------- Global Layout Elements - width specification is controlled by grid.css */
+#main {
+	padding-bottom: 74px;
+	min-height: 100%;
+	margin-bottom: 3em;
+}
+/*	------- Button Styles ------- */
+
+/* existent */
+.button 						{ position: relative; }
+a:hover .button img { background: black; }
+.button .button_text {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;  
+}
+#logins #sign_up_button .button .button_text {
+  margin-top: 0.5em;
+  margin-left: 1.4em;
+}
+
+/* new */
+.btn {
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.2em;
+	border: 1px solid #fff;
+	background-repeat: repeat-x;
+	background-position: bottom;
+	cursor: pointer;
+	width: auto;
+	float: right;
+}
+.btn a,
+.btn a:hover 	{ text-decoration: none; color: #fff; font-weight: bold;}
+.primary { 
+	background-image: url(/images/btn_primary_bg.gif);
+	background-color: #1fa5d2;
+	padding: .5em 1em;
+	border-top-color: #60c7ea;
+	border-left-color: #60c7ea;
+	border-bottom-color: #137797;
+	border-right-color: #137797;
+}
+.secondary {
+	background-image: url(/images/btn_secondary_bg.gif);
+	background-color: #804842;
+	padding: .5em 1em;
+	border-top-color: #a03d32;
+	border-left-color: #a03d32;
+	border-bottom-color: #76180d;
+	border-right-color: #76180d;
+}
+
+/*	------- Inline list items -------
+		( Make list items appear inline with pipe style right border ) */
+ol.inline { margin-left: 0; padding: 0;}					
+ol.inline li {
+	list-style-type: none;
+	display: block;
+	float: left;
+	line-height: 1.2em;
+	border-width: 0 1px 0 0;
+	border-style: solid;
+	margin: 0 2px 0 1px;
+	padding-right: 4px;
+}
+ol.inline a 			{ display: block; float: left; }
+ol.inline li.last { border-width: 0px!important; }
+ol.clean {
+	list-style-type: none;
+	padding: 0;
+	margin: .6em 0;
+}
+ol.clean li {
+	margin: .4em 0;
+}
+/*	------- Clearing Classes ---------*/
+
+.clear_both 	{ clear: both; }
+.clear_left 	{ clear: left; }
+.clear_right 	{ clear: right; }
+
+/* ------- Form Styles - switch to forms.css later */
+.hint 				{ font-size: .85em; }
+.error				{ color: red; font-weight: bold;}
+.errors 			{ font-weight: bold; font-size: 1.5em; color: red; }
+.notice       { text-align: center; font-weight: bold; font-size: 1.2em;}
+input.text 				{ border: 1px solid #ccc; padding: 3px; }
+input.text:focus 	{ background: #fff; }
+
+.icon 			{ padding: 6px 6px 6px 24px; background-position: 5px 4px; background-repeat: no-repeat; }
+.network 		{ background-image: url(/images/icon_network.gif);}
+.profile		{ background-image: url(/images/icon_profile.gif);}
+.startover	{ background-image: url(/images/icon_startover.gif);}
+
+.debug {
+  font-family: Courier;
+  font-size: 0.9em;
+}
+/* move this to relationships.css? */
+.relationship_group {
+  width: 50%;
+  float: left;
+	padding-top: .4em;
+}
+.metacategory {
+	margin-top: 8px;
+}
+.metacategory h3 {
+	margin: .4em 0;
+	border-top: 2px solid #444;
+	padding-top: .4em;
+	color: #444;
+}
+.metacategory h4 {
+	background: url(/images/border_dashed.gif) repeat-x bottom;
+	padding: 0 0 .4em 0;
+	font-weight: bold;
+	color: #888;
+}
+.new_relationship div {
+  width: 15%;
+  float: left;
+}
+.spinner {
+  background: url( /images/spinner.gif ) no-repeat;
+  width: 16px;
+  height: 16px;
+}
+#new_relationship .edit_links {
+  width: 9em;
+  height: 16px;
+  float: left;
+}
+
+#add_relationship_for .column {
+  float: left;
+}
+
+#add_relationship_for .column#first_name_column {
+  width: 25%;
+}
+
+#add_relationship_for .column#middle_name_column {
+  width: 15%;
+}
+
+#add_relationship_for .column#last_name_column {
+  width: 60%;
+}
+
+#add_relationship_for .column input {
+  width: 95%;
+}
+
+#add_relationship_for textarea {
+  width: 100%;
+  height: 5.5em;
+}
+
+#new_person .edit_links {
+  width: 5em;
+  height: 16px;
+  float: left;
+}
+
+#new_person #new_person_spinner {
+  float: left;
+  width: 16px;
+}
+.edit_link {
+  margin-left: 0.5em;
+}
+
+.edit_link img {
+  display: inline;
+}
+
+.field_edit_link {
+  width: auto;
+  float: right;
+  text-align: right;
+}
+
+.tile {
+  width: 250px;
+  float: left;
+  margin-right: 2em;
+}
+
+.rounded_corners .tr, .rounded_corners .br {
+  float: right;
+}
+
+
+.rounded_corners.gray_rounded_corners .corner {
+  width: 10px;
+  height: 10px;
+}
+
+.rounded_corners.gray_rounded_corners .tl {
+  background: url( /images/rounded_corners/gray/tl.gif ) no-repeat top left;
+}
+
+.rounded_corners.gray_rounded_corners .tr {
+  background: url( /images/rounded_corners/gray/tr.gif ) no-repeat top right;
+}
+
+.rounded_corners.gray_rounded_corners .bl {
+  background: url( /images/rounded_corners/gray/bl.gif ) no-repeat bottom left;
+}
+
+.rounded_corners.gray_rounded_corners .br {
+  background: url( /images/rounded_corners/gray/br.gif ) no-repeat bottom right;
+}
+
+.rounded_corners.clay_rounded_corners .corner {
+  width: 16px;
+  height: 16px;
+}
+
+.rounded_corners.clay_rounded_corners .tl {
+  background: url( /images/rounded_corners/clay/tl.gif ) no-repeat top left;
+}
+
+.rounded_corners.clay_rounded_corners .tr {
+  background: url( /images/rounded_corners/clay/tr.gif ) no-repeat top right;
+}
+
+.rounded_corners.clay_rounded_corners .bl {
+  background: url( /images/rounded_corners/clay/bl.gif ) no-repeat bottom left;
+}
+
+.rounded_corners.clay_rounded_corners .br {
+  background: url( /images/rounded_corners/clay/br.gif ) no-repeat bottom right;
+}
+
+.rounded_corners.salmon_rounded_corners .corner {
+  width: 16px;
+  height: 16px;
+}
+
+.rounded_corners.salmon_rounded_corners .tl {
+  background: url( /images/rounded_corners/salmon/tl.gif ) no-repeat top left;
+}
+
+.rounded_corners.salmon_rounded_corners .tr {
+  background: url( /images/rounded_corners/salmon/tr.gif ) no-repeat top right;
+}
+
+.rounded_corners.salmon_rounded_corners .bl {
+  background: url( /images/rounded_corners/salmon/bl.gif ) no-repeat bottom left;
+}
+
+.rounded_corners.salmon_rounded_corners .br {
+  background: url( /images/rounded_corners/salmon/br.gif ) no-repeat bottom right;
+}
+
+.dotted_line {
+  border-top: 1px dotted gray;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+#choose_to_person {
+  min-height: 400px;
+}
+
+#choose_person_panel {
+  padding-top: 1em;
+}
+
+#add_relationship_for .form_submit {
+  float: right;
+  width: auto;
+  text-align: right;
+}
+
+#start_over {
+  text-align: right;
+  margin-top: 1em;
+}
+
+#content_pages textarea {
+  width: 100%;
+}
+
+#content_pages .content h1, #content_pages .content h2, #content_pages .content h3, #content_pages .content h4, #content_pages .content h5, #content_pages .content h6 {
+  line-height: 1.1em;
+  margin-bottom: 0.1em;
+}
+
+#content_pages .content p {
+  line-height: 1.3em;
+  font-size: 1.1em;
+}
+
+#content_pages .content ul {
+  list-style-type: disc;
+  margin-left: 3em;
+}
+
+#choose_person_panel .person_name {
+  width: 30%;
+  float :left;
+}
+
+#choose_person_panel .summary {
+  width: 60%;
+  float: left;
+}
+
+#choose_person_panel .person_name a {
+  color: black;
+}
+div.autocomplete {
+  margin-top: -1em;
+}
+
+div.autocomplete ul li.selected {
+  background-color: #ffb;
+}
+
+div.autocomplete ul {
+  border-top: solid 1px darkgray
+}
+
+div.autocomplete ul li {
+  background-color: #D5EDF6;
+  padding: 0.5em 1em 0.5em 1em;
+  border-bottom: solid 1px darkgray
+}
+
+div.autocomplete div.extra {
+  background-color: #D5EDF6;
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+div.autocomplete div#more_results.extra {
+  width: 15%;
+}
+
+#add_relationship_for h2 {
+  font-weight: bold;
+}
+
+#right_corner_synopsis_link {
+  width: auto;
+  float: right;
+}
+.border li {
+	background: url(/images/border_dashed.gif) repeat-x bottom;
+	padding: 4px;
+}
+#start ul { 
+	font-size: 1.1em;
+	line-height: 1.3em;
+	float: left;
+	margin-top: 1em;
+	margin-bottom: .2em;
+}
+#start ul li { margin-right: 12px; padding: 1px 0; }
+#start ul li a { display: block; line-height: 1.9em; margin-bottom: 1px; padding-left: 8px; font-weight: bold; }
+#start ul li a:hover { text-decoration: none; background-color: #d5edf6;}
+#start ul li small { font-size: .85em; font-weight: normal; margin-bottom :2px;}
+
+#flashcontent { margin: -30px 0 2em 0;}
+#timeline_field_readonly #flashcontent { margin-top: 0px;}
+#new { float: left; margin: 1em 0;}
+#start h2 { clear: both;}
+
+/* share a story styles */
+#story { padding-bottom: 4em;}
+#story h2 { clear: left; padding-bottom: 8px; font-size: 1.6em; margin: 0;}
+#story h3 { font-size: 1.4em; font-weight: bold; margin: 0 0 8px 0;}
+#story label { margin-bottom: 4px; font-weight: bold; font-size: 1.1em; display: block;}
+#story input.text { margin-top: 4px; font-size: 1.4em;}
+#story div.person { border: 2px solid #ddd; margin-top: -2px; }
+#story div.person h2 { background: #fff; padding: 12px; }
+#story div.focus { border-width: 2px;}
+#story div.focus h2 { border-bottom: 2px solid #ddd; background: url(/images/focus_h2_bg.gif) no-repeat left center; padding-left: 26px; font-size: 1.8em;}
+#story div.choose { padding: 18px; background: #eee;}
+#story div.show ul { padding: 12px; }
+#story h3.last { font-weight: normal; font-size: 1.8em; border-top: 2px solid #ddd;font-family: Georgia, Times, serif; padding-top: 8px;}
+#story h4 { font-weight: bold; margin: .4em 0;}
+#story .person form div { margin: 5px 0 10px;}
+#story strong.continue { font-size: 1.4em; font-weight: bold;}
+#story #new_relationship_errors { padding: 10px; background: #fff;}
+#story ul.continue { margin-left: 1em;}
+#story ul.continue li { font-size: 1.2em; margin: .4em 0; list-style-type: disc; font-weight: bold; padding-left: 10px;}
+#story ul.continue li a { font-weight: bold;}
+
+#start_over { margin-bottom:8px;}
+#start_over a { text-transform: capitalize; background: url(/images/icon_startover.gif) no-repeat left center; padding-left: 20px;}
+
+#radio { padding-top: 10px; padding-bottom: 20px; }
+#radio label,
+#radio input { display: inline;}
+#radio label { padding-left: 10px;}
+#radio li { margin-top: 6px;}
+
+ol#synopsis_links li a { font-weight: bold;}
+ol#synopsis_links li { border: none;}
+
+#person_suggestions_container { width: 390px;}
+#person_suggestions_container div.spinner { position: relative; top: -2em; right: .4em;z-index: 900; float: right;}
+#person_suggestions_container div.autocomplete { z-index: 999; margin-top: -1px;}
+#add_new_person_link a { font-weight: bold;}

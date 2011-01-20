@@ -1,0 +1,51 @@
+- has_text = relationship.has_article_text?
+- error_free = relationship.errors.blank? && !relationship.new_record?
+
+#article
+  - if current_user_valid?
+    #article_editable.editable.active{:style => error_free ? 'display:none' : nil}
+      .hd
+        %h2 Story 
+        = link_to_function 'edit', "edit_article(#{relationship.has_article_text?})", :class => 'edit'
+        = link_to 'revisions', '#story_revisions_anchor', :onclick => 'new Effect.SlideDown("article_revisions", {duration: 0.3}); return true;', :class => 'edit'
+      .bd
+        - remote_form_for :relationship_article, relationship.article, :url => relationship_relationship_articles_path(relationship), :html => {:name => 'article_form'} do |f|
+          - markdown_text = ''
+
+          - initial_text = has_text ? relationship.article.text : markdown_text
+          = f.text_area :text, :value => initial_text
+      .ft
+        #article_spinner.spinner{:style => 'display: none'}
+        %p.note= markdown_link
+        = link_to_function 'Save', '$("article_spinner").show(); document.article_form.onsubmit()', :class => 'save primary'
+        = link_to_function 'Cancel', "unedit_article(#{has_text}); document.article_form.reset();", :class => 'cancel tertiary'
+
+  #article_readonly.editable{:style => error_free ? nil : 'display:none'}
+    .hd
+      %h2 Story 
+      - if relationship.has_article_text?
+        - if current_user_valid?
+          = link_to_function 'edit', "edit_article(true)", :class => 'edit'
+        = link_to 'revisions', '#story_revisions_anchor', :onclick => 'new Effect.SlideDown("article_revisions", {duration: 0.3}); return true;', :class => 'edit'
+    .bd
+      - if relationship.has_article_text?
+        - if relationship.stub?
+          %p.new.stub This page is a stub. You can help by expanding it.
+        %div= markdown(relationship.article.text_original) if relationship.article          
+      - else
+        - if current_user_valid?
+          %p.new= link_to_function 'add a story', "edit_article(true)", :class => 'add'
+
+%a{:name => 'story_revisions_anchor'}
+#article_revisions.editable.active{:style => 'display: none'}
+  .bd
+    %h3 Revisions
+    #revisions
+      %ol
+        = list_of(relationship.articles.first(9)) do |article|
+          = link_to_remote revision_display_name(article), :url => relationship_relationship_article_path(relationship, article), :method => :get
+          - if article == relationship.articles.first
+            %em Most recent
+    #revision
+  .ft
+    = link_to_function "Done", "new Effect.SlideUp('article_revisions', {duration: 0.3})", :class => 'tertiary cancel'

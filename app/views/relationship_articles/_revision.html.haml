@@ -1,0 +1,21 @@
+#selected_revision{:style => 'display:none'}
+  - datetime_format = "%b %d, %Y %H:%M%p"
+  #revision_original
+    - unless @relationship_article.revision == 1
+      = link_to_function 'show changes', "new Effect.Fade('revision_original', {duration: 0.3}); new Effect.Appear('revision_differences', {delay: 0.3, duration: 0.3});", :class => 'edit'
+    %ul.comments
+      %li
+        .title
+          %strong= "Revision #{@relationship_article.revision} (#{@relationship_article.created_at.strftime(datetime_format)}):"
+        .body= m(@relationship_article.text)
+
+  - unless @relationship_article.revision == 1
+    #revision_differences{:style => 'display:none'}
+      = link_to_function 'hide changes', "new Effect.Fade('revision_differences', {duration: 0.3}); new Effect.Appear('revision_original', {delay: 0.3, duration: 0.3});", :class => 'delete'
+      %ul.comments
+        %li
+          .title
+            %strong= "Changes between revisions #{@relationship_article.previous_revision.revision} and #{@relationship_article.revision}"
+          .body
+            = m(@relationship_article.diff_with_previous_revision)
+

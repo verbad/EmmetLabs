@@ -1,0 +1,70 @@
+basic_1:
+  id: 1
+  asset_id: 1
+  state_id: 1
+  filename: "1.png"
+  version: original
+  type: InternalAssetVersion
+basic_2:
+  id: 2
+  asset_id: 2
+  state_id: 1
+  filename: "2.png"
+  version: original
+  type: InternalAssetVersion
+video:
+  id: 3
+  asset_id: 4
+  state_id: 1
+  filename: "4.mpg"
+  version: original
+  type: InternalAssetVersion
+stock_photo_1:
+  id: 4
+  asset_id: 8
+  state_id: 1
+  filename: "8.png"
+  version: original
+  type: InternalAssetVersion
+stock_photo_2:
+  id: 5
+  asset_id: 9
+  state_id: 1
+  filename: "9.png"
+  version: original
+  type: InternalAssetVersion
+stock_photo_3:
+  id: 6
+  asset_id: 10
+  state_id: 1
+  filename: "10.png"
+  version: original
+  type: InternalAssetVersion
+basic_3:
+  id: 7
+  asset_id: 3
+  state_id: 1
+  filename: "3.png"
+  version: original
+  type: InternalAssetVersion
+generic_stock_photo_1:
+  id: 8
+  asset_id: 5
+  state_id: 1
+  filename: "5.png"
+  version: original
+  type: InternalAssetVersion
+generic_stock_photo_2:
+  id: 9
+  asset_id: 6
+  state_id: 1
+  filename: "6.png"
+  version: original
+  type: InternalAssetVersion
+generic_stock_photo_3:
+  id: 10
+  asset_id: 7
+  state_id: 1
+  filename: "7.png"
+  version: original
+  type: InternalAssetVersion

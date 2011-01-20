@@ -1,0 +1,45 @@
+#photos
+  - if current_user_valid?
+    #photos_editable.editable.active{:style => "display: none"}
+      .hd
+        %h2 Pictures
+      .editing.bd
+        = render :partial => 'photos/new_photo', :locals => {:photoable => photoable, :id=>'add_photo', :show => true}
+        - unless photoable.photos.empty?
+          = render :partial => 'photos/thumbnails', :locals => {:photoable => photoable, :show => true, :show_form => true }
+      .ft
+        = link_to_function 'Done', "$('add_photo_spinner').show(); new Ajax.Request('/photos?id=#{photoable.id}&type=#{photoable.class.name}', {asynchronous:true, evalScripts:true, method:'get'});", :class => 'cancel tertiary'
+
+  #photos_readonly.editable
+    - if photoable.photos.empty?
+      .hd
+        %h2 Pictures
+      .bd
+        - if current_user_valid?
+          %p.new= link_to_function 'add a picture', 'show_edit_photos()', :class => 'add'
+    -else
+      .hd
+        %h2 Pictures
+        - if current_user_valid?  
+          = link_to_function 'edit', 'show_edit_photos()', :class => 'edit'
+      .bd= render :partial => 'photos/thumbnails', :locals => {:photoable => photoable, :show => false, :show_form => true }
+        
+  :javascript
+    function show_edit_photos() {
+      if ($('photos_editable').style.display !='none') return;
+      if ($('photo_error_message')) new Effect.Fade('photo_error_message', {duration: 0.3});
+      new Effect.Fade("photos_readonly", {duration: 0.15});
+      new Effect.SlideDown("photos_editable", {duration: 0.3});
+      setTimeout('$("photo_file_field").focus();', 650);
+      if(typeof photo_action_ids=="object") {
+        photo_action_ids.each(function(photo_action_id) {
+          if ($(photo_action_id))
+            new Effect.Appear(photo_action_id, {duration: 0.3})
+        });
+      }
+    }
+    function edit_photo_comment(photo_id) {
+      new Effect.Fade("photo_comment_" + photo_id + "_readonly", {duration: 0.3});
+      new Effect.Appear("photo_comment_" + photo_id + "_editable", {duration: 0.3, delay: 0.3});
+      setTimeout('$("photo_comment_' + photo_id + '_field").focus();', 1000);
+    }

@@ -1,0 +1,29 @@
+basic_association_1:
+  id: 1
+  asset_id: 1
+  associate_id: 1
+  associate_type: Profile
+  type: ProfilePhotoAssociation
+  position: 1
+  primary: true
+basic_association_2:
+  id: 9999 # please don't change this!!!
+  asset_id: 2
+  associate_id: 1
+  associate_type: Profile
+  type: ProfilePhotoAssociation
+  position: 2
+basic_association_3:
+  id: 3
+  asset_id: 3
+  associate_id: 1
+  associate_type: Profile
+  type: ProfilePhotoAssociation
+  position: 3
+stock_profile_photo_association_1:
+  id: 4
+  asset_id: 8
+  associate_id: 1
+  associate_type: Profile
+  type: ProfilePhotoAssociation
+  position: 4

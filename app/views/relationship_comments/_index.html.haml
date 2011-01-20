@@ -1,0 +1,40 @@
+#relationship_comments.editable
+  .hd
+    %h2 Discussion
+    - if relationship.has_comments? && current_user_valid?    
+      = link_to_function 'add a comment', 'new Effect.Fade("relationship_comments_field_readonly", {duration: 0.3}); new Effect.Appear("relationship_comments_field_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("comment_text").focus();\', 650)', :id=>'add_comment_button', :class => 'add'
+    
+  #relationship_comments_field_readonly
+    - unless relationship.has_comments?
+      .bd
+        %p.new
+          - if current_user_valid?
+            = link_to_function 'add a comment', 'new Effect.Fade("relationship_comments_field_readonly", {duration: 0.3}); new Effect.Appear("relationship_comments_field_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("comment_text").focus();\', 650)', :id=>'add_comment_button', :class => 'add'
+
+  #relationship_comments_field_errors
+    - if relationship.has_comments?
+      - relationship.comments.last.errors.full_messages.each do |message|
+        .error= message
+
+  - if current_user_valid?
+    #relationship_comments_field_editable.editable.active{:style => 'display:none'}
+      - remote_form_for(:comment, nil, :url => relationship_relationship_comments_path(relationship), :html => {:name => 'comments_form'}) do |f|
+        #relationship_comments_column.bd
+          = f.text_area :text, :value => ''
+
+        .ft
+          #comments_spinner.spinner{:style => 'display: none'}
+          %p.note= markdown_link
+          = link_to_function 'save', '$("comments_spinner").show(); document.comments_form.onsubmit()', :class => 'save primary'
+          = link_to_function 'cancel', 'new Effect.Fade("relationship_comments_field_editable", {duration: 0.3}); document.comments_form.reset(); new Effect.Appear("relationship_comments_field_readonly", {duration: 0.3, delay: 0.3})', :class => 'cancel tertiary'
+
+  - if relationship.has_comments?
+    #relationship_comments_field_list.bd
+      %ul.comments
+        - relationship.comments.each do |comment|
+          - unless comment.new_record?
+            %li{:class => 'comment', :id => "relationship_comment_#{comment.id}"}
+              .title
+                %strong= author_and_ago(comment)
+                wrote:
+              .body= markdown comment.text

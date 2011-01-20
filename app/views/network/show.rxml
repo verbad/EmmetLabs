@@ -1,0 +1,23 @@
+xml.instruct!
+attr = {}
+if current_user_valid?
+  attr[:logged_in] = 'true'
+end
+xml.network(attr) do |xml|
+  xml.nodes do |xml|
+    @people.each { |person| xml << person.to_xml(:skip_instruct => true) }
+  end
+
+  xml.target(:id => @target_person.id, :type => @target_person.class.name.downcase)
+  
+  @target_person.relationship_supergroups.each do |supergroup|
+    xml.relationship_supergroup(:metacategory_id => supergroup.metacategory.id, :metacategory_name => supergroup.metacategory.name) do |xml|
+      supergroup.relationship_groups.each do |group|
+        xml.relationship_group(:category_id => group.category.id, :category_name => group.category.name) do |xml|
+          xml << directed_relationships_xml(group.directed_relationships)
+        end
+      end
+    end
+  end
+
+end

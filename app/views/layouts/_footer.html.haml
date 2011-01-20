@@ -1,0 +1,16 @@
+#ftr
+  #top
+    = render :partial => 'layouts/logo'
+  #bottom
+    %ol
+      - @content_pages.each do |content_page|
+        %li= link_to content_page.name, pretty_content_page_path(content_page)
+      %li= mail_to 'feedback@emmetlabs.com', 'Feedback'
+      %li Copyright &copy; 2009 Emmet Labs
+    #sub
+      %ol
+        %li= link_to 'Company', '/company'
+        %li= link_to 'Team', '/team'
+        %li= link_to 'Contact', '/contact'
+        %li= link_to 'Blog', 'http://blog.emmetlabs.com'
+      

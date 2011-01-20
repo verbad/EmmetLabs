@@ -1,0 +1,17 @@
+<%= error_messages_for :token %>
+<p>
+  To complete your password reset, please enter and confirm your new password.
+</p>
+<% form_for :token, @token, :url => password_reset_request_path(@token), :html => { :method => :put } do |f| %>
+    <p><label for="user_password">New Password</label><br/>
+    <%= f.password_field 'password'  %></p>
+    
+    <p><label for="user_password">Confirm Password</label><br/>
+    <%= f.password_field 'password_confirmation'  %></p>
+    
+    <%= submit_tag "Change Password" %>
+<% end %>
+
+
+
+

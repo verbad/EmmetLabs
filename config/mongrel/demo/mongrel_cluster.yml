@@ -1,0 +1,9 @@
+--- 
+cwd: /u/apps/emmet-demo/current/
+port: "8200"
+environment: demo
+address: 127.0.0.1
+pid_file: log/mongrel.pid
+servers: 2
+user: pivotal
+group: pivotal

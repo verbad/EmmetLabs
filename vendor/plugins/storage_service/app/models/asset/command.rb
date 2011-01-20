@@ -1,0 +1,2 @@
+module Asset::Command
+end

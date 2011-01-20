@@ -1,0 +1,51 @@
+#top
+  .l
+    %blockquote Asimov and Clarke once agreed to a ‘treaty’ in a taxicab, divvying up their claims as the leading science and science fiction writer respectively.
+    .box
+      %cite
+        Isaac Asimov & Arthur C. Clarke
+      %small Had a relationship of Mutual Emminence
+  .r
+    %h2 Right now on Emmet
+    %ul
+      %li Tudor England
+      %li Jazz
+      %li Dracula
+      %li The Barrow Gang
+      %li Early Television
+      %li Science Fiction
+      %li Hitler
+      %li Candy Barons
+      %li Ancient Rome
+
+#bottom
+  .l
+    %h2 What is Emmet?
+    %p Emmet Labs makes it easy to tell stories about how we're all connected, and to let people browse, search and add to those stories.
+
+    %h2 Want to know more?
+    %p Get our newsletter updates:
+    .error_container
+      - if @subscriber && !@subscriber.valid?
+        - @subscriber.errors.full_messages.each do |error|
+          .error= error
+
+      - remote_form_for(:subscriber, nil, :url => subscribers_path,  :html => {:name => 'subscriber_form'}) do |form|
+        %fieldset
+          - sign_up_button = capture_haml do
+            .primary Sign Up
+          = link_to_function sign_up_button, 'document.subscriber_form.onsubmit()', {:id => 'sign_up_button', :tabindex => '3'}
+          = form.text_field(:email_address, :class => 'text', :value => 'Enter email address', :onclick => 'if (this.value=="Enter email address") {this.value="";}' )
+          = submit_tag 'sign up', :style => 'display: none'
+  .r
+    %h3=link_to "Launch Day", "http://blog.emmetlabs.com/2009/01/launch-day/"
+    %small January 28th, 2009
+    %p
+      I’m watching Margaret, Erik, and David put some finishing touches on the Emmet software…
+      =link_to "more", "http://blog.emmetlabs.com/2009/01/launch-day/"
+    
+    %h3=link_to "25 Relationships that Matter", "http://blog.emmetlabs.com/2008/12/how-many-relationships-actually-matter/"
+    %small December 10th, 2008
+    %p
+      On his blog today, Auren Hoffman takes on what he calls The 150 Myth…
+      =link_to "more", "http://blog.emmetlabs.com/2008/12/how-many-relationships-actually-matter/"

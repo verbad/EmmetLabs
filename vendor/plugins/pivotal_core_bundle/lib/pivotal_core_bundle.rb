@@ -1,0 +1,8 @@
+require "bootstrap/require_package_based_on"
+require "bootstrap/rake_task_manager"
+require "clock"
+require "migrator/migrator"
+require "ruby_core_extensions"
+require "rails_core_extensions"
+require "pivotal_migration_methods"
+require "command_line"

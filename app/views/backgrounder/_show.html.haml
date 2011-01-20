@@ -1,0 +1,19 @@
+#backgrounder
+  #backgrounder_field_editable{:style => 'display:none'}
+    - remote_form_for(entity, :url => entity_backgrounder_path(entity), :html => {:name => 'backgrounder_field_form'}) do |f|
+      #backgrounder_column
+        %div
+          %label{:for => 'entity_backgrounder'}
+            %h2.field_header Biography 
+            = markdown_link
+            
+        = f.text_area(:backgrounder)
+      #backgrounder_field_spinner.spinner{:style => 'display: none'}
+      %div
+        .field_links
+          %div= link_to_function 'save', '$("backgrounder_field_spinner").show(); document.backgrounder_field_form.onsubmit()'
+          %div= link_to_function 'cancel', 'new Effect.Fade("backgrounder_field_editable", {duration: 0.3}); document.backgrounder_field_form.reset(); new Effect.Appear("backgrounder_field_readonly", {duration: 0.3, delay: 0.3})'
+  #backgrounder_field_readonly
+    %h2 Biography
+    %span.edit_link=link_to_function 'edit', 'new Effect.Fade("backgrounder_field_readonly", {duration: 0.3}); new Effect.Appear("backgrounder_field_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("entity_backgrounder").focus();\', 650)'
+    %div= m(entity.backgrounder_original)

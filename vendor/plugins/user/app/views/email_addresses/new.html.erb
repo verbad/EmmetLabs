@@ -1,0 +1,6 @@
+<h1>Add Email Address</h1>
+<%= error_messages_for :email_address %>
+<% form_for :email_address, :url => user_email_addresses_path(@user) do |f| %>
+  <%= f.text_field :address %>
+  <%= submit_tag %>
+<% end %>

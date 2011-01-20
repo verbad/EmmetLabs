@@ -1,0 +1,66 @@
+#story
+  #primary_column
+    %h1 Share a story
+    #start_over.refresh{:style => 'visibility:hidden'}
+      = link_to_function 'Start Over', nil do |page|
+        - page.call 'hide_start_over_link'
+        - page.replace_html 'choose_first_person', :partial => 'stories/choose_first_person'
+        - page.visual_effect :appear, 'choose_first_person', {:duration => 0.3}
+        - page.visual_effect :fade, 'choose_second_person', {:duration => 0.3}
+        - page.visual_effect :fade, "show_first_person_panel", {:duration => 0.3}
+        - page.visual_effect :fade, "show_second_person_panel", {:duration => 0.3}
+        - page.visual_effect :fade, "relationship_panel", {:duration => 0.3}
+        - page.call "$('suggestable_query_first').focus"
+
+    - if @node.nil?
+      #choose_first_person.editable.active
+        .hd
+          %h2 Who is the story about?
+        .bd
+          #choose_first_person_input
+            = render :partial => 'nodes/autosuggest_name', :locals => { :index => 'first' }
+            
+    #show_first_person_panel
+      = render :partial => 'nodes/synopsis', :locals => { :node => @node } if @node
+    
+    #node_info{:style => 'display: none'} 
+      = "from_node_id=#{@node.id}&from_node=#{@node.class}" if @node
+    
+    #choose_second_person.editable.active{:style => @node ? 'display: block' : 'display: none'}
+      .hd
+        %h2 Who else is the story about?
+      .bd
+        #choose_second_person_input
+          =render :partial => 'nodes/autosuggest_name', :locals => { :index => 'second' } 
+
+    #show_second_person_panel{:style => 'display: none'}
+
+    .person.focus#relationship_panel.editable.active{:style => 'display: none'}
+      = render :partial => 'directed_relationships/new_edit_relationship'
+
+  #secondary_column
+    %h3 How to Write a Great Story
+    %h4 Choose Who
+    %p The first step in contributing to Emmet is choosing who you want to write about. It can be a famous person, a family member, or anyone from the past whom you know something about.
+    %img{:src => '/images/story_howto.jpg', :alt => 'share a story'}
+    %h4 What to Say
+    %p The best stories capture the essence of a relationship - who were these people, what happened, and why did this relationship matter. The story must be true, even if it's not verifiable through another published source.
+    %h4 Why Not Write About Myself
+    %p The goal of Emmet is to record the history of human relationships. Not all of them, just the ones that sent ripples into the world. It's hard to have objectivity about our own everyday lives (just look at the thousands of Facebook &quot;friends&quot; that many people have). What's more, anyone can edit a story. As soon as you write it, the story is turned over to the community, and that can feel very uncomfortable, especially to the other person in the story.
+
+:javascript
+  if ($('suggestable_query_first')) $('suggestable_query_first').focus();
+    function notify_person_chosen(node_param, editable, index) {
+      new Ajax.Request('/nodes/' + node_param + '?index=' + index, {asynchronous:true, evalScripts:true, method:'get'});
+    }
+
+    function hide_start_over_link() {
+      $('start_over').style.visibility = 'hidden';
+    }
+
+    function show_start_over_link() {
+      $('start_over').style.visibility = 'visible';
+    }    
+= update_summary_js('person_summary')
+= update_summary_js('relationship_summary')
+

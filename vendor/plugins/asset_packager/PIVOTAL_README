@@ -1,0 +1,50 @@
+To Use:
+
+Set the Synthesis::AssetPackageHelper::USE_COMPRESSED_CSS_AND_JS in
+your environment files under config/environments.
+
+
+Examples:
+config/environments/test.rb:
+  Synthesis::AssetPackageHelper::USE_COMPRESSED_CSS_AND_JS = false
+
+config/environments/production.rb:
+  Synthesis::AssetPackageHelper::USE_COMPRESSED_CSS_AND_JS = true
+
+You'll need to run these after your plugins load (after the initializer runs).
+Here's a common pattern we use:
+
+config/environment.rb:
+  ...
+  POST_LOAD_BLOCKS = [] # make sure you have this
+
+  Rails::Initializer.run do |config|
+    config.plugin_paths = [
+      RAILS_ROOT + '/vendor/plugins/prerequisites',
+      RAILS_ROOT + '/vendor/plugins'
+    ]
+    config.action_controller.session_store = :active_record_store
+    config.load_paths += %W(#{RAILS_ROOT}/app/models/communities #{RAILS_ROOT}/app/models/resources)
+  end
+
+  POST_LOAD_BLOCKS.each { |proc| proc.call } # now add this if needed
+  ...
+
+
+config/environments/test.rb:
+  POST_LOAD_BLOCKS << Proc.new {
+    silence_warnings {Synthesis::AssetPackageHelper::USE_COMPRESSED_CSS_AND_JS = false}
+  }
+
+config/environments/production.rb:
+POST_LOAD_BLOCKS << Proc.new {
+  silence_warnings {Synthesis::AssetPackageHelper::USE_COMPRESSED_CSS_AND_JS = true}
+}
+
+########################
+
+You will also want to add deploy/after_update_code.rb to your project.  Look under pivotal_example.
+
+
+To use for Selenium, call Synthesis::AssetPackageHelper.use_packaged_assets
+in test/selenium/selenium_helper.rb

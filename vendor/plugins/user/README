@@ -1,0 +1,77 @@
+User
+====
+
+Welcome to the user plugin!
+
+REQUIREMENTS:
+  - desert
+
+MODEL SUPPORT:
+- User.  A user represents a login/account in the system.  The plugin offers a variety of
+  methods to support this concept.
+  - public identifier.  The public identifier is unique and immutable after it is first set;
+    it's used for identifying the user in any (non-displayable) public setting such as URLs.
+  - passwords.  Passwords are SHA-1 encrypted based on a salt.  The salt is currently hardcoded
+    in the app.
+  - email address. Users log in based on their email address, which must be valid and unique.
+  - password resetting.  When a user forgets their password, a 'reset token' can be stored off
+    that is good for the next 24 hours. To change the timeout, reopen User and change
+    the password_reset_timeout method.
+  - display_name.  Users have a display name.  It's a derived property - the default is to
+    combine first and last names together (which are in the default user object).  You can
+    override this method to match your requirements.
+  - last_login.  Each time a user logs in, last_login is updated.
+
+- AutoLogin.  A user can store off an auto-login token to log in without needing to type
+   a username/password.
+
+CONTROLLER SUPPORT:
+   - Before filters:
+      - store_location.  This filter stores your last page visited so that all logins/logouts
+        will return to this page. (in case of access control issues)
+      - auto_login.  This filter logs you in automatically if you have an appropriate
+        persistent cookie set.
+      - load_current_user.  This filter checks your session and loads the correct user
+        model.
+      - login_required (not in all actions).  This filter will redirect you to a log in page
+        if you are not already logged in.
+   - Class sugar:
+      - disable_store_location(*actions) will disable the 'store_location' filter for
+        a specific action(s) on the controller that declares it.
+   - Handy methods:
+      - current_user
+      - logged_in?
+      - logged_in_as?(user)
+   - Actions:
+      - signup - uses params[:user]
+      - login - uses params[:user][:email_address], params[:user][:password], params[:auto_login]
+      - logout (clears autologin, if set)
+      - list
+      - edit
+      - show
+      - update
+      - reset_password
+      - change_password_via_token
+      - send_password_reset_request
+      - forgot_password
+      - reset_password_expired
+
+TOUCHPOINTS:
+
+  UsersController:
+  - default_post_login_page is a hash representing the place the user would go after login/logout/registration
+    (if they didn't have a "last visit")
+
+  User:
+  TODO: outdated...
+  - You should define a uses_public_identifier :column_name_as_symbol for your project.  This column will used as the
+    'public_identifier' property, used for URL identification.  Public identifiers should always be unique and immutable.
+
+    For now, we assume that you use one column for this property.  'unique_name' and 'id' are typical columns for this.
+
+  - 'display_name' should be defined to whatever the most likely display view of your user should be, e.g. "#{last_name}, #{first_name}"
+    This is not meant to be a direct database concept, so don't twist your db schema to have display_name column.. that's just silly.
+
+  - We don't have a login_name concept yet (always assumes email address) but it'll come real soon now.
+  
+

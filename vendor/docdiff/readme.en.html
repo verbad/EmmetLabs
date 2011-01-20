@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>DocDiff Readme</title>
+ <style type="text/css">
+  body {
+   margin-left: 5%;
+  }
+  body > h1, body > h2 {
+   margin-left: -5%;
+  }
+  h1 {
+   border: medium outset;
+   padding: 0.5em;
+  }
+  h2 {
+   border-top:    thin  solid;
+   border-right:  thin  solid;
+   border-left:   thick solid;
+   border-bottom: thin  solid;
+   padding-left:  0.3em;
+  }
+  h3 {
+   border-left:   thick solid;
+   padding-left:  0.3em;
+  }
+  /* these styles are not supported or do not fit to today's browsers.
+  h4 {display: run-in;}
+  h4:after {content: ": ";}
+  kbd {font-family: "Courier New", "Courier", monospace; font-weight: bolder;}
+  */
+ </style>
+ <style type="text/css">
+  li blockquote {margin-top: 0em; margin-bottom: 0em; padding-top: 0em; padding-bottom: 0em;}
+  li blockquote p {margin-top: 0em; margin-bottom: 0em; padding-top: 0em; padding-bottom: 0em;}
+  span.del {background: hotpink; border: thin inset;}
+  span.add {background: deepskyblue; font-weight: bolder; border: thin outset;}
+  span.before-change {background: yellow; border: thin inset;}
+  span.after-change {background: lime; font-weight: bolder; border: thin outset;}
+  li.entry .position {font-weight: bolder; margin-top: 0em; margin-bottom: 0em; padding-top: 0em; padding-bottom: 0em;}
+  li.entry .body {margin-top: 0em; margin-bottom: 0em; padding-top: 0em; padding-bottom: 0em;}
+ </style>
+ <style title="en" type="text/css">
+  * [lang="ja"] {display: none}
+  * [lang="en"] {display: compact}
+ </style>
+ </head>
+<body>
+<h1>DocDiff Readme</h1>
+<p>
+ 2000-12-09..2006-02-03 Hisashi MORITA
+</p>
+
+<hr />
+
+<h2>
+ <span lang="en">Table of Contents</span>
+ </h2>
+<ul lang="en">
+ <li><a href="#news">News</a></li>
+ <li><a href="#todo">Todo</a></li>
+ <li><a href="#description">Description</a></li>
+ <li><a href="#summary">Summary</a></li>
+ <li><a href="#requirement">Requirement</a></li>
+ <li><a href="#installation">Installation</a></li>
+ <li><a href="#usage">Usage</a></li>
+ <li><a href="#tips">Troubleshooting and Tips</a></li>
+ <li><a href="#license">License</a></li>
+ <li><a href="#credits">Credits</a></li>
+ <li><a href="#acknowledgments">Acknowledgments</a></li>
+ <li><a href="#resources">Resources</a></li>
+</ul>
+
+<hr />
+
+<h2 id="news">
+ <span lang="en">News</span>
+ </h2>
+<ul>
+<!-- 
+<li>0.3.4 (xxxx-xx-xx)<ul>
+ <li></li>
+</ul></li>
+ -->
+<li>0.3.3 (2006-02-03)<ul>
+ <li>Fixed arg test so that we can compare non-normal files, such as device files and named pipes (thanks to Shugo Maeda).</li>
+ <li>Added DocDiff Web UI sample (experimental).</li>
+ <li>Fixed HTML output to produce valid XHTML (thanks to Hiroshi OHKUBO).  Note that CSS in HTML output is slightly changed.</li>
+ <li>Replaced underscores(_) in CSS class names to hyphens(-) so that older UAs can understand them (thanks to Kazuhiro NISHIYAMA).</li>
+</ul></li>
+<li>0.3.2 (2005-01-03)<ul>
+ <li>Readme is multilingualized (added partial Japanese translation).  Try switching CSS between en and ja.  Monolingual files are also available (readme.en.html, readme.ja.html).</li>
+ <li>Outputs better error messages when it failed to auto-detect the encoding and/or eol, though the accuracy is the same.</li>
+ <li>Switched revision control system from CVS to Subversion.</li>
+</ul></li>
+<li>0.3.1 (2004-08-29)<ul>
+ <li>Added -L (--label) option place holder in order to be used as external diff program from Subversion.</li>
+</ul></li>
+<li>0.3.0 (2004-05-29)<ul>
+ <li>Re-designed and re-written from scratch.</li>
+ <li>Supports multiple encodings (ASCII, EUC-JP, Shift_JIS, UTF-8) and multiple eols (CR, LF, CRLF).</li>
+ <li>Supports more output formats (tty, HTML, Manued, wdiff-like, user-defined markup text).</li>
+ <li>Supports configuration files (/etc/docdiff/docdiff.conf, ~/etc/docdiff/docdiff.conf (or ~/.docdiff/docdiff.conf)).</li>
+ <li>Introduced digest (summary) mode.</li>
+ <li>Approximately 200% faster than older versions, thanks to akr's diff library.</li>
+ <li>Better documentation and help message.</li>
+ <li>License changed from Ruby's to modified BSD style.</li>
+ <li>Pure Ruby.  Does not require external diff program such as GNU diff, or morphological analyzer such as ChaSen.</li>
+ <li>Runs on both Unix and Windows (tested on Debian GNU/Linux and Cygwin)</li>
+ <li>Unit tests introduced to decrease bugs and to encourage faster development.</li>
+ <li>Makefile introduced.</li>
+</ul></li>
+<li>0.1.8 (2003-12-14)<ul>
+ <li>Displays warning when --bymorpheme is specified but ChaSen is not available (patch by Akira YAMADA: Debian bug #192258).</li>
+ <li>Supports system-wide configuration file (if ~/.chasenrc.docdiff does not exist, reads /etc/docdiff/chasenrc) (patch by Akira YAMADA: Debian bug #192261).</li>
+</ul></li>
+<li>0.1.7 (2003-11-21)<ul>
+ <li>HTML output retains spaces (&amp;nbsp; patch by Akira YAMADA). </li>
+ <li>Manued output is added.  Use --manued command line option to get result in Manued-like format.</li>
+ <li>Fixed .chasenrc.docdiff to be compatible with the latest ChaSen, so that it does not cause error.</li>
+ <li>Alphabet words in the output may look ugly, since ChaSen does not keep spaces between alphabetical words recently.</li>
+ <li>Other minor bug fixes and code cleanup.</li>
+</ul></li>
+<li>0.2.0b2 (2001-08-31)<ul>
+ <li>Code cleanup.</li>
+</ul></li>
+<li>0.2.0b1 (2001-08-31)<ul>
+ <li>A bit faster than 0.1.x, using file cache.</li>
+ <li>A bit cleaner code.</li>
+</ul></li>
+<li>0.1.6 (2001-05-16)<ul>
+ <li>Increased diff option number from 100000 to 1000000 in order to support 900KB+ text files.</li>
+</ul></li>
+<li>0.1.5 (2001-01-17)<ul>
+ <li>Erased useless old code which were already commented out.</li>
+ <li>Added documentation. (Updated README, more comments)</li>
+ <li>First public release.  Registered to RAA.</li>
+</ul></li>
+<li>0.1.4 (2001-01-16)<ul>
+ <li>Output is like &lt;tag&gt;ab&lt;/tag&gt;, instead of ugly &lt;tag&gt;a&lt;/tag&gt;&lt;tag&gt;b&lt;/tag&gt; (thanks again to Masatoshi Seki for suggestion).</li>
+ <li>Fixed hidden bug ('puts' was used to output result).</li>
+ <li>Some code clean-up, though still hairy enough.</li>
+</ul></li>
+<li>0.1.3 (2001-01-09)<ul>
+ <li>Tested with Ruby 1.6.2.</li>
+ <li>Fixed "meth(a,b,)" bug (thanks to Masatoshi Seki).</li>
+ <li>Switched development platform from Windows to Linux, but it should work fine on Windows too, except for ChaSen stuff.</li>
+</ul></li>
+<li>0.1.2 (2000-12-28)<ul>
+ <li>Mostly bug fix.</li>
+</ul></li>
+<li>0.1.1 (2000-12-25)<ul>
+ <li>Bug fix and some cleanup.</li>
+ <li>Quotes some of HTML special characters (&lt;&gt;&amp;) when output in HTML.</li>
+ <li>Added support for tty output using escape sequence.</li>
+</ul></li>
+<li>0.1.0 (2000-12-19)<ul>
+ <li>ChaSen works fine now.</li>
+ <li>GetOptLong was introduced to support command line options.</li>
+</ul></li>
+<li>0.1.0a1 (2000-12-16)<ul>
+ <li>Added ChaSen support.  Japanese word by word comparison requires ChaSen.</li>
+ <li>Converted scripts from Shift_JIS/CRLF to EUC-JP/LF.</li>
+</ul></li>
+<li>0.0.2 (2000-12-10)<ul>
+ <li>Rewritten to use class.</li>
+</ul></li>
+<li>0.0.1 (2000-12-09)<ul>
+ <li>First version.  Proof-of-concept.</li>
+ <li>Supports ASCII, EUC-JP, LF only.</li>
+ <li>Supports HTML output only.</li>
+ <li>Requires GNU diff.</li>
+ <li>Distributed under the same license as Ruby's</li>
+</ul></li>
+</ul>
+<p>See the ChangeLog for detail.</p>
+
+<h2 id="todo">
+ <span lang="en">Todo</span>
+ </h2>
+<ul>
+ <li>Fixing bugs.</li>
+ <li>Incorporate user feedback.</li>
+ <li>Better auto-recognition of encodings and eols.</li>
+ <li>Make CSS and tty escape sequence customizable in config files.</li>
+ <li>Make stand-alone Windows application using Exerb, hopefully with fancy GUI.</li>
+ <li>Multilingualization (M17N), when Ruby is multilingualized.</li>
+ <li>Write "DocPatch".</li>
+</ul>
+
+<hr />
+
+<h2 id="description">
+ <span lang="en">Description</span>
+ </h2>
+<p lang="en">
+ Compares two text files word by word / char by char
+</p>
+
+<h2 id="summary">
+ <span lang="en">Summary</span>
+ </h2>
+<p lang="en">
+ DocDiff compares two text files and shows the difference.  It can compare files word by word, char by char, or line by line.  It has several output formats such as HTML, tty, Manued, or user-defined markup.
+</p>
+<p lang="en">
+ It supports several encodings and end-of-line characters, including ASCII, UTF-8, EUC-JP, Shift_JIS, CR, LF, and CRLF.
+</p>
+
+<hr />
+
+<h2 id="requirement">
+ <span lang="en">Requirement</span>
+ </h2>
+<ul>
+ <li lang="en"><a href="http://www.ruby-lang.org">Ruby</a><br />
+  (Note that you may need additional ruby library such as iconv and uconv, if your OS's Ruby package does not include those.)
+ </li>
+ </ul>
+
+<h2 id="installation">
+ <span lang="en">Installation</span>
+ </h2>
+<p lang="en">
+ Note that you need appropriate permission for proper installation (you may have to have a root/administrator privilege).
+</p>
+<ol lang="en">
+<li>
+ Place <samp>docdiff/</samp> directory and its contents to ruby library directory, so that ruby interpreter can load them.<br />
+ (e.g. <blockquote><p><samp># <kbd>cp -r docdiff /usr/lib/ruby/1.8</kbd></samp></p></blockquote>)
+</li>
+<li>
+ Place <samp>docdiff.rb</samp> in command binary directory.<br />
+ (e.g. <blockquote><p><samp># <kbd>cp docdiff.rb /usr/bin/</kbd></samp></p></blockquote>)<br />
+ Optionally you may want to rename it to <samp>docdiff</samp>.<br />
+ (e.g. <blockquote><p><samp># <kbd>mv /usr/bin/docdiff.rb /usr/bin/docdiff</kbd></samp></p></blockquote>)
+</li>
+<li>
+ Set appropriate permission.<br />
+ (e.g. <blockquote><p><samp># <kbd>chmod +x /usr/bin/docdiff.rb</kbd></samp></p></blockquote>)
+</li>
+<li>
+ (Optional) If you want site-wide configuration file, place <samp>docdiff.conf.example</samp> as <samp>/etc/docdiff/docdiff.conf</samp> and edit it.<br />
+ (e.g. <blockquote><p><samp># <kbd>cp docdiff.conf.example /etc/docdiff.conf</kbd><br />
+ # <kbd>$EDITOR /etc/docdiff.conf</kbd></samp></p></blockquote>)
+</li>
+<li>
+ (Optional) If you want per-user configuration file, place <samp>docdiff.conf.example</samp> as <samp>~/etc/docdiff/docdiff.conf</samp> and edit it.<br />
+ (e.g. <blockquote><p><samp>% <kbd>cp docdiff.conf.example ~/etc/docdiff.conf</kbd><br />
+ % <kbd>$EDITOR ~/etc/docdiff.conf</kbd></samp></p></blockquote>)
+</li>
+</ol>
+
+<hr />
+
+<h2 id="usage">
+ <span lang="en">Usage</span>
+ </h2>
+
+<h3>
+ <span lang="en">Synopsis</span>
+ </h3>
+<blockquote><p>
+<kbd>docdiff [options] <var>oldfile</var> <var>newfile</var></kbd><br />
+e.g. <samp>% <kbd>docdiff old.txt new.txt > diff.html</kbd></samp>
+</p></blockquote>
+<p lang="en">
+ See the help message for detail (<kbd>docdiff --help</kbd>).
+</p>
+
+<h3>
+ <span lang="en">Example</span>
+ </h3>
+<blockquote>
+<p lang="en"><samp>
+% <kbd>cat sample/01.en.ascii.lf</kbd><br />
+Hello, my name is Watanabe.<br />
+I am just another Ruby porter.<br />
+% <kbd>cat sample/02.en.ascii.lf</kbd><br />
+Hello, my name is matz.<br />
+It's me who has created Ruby.  I am a Ruby hacker.<br />
+% <kbd>docdiff sample/01.en.ascii.lf sample/02.en.ascii.lf</kbd><br />
+<span class="common">Hello, my name is </span><span class="before-change"><del>Watanabe.</del></span><span class="after-change"><ins>matz.</ins></span><span class="common"><br /></span>
+<span class="add"><ins>It's me who has created Ruby.&nbsp;&nbsp;</ins></span><span class="common">I am </span><span class="before-change"><del>just another </del></span><span class="after-change"><ins>a </ins></span><span class="common">Ruby </span><span class="before-change"><del>porter.</del></span><span class="after-change"><ins>hacker.</ins></span><span class="common"><br /></span>
+%<br />
+</samp></p>
+</blockquote>
+
+<h3>
+ <span lang="en">Configuration</span>
+ </h3>
+<p lang="en">
+ You can place configuration files at:
+</p>
+<ul lang="en">
+<li><samp>/etc/docdiff/docdiff.conf</samp> (site-wide configuration)</li>
+<li><samp>~/etc/docdiff/docdiff.conf</samp> (user configuration)<br />
+ (<samp>~/etc/docdiff/docdiff.conf</samp> is used by default in order to keep home directory clean, preventing dotfiles and dotdirs from scattering around. Alternatively, you can use <samp>~/.docdiff/docdiff.conf</samp> as user configuration file name, following the traditional Unix convention.)</li>
+</ul>
+
+<p lang="en">
+ Notation is as follows (also refer to the file <samp>docdiff.conf.example</samp> included in the distribution archive):
+</p>
+<blockquote>
+<p><code>
+# comment<br />
+key1 = value<br />
+key2 = value<br />
+...
+</code></p>
+</blockquote>
+<p lang="en">
+ Every value is treated as string, unless it seems like a number.  In such case, value is treated as a number (usually an integer).
+</p>
+
+<h2 id="tips">
+ <span lang="en">Troubleshooting and Tips</span>
+ </h2>
+
+<h3>
+ <span lang="en">wrong argument type nil (expected Module) (TypeError)</span>
+ </h3>
+<p lang="en">
+ Sometimes DocDiff fails to auto-recognize encoding and/or end-of-line
+ character.  You may get an error like this.
+</p>
+<blockquote><p><samp>
+charstring.rb:47:in `extend': wrong argument type nil (expected Module) (TypeError)<br />
+</samp></p></blockquote>
+<p lang="en">
+ In such a case, try explicitly specifying encoding and end-of-line character (e.g. <kbd>docdiff --utf8 --crlf</kbd>).
+</p>
+
+<h3>
+<span lang="en">Inappropriate Insertion / Deletion</span>
+</h3>
+<p lang="en">
+ When comparing space-separated texts (such as English or program source code), the word next to the end of line is sometimes unnecessarily deleted and inserted.  This is due to the limitation of DocDiff's word splitter.  It splits strings into words like the following.
+</p>
+<p>text 1:</p>
+<blockquote><p><samp>
+ foo bar<br />
+ ("foo bar"  =&gt; ["foo ", "bar"])
+</samp></p></blockquote>
+<p>text 2:</p>
+<blockquote><p><samp>
+ foo<br />
+ bar<br />
+ ("foo\nbar" =&gt; ["foo", "\n", "bar"])
+</samp></p></blockquote>
+<p>comparison result:</p>
+<blockquote><p><samp>
+ <del>foo </del><ins>foo</ins><ins><br />
+ </ins>bar<br />
+ ("&lt;del&gt;foo &lt;/del&gt;&lt;ins&gt;foo&lt;/ins&gt;&lt;ins&gt;\n&lt;/ins&gt;bar")
+</samp></p></blockquote>
+<p lang="en">
+ Foo is (unnecessarily) deleted and inserted at the same time.
+</p>
+<p lang="en">
+ I would like to fix this sometime, but it's not easy.  If you split single space as single element (i.e. <samp>["foo", " ", "bar"]</samp>), the word order of the comparison result will be less natural.  Suggestions are welcome.
+</p>
+
+<h3>
+ <span lang="en">Using DocDiff with Version Control Systems</span>
+ </h3>
+<p lang="en">
+ If you want to use DocDiff as an external diff program from Subversion, the following may work.
+</p>
+<blockquote><p>
+ <samp>% <kbd>svn diff --diff-cmd=docdiff --extensions "--ascii --lf --tty --digest"</kbd></samp>
+</p></blockquote>
+<p lang="en">
+ With zsh, you can use DocDiff or other utility to compare arbitrary sources.  In the following example, we compare specific revision of foo.html in a repository with one on a website.
+</p>
+<blockquote><p>CVS:<br />
+ <samp>% <kbd>docdiff =(cvs -Q update -p -r 1.3 foo.html) =(curl --silent http://www.example.org/foo.html)</kbd></samp>
+</p></blockquote>
+<blockquote><p>Subversion:<br />
+ <samp>% <kbd>docdiff =(svn cat -r3 http://svn.example.org/repos/foo.html) =(curl --silent http://www.example.org/foo.html)</kbd></samp>
+</p></blockquote>
+<h3>
+ <span lang="en">Comparing Non-plain Text Files Such As HTML or Microsoft Word Documents</span>
+ </h3>
+<p lang="en">
+ You can compare files other than plain text, such as HTML and Microsoft Word documents, if you use appropriate converter.
+</p>
+<blockquote><p>
+<span lang="en">Comparing the content of two HTML documents (without tags)</span>
+:<br />
+ <samp>% <kbd>docdiff =(w3m -dump -cols 10000 foo.html) =(w3m -dump -cols 10000 http://www.example.org/foo.html)</kbd></samp>
+</p></blockquote>
+<blockquote><p>
+<span lang="en">Comparing the content of two Microsoft Word documents</span>
+:<br />
+ <samp>% <kbd>docdiff =(wvWare foo.doc | w3m -T text/html -dump -cols 10000) =(wvWare bar.doc | w3m -T text/html -dump -cols 10000)</kbd></samp>
+</p></blockquote>
+
+<hr />
+
+<h2 id="license">
+ <span lang="en">License</span>
+ </h2>
+<p lang="en">
+ This software is distributed under so-called modified BSD style license (<a href="http://www.opensource.org/licenses/bsd-license.php">http://www.opensource.org/licenses/bsd-license.php</a> (without advertisement clause)).  By contributing to this software, you agree that your contribution may be incorporated under the same license.
+</p>
+<p lang="en">
+ Copyright and condition of use of main portion of the source:
+</p>
+
+<blockquote>
+<pre>
+Copyright (C) Hisashi MORITA.  All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+3. Neither the name of the University nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGE.
+</pre>
+</blockquote>
+
+<p lang="en">
+ diff library (<samp>docdiff/diff.rb</samp> and <samp>docdiff/diff/*</samp>) was originally a part of Ruby/CVS by Akira TANAKA.  Ruby/CVS is licensed under modified BSD style license.  See the following for detail.
+</p>
+<ul>
+ <li><a href="http://raa.ruby-lang.org/list.rhtml?name=ruby-cvs">
+     http://raa.ruby-lang.org/list.rhtml?name=ruby-cvs</a></li>
+ <li><a href="http://cvs.m17n.org/~akr/ruby-cvs/">
+     http://cvs.m17n.org/~akr/ruby-cvs/</a></li>
+</ul>
+
+<h2 id="credits">
+ <span lang="en">Credits</span>
+ </h2>
+<ul>
+ <li>Hisashi MORITA (primary author)</li>
+</ul>
+
+<h2 id="acknowledgments">
+ <span lang="en">Acknowledgments</span>
+ </h2>
+<ul>
+ <li>Akira TANAKA (diff library author)</li>
+ <li>Shin'ichiro HARA (initial idea and algorithm suggestion)</li>
+ <li>Masatoshi SEKI (patch)</li>
+ <li>Akira YAMADA (patch, Debian package)</li>
+ <li>Kenshi MUTO (testing, bug report, Debian package)</li>
+ <li>Kazuhiro NISHIYAMA (bug report)</li>
+ <li>Hiroshi OHKUBO (bug report)</li>
+ <li>Shugo MAEDA (bug report)</li>
+</ul>
+
+<hr />
+
+<h2 id="resources">
+ <span lang="en">Resources</span>
+ </h2>
+
+<h3>
+ <span lang="en">Format</span>
+ </h3>
+<ul>
+ <li>HTML/XHTML<br />
+     <a href="http://www.w3.org">http://www.w3.org</a></li>
+ <li>tty (Graphic rendition using VT100 / ANSI escape sequence)<br />
+     VT100: <a href="http://vt100.net/docs/tp83/appendixb.html">
+     http://vt100.net/docs/tp83/appendixb.html</a><br />
+     ANSI: <a href="http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html">
+     http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html</a></li>
+ <li>Manued (Manuscript Editing language: a proofreading method for text)<br />
+     <a href="http://www.archi.is.tohoku.ac.jp/~yamauchi/otherprojects/manued/index.shtml">
+     http://www.archi.is.tohoku.ac.jp/~yamauchi/otherprojects/manued/index.shtml</a></li>
+</ul>
+
+<h3>
+ <span lang="en">Similar Software</span>
+ </h3>
+<p lang="en">
+ There are several other software that can compare text word by word and/or character by character.
+</p>
+<ul>
+ <li>GNU wdiff (Seems to support single byte characters only.)<br />
+     <a href="http://www.gnu.org/directory/GNU/wdiff.html">
+     http://www.gnu.org/directory/GNU/wdiff.html</a></li>
+ <li>cdif by Kazumasa UTASHIRO (Supports several Japanese encodings.)<br />
+     <a href="http://srekcah.org/~utashiro/perl/scripts/cdif">
+     http://srekcah.org/~utashiro/perl/scripts/cdif</a></li>
+ <li>ediff for Emacsen<br />
+     <a href="http://www.xemacs.org/Documentation/packages/html/ediff.html">
+     http://www.xemacs.org/Documentation/packages/html/ediff.html</a></li>
+ <li>diff-detail for xyzzy, by Hiroshi OHKUBO<br />
+     <a href="http://ohkubo.s53.xrea.com/xyzzy/index.html#diff-detail">
+     http://ohkubo.s53.xrea.com/xyzzy/index.html#diff-detail</a></li>
+ <li>Manuediff (Outputs difference in Manued format.)<br />
+     <a href="http://hibiki.miyagi-ct.ac.jp/~suzuki/comp/export/manuediff.html">
+     http://hibiki.miyagi-ct.ac.jp/~suzuki/comp/export/manuediff.html</a></li>
+ <li>YASDiff (Yet Another Scheme powered diff) by Y. Fujisawa<br />
+     <a href="http://nnri.dip.jp/~yf/cgi-bin/yaswiki2.cgi?name=YASDiff&parentid=0">
+     http://nnri.dip.jp/~yf/cgi-bin/yaswiki2.cgi?name=YASDiff&parentid=0</a></li>
+</ul>
+
+<hr />
+</body>
+</html>

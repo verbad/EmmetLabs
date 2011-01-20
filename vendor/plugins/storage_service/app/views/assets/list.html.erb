@@ -1,0 +1,12 @@
+<%= error_messages_for :asset %>
+
+<h1>Assets</h1>
+
+<ul>
+<% @assets.each do |asset| %>
+  <li>
+    <%= link_to(asset.filename, asset.url) %>
+  </li>
+<% end %>
+</ul>
+

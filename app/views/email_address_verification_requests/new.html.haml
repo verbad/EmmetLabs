@@ -1,0 +1,21 @@
+#admin
+  %h1 Check Your Email
+  
+  %p
+    We've created your account, but you still need to verify it. We've sent you an email to confirm your registration. In order
+    to complete your registration, you will need to click the link enclosed in that email.
+    
+  %p
+    But in the meantime, please feel free to 
+    = link_to('browse the site', '/') + '.'
+  
+  %h2 Having trouble?
+  %p
+    We can also 
+    = link_to("send you a new verification email", email_address_verification_requests_path(@user, @email_address), {:method => :post}) + ','
+    if that would help.
+
+  - if RAILS_ENV == "development"
+    %p
+      - @token = @email_address.verification_tokens.last
+      = link_to(email_address_verification_request_url(@token.user, @token.email_address, @token), email_address_verification_request_url(@token.user, @token.email_address, @token))

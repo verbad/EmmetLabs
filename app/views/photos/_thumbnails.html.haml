@@ -1,0 +1,26 @@
+- hidden = show ? nil : "display: none"
+
+#thumbnail_photos
+  %h6{:style => hidden } Current Pictures
+  - reset_cycle
+  %ul
+    - photoable.assets_associations.each do |association|
+      - photo = association.asset
+      %li{:class => cycle('first', nil, nil, nil, nil)}
+        = image_tag photo.versions[:medium].url
+        = render :partial => 'photo_comments/show', :locals => {:photo => photo, :comment => photo.comment, :show_form => show_form }
+        - if current_user_valid?
+          .photo_ft{:id => 'action_#{association_id}', :style => hidden }
+            %span{:id => "delete_#{association.id}", :class => 'field_edit_link'}
+              = link_to_remote 'delete photo', {:url=>photos_association_path(photo).to_s, :confirm => "You won't be able to undo this. Are you sure?", :method => :delete, :loading => "$('add_photo_spinner').show()"}, :class => 'delete'
+            - if photoable.primary_photo == photo
+              %span.featured featured
+            - else
+              = link_to_remote "feature this", {:url=>primary_photos_association_path(:photoable_id => @photoable, :id => photo).to_s, :method => :put, :loading => "$('add_photo_spinner').show()"}, :class => 'feature'
+
+  
+- all_ids = photoable.assets_associations.inject([]) {|result, association| result + ["'action_#{association.id}'", "'photo_comment_#{association.id}_edit'"] }
+
+:javascript
+  photo_action_ids = [#{all_ids.join(',')}];
+

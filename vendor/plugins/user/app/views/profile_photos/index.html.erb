@@ -1,0 +1,5 @@
+<% @profile_photos.each do |photo| %>
+  <div>
+    <%= image_tag photo.versions[:original].url, :size => '50x50' %>
+  </div>
+<% end %>

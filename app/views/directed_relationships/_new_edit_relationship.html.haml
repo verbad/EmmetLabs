@@ -1,0 +1,38 @@
+.hd
+  %h2 Start the Story
+#new_relationship
+- error_messages = []
+- if @directed_relationship
+  - error_messages = @directed_relationship.errors.reject {|field, message| field == 'relationship_id'}.collect {|field, message| message}
+  -if @relationship
+    -error_messages += @relationship.errors.full_messages
+
+- unless error_messages.empty?
+  #new_relationship_errors.error
+    - error_messages.each do |error|
+      %div= error
+
+
+- remote_form_for('', nil, :url => directed_relationships_path.to_s, :html => {:method => :post, :name => 'add_connections_form'}) do
+  .bd
+    %fieldset
+      = hidden_field_tag(:new, true)
+      #first_name_param= hidden_field_tag(:person_id, @node.to_param) if @node
+      #second_name_param
+      %ol
+        %li.people
+          %strong#first_name.first= @node.full_name if @node 
+          %select{:name => 'category_id'}
+            - @relationship_categories.each do |rc|
+              %option{:value => rc.id}= rc.to_display_name
+          %strong#second_name
+        %li
+          - fields_for("relationship") do |fields_for_relationship|
+            #add_relationship_summary
+              %label{:for => "relationship_summary"}
+                Start the story with a brief description of their relationship
+              = fields_for_relationship.text_area(:summary, :value => nil, :onkeyup => 'update_summary_characters_remaining_relationship_summary()')
+
+  .ft
+    %p#summary_countdown_relationship_summary.note
+    = submit_tag 'Save'

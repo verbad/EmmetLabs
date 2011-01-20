@@ -1,0 +1,24 @@
+basic_1:
+  id: 1
+  type: ProfilePhoto
+  creator_id: 1
+  position: 1
+  original_filename: blah.jpg
+basic_2:
+  id: 2
+  type: ProfilePhoto
+  creator_id: 1
+  position: 2
+  original_filename: blah.jpg
+basic_3:
+  id: 3
+  type: ProfilePhoto
+  creator_id: 2
+  position: 1
+  original_filename: blah.jpg
+video:
+  id: 4
+  type: Video
+  creator_id: 1
+  position: 3
+  original_filename: blah.mpeg

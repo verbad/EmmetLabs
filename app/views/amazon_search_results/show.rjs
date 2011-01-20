@@ -1,0 +1,2 @@
+page.replace_html :amazon_ads, :partial =>'show'
+page.visual_effect :appear, 'amazon_ads_body', :duration => 1

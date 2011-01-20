@@ -1,0 +1,28 @@
+#backgrounder
+  - if current_user_valid?
+    #backgrounder_field_editable.editable.active{:style => 'display:none'}
+      .hd
+        %h2 Backgrounder
+      .bd
+        - remote_form_for(:entity, entity, :url => entity_backgrounder_path(entity), :html => {:method => :put, :name => 'backgrounder_field_form'}) do |f|    
+          = f.text_area(:backgrounder)
+    
+      .ft
+        %p.note= markdown_link
+        #backgrounder_field_spinner.spinner{:style => 'display: none'}
+        = link_to_function 'save', '$("backgrounder_field_spinner").show(); document.backgrounder_field_form.onsubmit()', :class => 'save primary'
+        = link_to_function 'cancel', 'new Effect.Fade("backgrounder_field_editable", {duration: 0.3}); document.backgrounder_field_form.reset(); new Effect.Appear("backgrounder_field_readonly", {duration: 0.3, delay: 0.3})', :class => 'cancel tertiary'
+  
+    #backgrounder_field_readonly.editable
+      - if (entity.backgrounder_original.blank?)
+        .hd
+          %h2 Backgrounder
+        .bd
+          - if current_user_valid?
+            %p.new= link_to_function 'add a backgrounder', 'new Effect.Fade("backgrounder_field_readonly", {duration: 0.3}); new Effect.Appear("backgrounder_field_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("entity_backgrounder").focus();\', 650)', :class => 'add'
+      - else
+        .hd
+          %h2 Backgrounder
+          - if current_user_valid?
+            = link_to_function 'edit', 'new Effect.Fade("backgrounder_field_readonly", {duration: 0.3}); new Effect.Appear("backgrounder_field_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("entity_backgrounder").focus();\', 650)', :class => 'edit'
+        .bd= m(entity.backgrounder_original)

@@ -1,0 +1,7 @@
+family:
+  id: 1
+  name: Family
+  
+other:
+  id: 2
+  name: Other

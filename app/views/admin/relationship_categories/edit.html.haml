@@ -1,0 +1,41 @@
+#admin
+
+  %h1= "Editing #{@relationship_category.to_display_name}"
+
+  .error= error_messages_for(:relationship_category)
+
+
+  - form_for :relationship_category, :url => admin_relationship_category_path(@relationship_category), :html => { :method => :put } do |f|
+    %table
+      %tr
+        %th Count
+        %th Name
+        - unless @relationship_category.opposite_id.nil?
+          %th Is opposite to
+        %th Metacategory
+        %th Migrate All Relationships To
+        %th Actions
+
+      %tr
+        %td= @relationship_category.directed_relationships.size
+        %td.cat= f.text_field(:name)
+        - unless @relationship_category.opposite_id.nil?
+          %td
+            Is opposite to: 
+            = link_to @relationship_category.opposite.to_display_name, edit_admin_relationship_category_path(@relationship_category.opposite)
+        %td= drop_down(:relationship_category, :metacategory_id, @relationship_metacategories)
+        %td
+          %select{:name => 'migrate'}
+            %option{:value => ''} ---
+            - @relationship_categories.each do |rc|
+              %option{:value => rc.id}= rc.to_display_name
+        %td
+          = link_to 'Cancel', admin_relationship_categories_path, :class => 'view'
+          = submit_tag("Update", :id=>"update")
+
+
+
+  -if !@relationship_category.opposite_id.nil?
+    %p= link_to('Make Symmetric', admin_relationship_category_path(@relationship_category, :symmetric => true ), :method => :put , :confirm => 'Are you sure?')
+
+

@@ -1,0 +1,12 @@
+<% @page_title = 'Forgot Your Password?' %>
+<%= error_messages_for :token %>
+<p>
+Please enter the email address with which you registered,
+and we'll send you an email containing a link that you may use to reset your password. 
+</p>
+
+<% form_tag password_reset_requests_url do %>
+  <p><label for="user_email_address">Email Address</label><br/>
+  <%= text_field 'user', 'email_address'  %></p>
+  <%= submit_tag "Reset Password" %>
+<% end %>

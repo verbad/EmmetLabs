@@ -1,0 +1,39 @@
+- has_errors = comment && !comment.errors.empty?
+.photo_comment{:id =>"photo_comment_#{photo.id}"}
+  %span.pointer
+  %div{:id => "photo_comment_#{photo.id}_editable", :style => (has_errors ? nil : 'display:none')}
+    - if photo.comment.nil? or comment.new_record?
+      - url = photo_photo_comments_path(photo).to_s
+      - method = :post
+    - else
+      - url = photo_photo_comment_path(photo, comment).to_s
+      - method = :put
+
+    - if comment
+      - comment.errors.full_messages.each do |message|
+        .error= message
+
+    - if show_form
+      - remote_form_for(:comment, photo.comment, :url => url, :html => {:method => method, :name => "photo_comment_#{photo.id}_form"}) do  |f|
+        %fieldset
+          %ol
+            %li
+              = f.text_area(:text, :id => "photo_comment_#{photo.id}_field")
+            %li
+              = link_to_function 'save', %Q{$("photo_comment_#{photo.id}_spinner").show(); document.photo_comment_#{photo.id}_form.onsubmit()}, :class => 'save primary'          
+              = link_to_function 'cancel', 'new Effect.Fade("photo_comment_#{photo.id}_editable", {duration: 0.3}); document.photo_comment_#{photo.id}_form.reset(); new Effect.Appear("photo_comment_#{photo.id}_readonly", {duration: 0.3, delay: 0.3})', :class => 'cancel tertiary'
+          
+        %div{:id => "photo_comment_#{photo.id}_spinner", :style => 'display: none', :class => 'spinner'}
+
+  %div{:id => "photo_comment_#{photo.id}_readonly", :style => (has_errors ? 'display:none' : nil)}
+    %span
+      - unless comment.nil?
+        = m(comment.text)
+
+    - if comment.nil?
+      %span{:id => "photo_comment_#{photo.id}_add"} 
+        %p= link_to_function 'add caption', "show_edit_photos(); edit_photo_comment(#{photo.id})", :class => 'add'
+    - else
+      %span.edit_link{:id => "photo_comment_#{photo.id}_edit", :style => 'display:none'}
+        = link_to_function 'edit', "edit_photo_comment(#{photo.id})", :class => 'edit'
+

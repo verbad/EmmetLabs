@@ -1,0 +1,22 @@
+<h1>New relationship story</h1>
+
+<%= error_messages_for :relationship_story %>
+
+<% form_for(:relationship_story, :url => relationship_stories_path) do |f| %>
+    <%= f.hidden_field :relationship_id %>
+  <p>
+    <b>Text</b><br />
+    <%= f.text_area :text, :size => "100x10" %>
+  </p>
+
+  <p>
+    <b>Verisimilitude</b><br />
+    <%= f.select :verisimilitude, (1..10).collect {|rating| [rating, rating]} %>
+  </p>
+
+  <p>
+    <%= submit_tag "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', relationship_stories_path %>

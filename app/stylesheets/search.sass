@@ -1,0 +1,96 @@
+html
+  body
+    .pagination
+      +small
+      :float left
+      :clear both
+      :padding 4px 0 4px 20px
+      a, span
+        +bold
+        :padding .2em .6em
+        :margin 0
+      a
+        :border-width 1px
+        :border-style solid
+        :border-color= !light_gray
+      a:hover
+        :color= !link_color
+        :background #fff
+        :text-decoration none
+        :border-color= !link_color
+      span.current
+        :border 1px solid #333
+        :background #fff
+      span.disabled
+        :font-weight normal
+        :color #888
+    div.pagination span.disabled
+      :font-weight normal
+      :color #888
+    .pagetools
+      +clearfix
+      +column(22)
+      +last
+      :background= !light_gray
+      :padding 4px 0
+      :margin 0 0 20px 0
+      :display block
+      ol.show_counts
+        :width auto
+        :float right
+        :margin 0
+        :padding-right 20px
+        li
+          +small
+          +bold
+          +inline
+          :padding 4px 0 4px 12px
+          :background none!important
+          a
+            :text-decoration underline
+    #search
+      +gutter-layout
+      #results
+        +clean
+        :margin-top .4em
+        :padding-top .4em
+        li
+          +dashed-border
+          +clearfix
+          :clear left
+          :margin .4em 0
+          :height auto
+          .thumbnail
+            +column(3)
+            :float left
+            :display block
+            :text-align center
+            img
+              +img-border
+          .info
+            +column(19)
+            +last
+            strong
+              +serif
+              +large
+              :font-weight normal
+              :display block
+              :margin .2em 0  
+            span
+              :color #666
+
+    #start
+      +gutter-layout
+      h1,h2
+        :clear both
+      ul
+        +column(7)
+        :clear right
+        :margin-left 0
+        li
+          +dashed-border
+          +bold
+          :padding 5px 5px 5px 15px
+      .primary
+        :float right
+        :margin -40px 0 20px 0

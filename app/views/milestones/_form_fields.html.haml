@@ -1,0 +1,29 @@
+%li
+  %div{:id=> "milestone_#{prefix}"}
+    - if show_errors && milestone && !milestone.valid?
+      .error.milestone_error
+        - milestone.errors.full_messages.each do |message|
+          %div= message
+
+    .milestone_date
+      = milestone_date_fields(milestone, prefix)
+
+    .milestone_estimate
+      = check_box_tag("#{prefix}[estimate]", 'true', milestone && milestone.estimate?)
+      %label{:for=>"#{prefix}[estimate]"} Estimate?
+
+    .milestone_type
+      - if milestone.type.nil?
+        = select_tag("#{prefix}[type_id]", options_for_select([['', '']] + Milestone::Type.all.map {|type| [type.display_name, type.id]}, milestone.nil? || milestone.type.nil? ? '' : milestone.type.id))
+      - else
+        %label{:for => "#{prefix}[name]"}= milestone.type.display_name
+        = hidden_field_tag("#{prefix}[type_id]", milestone.type.id)
+
+    .milestone_name
+      = text_field_tag("#{prefix}[name]", milestone.nil? ? '' : milestone.name)
+  
+    .milestone_remove
+      - if milestone.new_record?
+        = link_to_function 'remove', "if (confirm('Are you sure you want to remove this milestone?')) { new Effect.Fade('milestone_#{prefix}', {duration: 0.3}) }", :class => 'delete'
+      - else
+        = link_to_remote 'remove', {:url => polymorphic_path([milestone.node, milestone]), :confirm => "Are you sure you want to remove this milestone'?", :method => :delete, :loading=>"$('timeline_field_editable_spinner').show()"}, :class => 'delete'

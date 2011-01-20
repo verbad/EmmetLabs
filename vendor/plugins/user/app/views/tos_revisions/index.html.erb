@@ -1,0 +1,11 @@
+<h1>Terms of service revisions</h1>
+
+<ul>
+<% for tos_revision in @tos_revisions %>
+  <li>
+    <%= link_to tos_revision.revision, tos_revision_path(tos_revision.id) %>
+  </li>
+<% end %>
+</ul>
+
+<%= link_to 'Create', new_tos_revision_path %>

@@ -1,0 +1,27 @@
+- error = entity.errors.on(:summary)
+= update_summary_js('entity_summary')
+#summary
+  #summary_field_readonly.editable{:style => (error.nil? ? nil: "display: none")}
+    .bd
+      %p
+        = entity.summary_original
+        - if current_user_valid?
+          = link_to_function 'edit', 'update_summary_characters_remaining_entity_summary(); new Effect.Fade("summary_field_readonly", {duration: 0.3}); new Effect.Appear("summary_field", {duration: 0.3, delay: 0.3}); setTimeout(\'$("entity_summary").focus();\', 650)', :class => :edit
+
+  - if current_user_valid?
+    #summary_field.editable.active{:style => error.nil? ? 'display: none': nil}
+      - remote_form_for :entity, entity, :url => entity_summary_path(entity), :html => {:method => :put, :name => 'summary_field_form'} do |f|
+        .bd
+          - unless error.nil?
+            %span#summary_error_entity_summary.error= "Failed to save: #{error}"
+          - else
+            :javascript
+              onload_functions.push(update_summary_characters_remaining_entity_summary);
+
+          = f.text_area :summary, :onkeyup => 'update_summary_characters_remaining_entity_summary()'
+
+        .ft
+          #summary_field_spinner.spinner{:style => 'display: none'}
+          %p#summary_countdown_entity_summary.note
+          = link_to_function 'Save', '$("summary_field_spinner").show(); document.summary_field_form.onsubmit()', :class => 'save primary'
+          = link_to_function 'Cancel', 'new Effect.Fade("summary_field", {duration: 0.3}); document.summary_field_form.reset(); new Effect.Appear("summary_field_readonly", {duration: 0.3, delay: 0.3})', :class => 'cancel tertiary'

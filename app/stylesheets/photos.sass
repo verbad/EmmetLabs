@@ -1,0 +1,94 @@
+#thumbnail_photos
+  ul
+    +clean
+    li
+      +clean
+      +column(3)
+      img
+        :max-height 130px
+        :margin 0 auto
+        :display block
+    li.first
+      :clear left
+  img
+    +img-border
+
+.new_photo
+  .box
+    :position relative
+    +column(6)
+    :background= !light_yellow
+    legend
+      :font-weight bold
+    input
+      :margin-top 8px
+    .upload
+      :float right
+      :position relative
+      :padding-left 20px
+      .spinner
+        :background-image url(/images/editable_spinner.gif)
+        :position absolute
+        :left 0
+        :top 10px
+
+.photo_comment
+  :position relative
+  :margin-top 10px
+  :padding 4px
+  :background #fff
+  .spinner
+    :background-image url(/images/spinner.gif)
+  fieldset, ol
+    :margin 0
+    :padding 0
+    li
+      :margin 0
+      textarea
+        :margin 0
+        :width 100px
+        :height 100px
+        :background #fff
+        :padding 0
+      .primary.save
+        +normal
+        :margin-top 2px
+        :float left
+      .tertiary.cancel
+        +small
+        :margin-left 2px
+        :float left
+  span
+    p
+      +bold
+      +medium
+      a
+        +normal
+        :font-weight normal
+  .add, .edit
+    :float none
+   
+.photo_ft
+  +clearfix
+  :background #fff
+  :padding-left 4px
+  :margin-bottom 8px
+  .delete, .feature, .featured
+    :float left
+ 
+.editable
+  .thumbnail_photo
+    +column(3)
+    .thumbnail_photo_image
+      img
+        +img-border
+    
+#primary_photo
+  .photo_comment
+    :border none
+    :margin 10px 20px
+    p
+      +bold
+      +large
+    .pointer
+      :display none

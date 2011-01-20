@@ -1,0 +1,17 @@
+<ul>
+  <% @email_addresses.each do |email_address| %>
+    <li>
+      <%= email_address %>
+      <% unless email_address.verified? %>
+      Not Verified
+      <% end %>
+      <%= link_to('Destroy', user_email_address_path(@user, email_address), :method => :delete) if current_user.can_destroy?(email_address) %>
+      <%=
+        if !email_address.primary? && email_address.verified?
+          link_to('Make Primary', user_email_address_path(:user_id => @user, :id => email_address, 'email_address[primary]' => '1'), :method => :put)
+        end
+      %>
+    </li>
+  <% end %>
+  <%= link_to 'New Address', new_user_email_address_path(@user) %>
+</ul>

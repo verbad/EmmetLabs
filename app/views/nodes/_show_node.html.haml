@@ -1,0 +1,7 @@
+.box.synopsis
+  %h2= @node.full_name
+  %ul
+    - if @node.class == Person
+      %li.milestone= milestone_label(@node.birth_milestone, 'b.')
+      %li.milestone= milestone_label(@node.death_milestone, 'd.')   
+    %li= @node.summary

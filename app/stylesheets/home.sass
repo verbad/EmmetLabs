@@ -1,0 +1,195 @@
+#home
+  +gutter-layout
+  :padding-top 40px
+  h4
+    +large
+    +sans-serif
+    :font-weight bold
+    :margin 6px 0 0 0
+  #brace
+    :font-size 110px
+    :color= !light_gray
+    :position absolute
+    :left 400px
+    :top 50px
+    :line-height 1em
+  #explore
+    +column(20)
+    +prepend(1)
+    +append(1)
+    +last
+    :padding
+      :top 10px
+      :bottom 10px
+    h2
+      +medium
+      :color= !medium_gray
+      :margin 8px 0 6px 0
+    h3
+      :margin-bottom 8px
+      :font-weight bold
+    #rotate
+      +column(10)
+      :position relative
+      .thumb
+        :height 75px
+        :left 46px
+        :position absolute
+        :text-align center
+        :top 20px
+        :width 75px
+      #rotate_right
+        :left 186px
+    #text
+      +column(10)
+      +last
+  #banner
+    +column(22)
+    +last
+    :text-align center
+    p
+      +x-large
+      :padding 8px 10px
+      :background= !dark_yellow
+    strong
+    span
+      +serif
+      :background= !light_yellow
+      :padding 2px 5px 4px 5px
+      :display inline-block
+      :margin-bottom 0px
+  #projects
+    +column(15)
+    dl
+      +column(5)
+      :list-style-type disc
+      dt
+        +large
+        :margin-top 10px
+        :text-indent 20px
+        :background url(/images/projects_dt_bg.gif) no-repeat 0 2px
+        :border-bottom
+          :width 1px
+          :style solid
+          :color= !light_gray
+        :margin-right 12px
+        :margin-bottom 4px
+        :padding-bottom 2px
+      dd
+        :padding-left 20px
+    dl
+      +last
+  #info
+    +column(7)
+    +last
+    #login_form
+      :clear both
+      h2
+        :padding 5px 0 5px 5px
+        +large
+      input
+        :width 150px
+        :margin 0 0 0 5px
+        :float left
+      .btn
+        +medium
+        :margin 0 15px 10px 0
+        :width auto
+        :padding 1px 2px
+        :position relative
+        :top -1px
+        :float right
+  #what_is
+    +append(1)
+    :clear both
+    h3
+      +medium
+      :margin-bottom 5px
+  #stories
+    +column(10)
+    ol
+      +clean
+      li
+        +dashed-border
+        +small
+        :padding 6px 0
+        strong
+          +normal
+          :background url(/images/stories_strong_bg.gif) no-repeat right 4px
+          :padding-right 12px
+        strong.last
+          :background-position 0 4px
+          :margin-left 2px
+          :padding-left 13px
+  #content
+    +column(12)
+    +last
+    :padding-bottom 30px
+    #recent
+      ol
+        +clean
+        li
+          :margin 4px 0
+        span.label
+          +small
+          :color= !medium_gray
+          :display block
+          :float left
+          :text-align right
+          :width 4.2em
+          :margin-left -.4em
+          :margin-right .8em
+        span.connection
+          :background transparent url(/images/icon_connection_bg.gif) no-repeat right center
+          :margin-right 3px
+          :padding-right 13px
+  #now
+    +column(10)
+    dl
+      :width 180px
+      :float left
+      :margin-right 15px
+      dt
+        +large
+        +bold
+        :margin-top 6px
+      dd
+        +bold
+        +dashed-border
+        :margin-top 4px
+      span
+        :font-weight bold
+        :float right
+  #twitter_div
+    :padding 10px 0
+    :clear both
+    :position relative
+    :left -20px 
+    :background url(/images/twitter_bg.gif) no-repeat 0 32px
+    h3
+      :margin 3px 0 5px 
+      :padding 0 10px 0 35px
+    ul
+      +clean
+      :padding 5px 0 0 35px
+      li
+        :margin-bottom 5px
+        :font-size 15px
+        +serif
+        a
+          :font-weight normal
+          :color= !medium_gray
+          +sans-serif
+        span
+          a
+            +serif
+            :display inline
+            :font-weight bold
+            :color= !link_color
+    #twitter-link
+      :font-weight bold
+      :margin 0 10px 10px 35px
+      +medium
+      :text-decoration none
+      :float left
+

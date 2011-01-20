@@ -1,0 +1,20 @@
+addict:
+  id: 1
+  name: addict
+
+singer:
+  id: 2
+  name: singer
+
+dancer:
+  id: 3
+  name: dancer
+
+paris:
+  id: 4
+  name: paris
+
+princess:
+  id: 5
+  name: princess
+  

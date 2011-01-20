@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby -w
+
+def unfound_files
+  `svn status`.
+    select { |line| line =~ /^\!/ }.
+    collect { |line| line[7..-1] }
+end
+
+unfound_files.each do |file|
+  `svn rm #{file}`
+end

@@ -1,0 +1,13 @@
+.diff_common {
+}
+
+.diff_deletion, .diff_from {
+  background-color: white;
+  color: #B9532E;
+  text-decoration: line-through;
+}
+
+.diff_insertion, .diff_to {
+  color: black;
+  background-color: #FED96E;
+}

@@ -1,0 +1,27 @@
+#name_field_readonly.editable
+  .hd.first
+    %h1= entity.full_name 
+    = link_to_function 'edit', %Q|new Effect.Fade("name_field_readonly", {duration: 0.3}); new Effect.Appear("name_field_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("entity_full_name").focus();\', 650);|, :class => 'edit'
+
+#name_field_editable.editable.active{:style => entity.errors.blank? && !entity.new_record? ? 'display:none' : nil}
+  - unless entity.errors.blank? || entity.errors.on(:calculated_dashified_full_name).nil?
+    #errors.error_message.entity
+      = entity.errors.on(:calculated_dashified_full_name)
+
+  .hd.first
+    %h1= entity.full_name 
+
+  %div.editing
+    - form_for(entity, :html => {:name => 'name_field_form'}) do |f|
+      %fieldset#name
+        = hidden_field_tag(:profile_page, 'true')
+        
+        %ol
+          %li
+            %label{:for => 'entity_full_name'} Name
+            = f.text_field(:full_name, :size => 45)
+            %br
+    %div.ft
+      #name_field_spinner.spinner{:style => 'display: none'}
+      = link_to_function 'save', '$("name_field_spinner").show(); document.name_field_form.submit();', :class => 'save primary'
+      = link_to_function 'cancel', %Q|new Effect.Fade("name_field_editable", {duration: 0.3}); if ($('entity.errors')) new Effect.Fade("entity.errors", {duration: 0.3}); document.name_field_form.reset(); new Effect.Appear("name_field_readonly", {duration: 0.3, delay: 0.3});|, :class => 'cancel tertiary'

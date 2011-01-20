@@ -1,0 +1,39 @@
+= update_summary_js('person_summary')
+#summary
+  #summary_readonly.editable{:style => person.errors.on(:summary).blank? && !person.new_record? ? nil : 'display:none'}
+    .bd
+      - if (person.new_record?)
+        %p.new= link_to_function 'add a summary', %Q|new Effect.Fade("summary_readonly", {duration: 0.3}); new Effect.Appear("summary_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("summary_editable").focus();\', 650);|, :class => 'add'
+      - else
+        %p
+          = person.summary_original
+          - if current_user_valid?
+            = link_to_function 'edit', %Q|new Effect.Fade("summary_readonly", {duration: 0.3}); new Effect.Appear("summary_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("summary_editable").focus();\', 650);|, :class => 'edit'
+          
+  - if current_user_valid?
+    #summary_editable.editable.active{:style => person.errors.on(:summary).blank? && !person.new_record? ? 'display:none' : nil}
+      - if person.new_record?
+        - method = :post
+        - url = people_path
+      - else
+        - method = :put
+        - url = person_path(person)
+
+      .hd
+        %h2 Summary
+      .bd
+    
+        - unless person.errors.on(:summary).blank?
+          #person_summary_error.error= "Failed to save: #{person.errors.on(:summary)}"
+        - else
+          :javascript
+            onload_functions.push(update_summary_characters_remaining_person_summary);
+    
+        - form_for(person, :html => {:method => method, :name => 'summary_form'}) do |f|
+          = f.text_area(:summary, :onkeyup => 'update_summary_characters_remaining_person_summary()')
+
+      .ft
+        #summary_spinner.spinner{:style => 'display: none'}
+        %p#summary_countdown_person_summary.note
+        = link_to_function 'Save', '$("summary_spinner").show(); document.summary_form.submit();', :class => 'save primary'
+        = link_to_function 'Cancel', %Q|new Effect.Fade("summary_editable", {duration: 0.3}); if ($('person_summary_error')) new Effect.Fade("person_summary_error", {duration: 0.3}); document.summary_form.reset(); new Effect.Appear("summary_readonly", {duration: 0.3, delay: 0.3});|, :class => 'cancel tertiary'

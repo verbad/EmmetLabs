@@ -1,0 +1,2 @@
+page.replace_html 'revision', :partial => 'revision'
+page.visual_effect :slide_down, 'selected_revision', {:duration => 0.3}

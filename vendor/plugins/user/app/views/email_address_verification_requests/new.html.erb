@@ -1,0 +1,11 @@
+Your new email has been added, but has not yet been verified.
+We've sent you an email to confirm your registration.
+To complete your registration, please check your email and click the enclosed link. 
+Click <%= link_to "here", email_address_verification_requests_path(@user, @email_address), {:method => :post} %> to send a new verification email.
+
+<% if RAILS_ENV == "development" %>
+<p>
+  <% @token = @email_address.verification_tokens.last %>
+  <%= link_to(email_address_verification_request_url(@token.user, @token.email_address, @token), email_address_verification_request_url(@token.user, @token.email_address, @token)) %>
+</p>
+<% end %>

@@ -1,0 +1,15 @@
+#admin
+  %h1 New Relationship Metacategory
+
+  = error_messages_for :relationship_metacategory
+
+  - form_for(:relationship_metacategory, :url => admin_relationship_metacategories_path) do |f|
+    %table
+      %tr
+        %th Name
+        %th Actions
+      %tr
+        %td= f.text_field :name
+        %td.actions
+          = submit_tag "Create"
+          = link_to 'Cancel', admin_relationship_metacategories_path, :class => 'delete'

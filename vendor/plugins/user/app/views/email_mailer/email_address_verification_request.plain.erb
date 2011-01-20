@@ -1,0 +1,10 @@
+Thank you for signing up with us!
+
+Please click this link to verify that you've signed up
+        for this account:
+
+<%= email_address_verification_request_url(@token.user, @token.email_address, @token) %>
+
+Your Account has been created with the following information:
+User Name : <%= @token.user.unique_name %>
+Email Address : <%= @token.user.email_address %>

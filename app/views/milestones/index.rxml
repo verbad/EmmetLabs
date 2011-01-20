@@ -1,0 +1,15 @@
+xml.instruct!
+
+xml.timeline(:node_id => @node.id) do |xml|
+  @node.milestones.each do |milestone|
+    xml.milestone do
+      xml.date do
+        xml.year milestone.year
+        xml.month milestone.month
+        xml.day milestone.day
+        xml.estimate milestone.estimate?
+      end
+      xml.name milestone.display_name
+    end
+  end
+end

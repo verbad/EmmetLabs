@@ -1,0 +1,16 @@
+%p
+  %h2 Primary Pictures
+  %div= image_tag photoable.primary_photo.versions[:medium].url
+  %br
+  = label(:for => 'photo_file_field') { text 'Upload a photo' }
+  %br
+  = form.file_field(:photo, :id => 'photo_file_field')
+  %br
+  %h2 All Pictures
+
+  - photoable.assets_associations.each do |association|
+    %div
+      = image_tag association.asset.versions[:large].url
+      = link_to 'Delete', photos_association_path(association), :confirm => "You won't be able to undo this. Are you sure?", :method => :delete
+  - unless photoable.primary_photo == photo
+    = link_to 'Set as primary photo', primary_photos_association_path(:photoable_id => photoable, :id => photo), :method => :put

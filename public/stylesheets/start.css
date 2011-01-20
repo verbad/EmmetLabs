@@ -1,0 +1,130 @@
+#start_top {
+	margin-top: 3em;
+}
+
+#start_photo {
+}
+
+#start_photo_image {
+	margin-bottom: 1em;
+}
+
+#emmet_is_text {
+  float: left;
+  font-size: 1.6em;
+	width: 260px;
+	color: #b9532e;
+	letter-spacing: 1px;
+	line-height: 1.4em;
+}
+
+#last_seven {
+	float: right;
+	width: 300px;
+}
+
+#last_seven h2 {
+	font-size: 1.5em;
+}
+
+#last_seven ul {
+	padding-top: 1em;
+	font-size: 1.1em;
+}
+
+#last_seven li {
+	margin-bottom: .8em;
+  line-height: 1.3em;
+}
+
+#invitation_to_action {
+	font-size: 2em;
+	color: 0099cc;
+	width: 660px;
+	float: right;
+	margin-top: 35px;
+}
+
+#invitation_to_action ul {
+}
+
+#invitation_to_action li {
+	display: inline;
+	padding-right: 10px;
+	font-weight: bolder;
+}
+
+#invitation_to_action li img {
+	vertical-align: -4;
+}
+
+#getting_started {
+	font-size: 1.3em;
+	float: right;
+	margin-top: 20px;
+	padding-right: 60px;
+	clear: right;
+}
+
+#user_contributions {
+	clear:both;
+	padding-top: 20px;
+}
+
+#user_contributions hr {
+	border-color:-moz-use-text-color -moz-use-text-color #DDDDDD;
+	border-style:none none solid;
+	border-width:medium medium 4px;
+	margin-bottom: 40px;
+}
+
+#user_contributions #right_column {
+	float:right;
+	margin-left:10px;
+	width:250px
+}
+
+#user_contributions h2 {
+	font-size: 1.8em;	
+	padding-bottom: 1.1em;
+}
+
+#user_contributions h3 {
+	font-size: 1.4em;	
+}
+
+
+#contributed {
+	margin-top: 10px;
+}
+
+#contributed ul {
+	padding-top: 1.4em;
+	
+}
+
+#contributed li{
+	padding-bottom: 1.3em;
+}
+
+.empty_contribution {
+	padding: 1em;
+}
+
+.give_aways  {
+  background: #E7C3B6;
+  margin-bottom: 20px;
+
+}
+
+.give_aways .inner {
+	padding: 1em 1.6em;
+	font-size: 1.1em;
+	line-height: 1.4em;
+}
+
+#right_column h3 {
+	font-size: 1.2em;
+	font-weight: bolder;
+  margin-bottom: .6em; 
+}

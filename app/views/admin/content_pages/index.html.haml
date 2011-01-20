@@ -1,0 +1,16 @@
+%h1 Content Pages
+.control
+  = link_to 'Add new content page', new_admin_content_page_path, :class => 'add'
+%table
+  %tr
+    %th Page Name
+    %th Actions
+  - @admin_content_pages.each do |content_page|
+  
+    %tr
+      %td= content_page.name
+      %td.actions
+        = '&nbsp;' * 5
+        = link_to 'View', admin_content_page_path(content_page), :class => 'view'
+        = link_to 'Edit Page', edit_admin_content_page_path(content_page), :class => "edit"
+        = link_to 'Delete', admin_content_page_path(content_page), :confirm => "You won't be able to undo this. Are you sure?", :method => :delete, :class => 'delete'

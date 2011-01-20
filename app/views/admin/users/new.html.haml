@@ -1,0 +1,28 @@
+%h1 Invite a New User
+- @user.errors.full_messages.each do |error|
+  .error= error
+
+- form_for :user, :url => admin_users_path do |f|
+  %table
+    %tr
+      %th
+        %label{:for => "user_unique_name"} User Name
+      %th
+        %label{:for=>"user_email_address"} Email Address
+      %th
+        %label{:for => "user_super_admin"} Super Admin?
+      %th
+        %label{:for => "submit"} Actions
+
+    %tr
+      %td= f.text_field(:unique_name)
+      %td= f.text_field(:email_address)
+      %td= f.check_box(:super_admin)
+      %td
+        = submit_tag "Create", :id=>"submit"
+        = '   | '
+        = link_to 'Cancel', admin_users_path
+  
+
+  = f.hidden_field(:password, :value => 'password')
+  = f.hidden_field(:password_confirmation, :value => 'password')

@@ -1,0 +1,75 @@
+janis_and_jim_0:
+  id: 1
+  relationship_id: 1
+  text: LA woman.  Sunday afternoon.
+  verisimilitude: 5
+
+elvis_and_jim_0:
+  id: 2
+  relationship_id: 2
+  text: Elvis and Jim ran into each other one day when shopping for tiny parcels of meat at the local deli.
+  verisimilitude: 10
+
+jim_and_marilyn_0:
+  id: 3
+  relationship_id: 3
+  text: Marilyn's ghost fell in love with Jim one day in forests of azure.
+  verisimilitude: 3
+
+jfk_and_jim_0:
+  id: 4
+  relationship_id: 4
+  text: Ask not for ye shall receive crazy theories about Jim and JFK.
+  verisimilitude: 9
+
+jfk_and_marilyn_0:
+  id: 5
+  relationship_id: 5
+  text: Marilyn was the lone gunperson that shot JFK.  You thought they were lovers?  Guess again.
+  verisimilitude: 4
+
+jfk_and_marilyn_1:
+  id: 6
+  relationship_id: 5
+  text: Marilyn gave birth to JFK on October 1st, 1602. When he opened his eyes, he said, "Me like!"  It turns out he
+    was talking about his juicebox.
+  verisimilitude: 8
+
+janis_and_marilyn_0:
+  id: 7
+  relationship_id: 6
+  text: The Marilyn Monroe and Janis Joplin reunion tour is still going strong.
+  verisimilitude: 1
+
+elvis_and_marilyn_0:
+  id: 8
+  relationship_id: 7
+  text: Lead-based paint sniffing recovery groups brought Elvis and Marilyn together.
+  verisimilitude: 8
+
+elvis_and_jfk_0:
+  id: 9
+  relationship_id: 8
+  text: The president and the king.  One power struggle to rule them all.
+  verisimilitude: 5
+
+abe_and_marilyn_0:
+  id: 10
+  relationship_id: 9
+  text: Happy birthday, Mr. President!
+  verisimilitude: 6
+
+grace_and_josephine_0:
+  id: 11
+  relationship_id: 22
+  title: Friends FoEvah
+  text: Grace Kelly was Josephine's Benefactor, bonding the two stunning American ex-pats, despite differences.  In 1968, Josephine Baker and her 12 adopted children were evicted from their French chateau, and found themselves homeless.  Princess Grace of Monaco had long adminred Josephine's crusade for multicultural tolerance.  Grace gave the aging dancer a villa to live in on the south coast of France, near Monaco.
+  verisimilitude: 7
+  
+garvey_and_hughes_0:
+  id: 12
+  relationship_id: 50
+  title: Moo!
+  text: Both these people were involved in the Harlem Renaissance.
+  verisimilitude: 10
+  

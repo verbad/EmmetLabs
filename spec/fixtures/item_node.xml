@@ -1,0 +1,103 @@
+<Item>
+  <ASIN>0815411723</ASIN>
+  <DetailPageURL>
+    http://www.amazon.com/gp/redirect.html%3FASIN=0815411723%26tag=ws%26lcode=xm2%26cID=2025%26ccmID=165953%26location=/o/ASIN/0815411723%253FSubscriptionId=0DTQ5AAFKR6KRRM94JR2
+  </DetailPageURL>
+  <SalesRank>389626</SalesRank>
+  <SmallImage>
+    <URL>http://ecx.images-amazon.com/images/I/11DXJ2NVEAL.jpg</URL>
+    <Height Units="pixels">75</Height>
+    <Width Units="pixels">50</Width>
+  </SmallImage>
+  <MediumImage>
+    <URL>http://ecx.images-amazon.com/images/I/21FSPH7WW6L.jpg</URL>
+    <Height Units="pixels">160</Height>
+    <Width Units="pixels">106</Width>
+  </MediumImage>
+  <LargeImage>
+    <URL>http://ecx.images-amazon.com/images/I/5153524AD5L.jpg</URL>
+    <Height Units="pixels">500</Height>
+    <Width Units="pixels">331</Width>
+  </LargeImage>
+  <ImageSets>
+    <ImageSet Category="primary">
+      <SwatchImage>
+        <URL>http://ecx.images-amazon.com/images/I/014GJ3P334L.jpg</URL>
+        <Height Units="pixels">30</Height>
+        <Width Units="pixels">20</Width>
+      </SwatchImage>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/11DXJ2NVEAL.jpg</URL>
+        <Height Units="pixels">75</Height>
+        <Width Units="pixels">50</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/21FSPH7WW6L.jpg</URL>
+        <Height Units="pixels">160</Height>
+        <Width Units="pixels">106</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/5153524AD5L.jpg</URL>
+        <Height Units="pixels">500</Height>
+        <Width Units="pixels">331</Width>
+      </LargeImage>
+    </ImageSet>
+  </ImageSets>
+  <ItemAttributes>
+    <Author>Jean-Claude Baker</Author>
+    <Binding>Paperback</Binding>
+    <DeweyDecimalNumber>792.8028092</DeweyDecimalNumber>
+    <EAN>9780815411727</EAN>
+    <Edition>1st Cooper Square Press ed</Edition>
+    <ISBN>0815411723</ISBN>
+    <Label>Cooper Square Press</Label>
+    <ListPrice>
+      <Amount>2195</Amount>
+      <CurrencyCode>USD</CurrencyCode>
+      <FormattedPrice>$21.95</FormattedPrice>
+    </ListPrice>
+    <Manufacturer>Cooper Square Press</Manufacturer>
+    <NumberOfItems>1</NumberOfItems>
+    <NumberOfPages>592</NumberOfPages>
+    <PackageDimensions>
+      <Height Units="hundredths-inches">142</Height>
+      <Length Units="hundredths-inches">898</Length>
+      <Weight Units="hundredths-pounds">172</Weight>
+      <Width Units="hundredths-inches">583</Width>
+    </PackageDimensions>
+    <ProductGroup>Book</ProductGroup>
+    <PublicationDate>2001-09-25</PublicationDate>
+    <Publisher>Cooper Square Press</Publisher>
+    <Studio>Cooper Square Press</Studio>
+    <Title>Josephine Baker: The Hungry Heart</Title>
+  </ItemAttributes>
+  <OfferSummary>
+    <LowestNewPrice>
+      <Amount>1204</Amount>
+      <CurrencyCode>USD</CurrencyCode>
+      <FormattedPrice>$12.04</FormattedPrice>
+    </LowestNewPrice>
+    <LowestUsedPrice>
+      <Amount>806</Amount>
+      <CurrencyCode>USD</CurrencyCode>
+      <FormattedPrice>$8.06</FormattedPrice>
+    </LowestUsedPrice>
+    <LowestCollectiblePrice>
+      <Amount>2195</Amount>
+      <CurrencyCode>USD</CurrencyCode>
+      <FormattedPrice>$21.95</FormattedPrice>
+    </LowestCollectiblePrice>
+    <TotalNew>24</TotalNew>
+    <TotalUsed>10</TotalUsed>
+    <TotalCollectible>3</TotalCollectible>
+    <TotalRefurbished>0</TotalRefurbished>
+  </OfferSummary>
+  <EditorialReviews>
+    <EditorialReview>
+      <Source>Book Description</Source>
+      <Content>This revelatory biography of Folies Bergere dancer Josephine Baker (1906-1975) is a study of
+        struggle, truimph and tragedy.
+      </Content>
+    </EditorialReview>
+  </EditorialReviews>
+</Item>

@@ -1,0 +1,6 @@
+if !@person_errors || @person_errors.empty?
+  page.call 'notify_person_chosen', @person.to_param, true, @index
+else
+  page.replace_html "show_#{@index}_person_panel", :partial => 'new_person', :locals => { :index => @index }
+end
+page.call :update_summary_characters_remaining_person_summary

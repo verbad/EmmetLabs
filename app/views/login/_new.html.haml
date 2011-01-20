@@ -1,0 +1,12 @@
+#login
+  .error_container
+    - if @login
+      - @login.errors.full_messages.each do |error|
+        .error= error
+  - form_for(:login, :url => login_path, :html => {:name => 'login_form'}) do |f|
+    %fieldset
+      = f.text_field(:email_address, :class => 'text', :tabindex => 1, :value =>'Email address', :onclick => 'if (this.value=="Email address") {this.value="";}' )
+      = f.password_field(:password, :value => '', :class =>'text', :tabindex => 2 )
+      = submit_tag 'Sign In', :class => 'secondary'
+
+      = link_to 'Forgot Password?', new_password_reset_request_path(), :class => 'small'

@@ -1,0 +1,7 @@
+test:
+  adapter: mysql
+  database: pivotal_core_bundle_test
+  username: root
+  password: password
+  host: localhost
+  encoding: utf8

@@ -1,0 +1,38 @@
+.primary, .secondary, .tertiary
+  +btn
+  :padding 2px 6px
+  
+.primary
+  :background-color #1FA5D2
+  :background-image url(/images/btn_primary_bg.gif)
+  :border-color #60C7EA #137797 #137797 #60C7EA
+
+.secondary
+  :background-color #804842
+  :background-image url(/images/btn_secondary_bg.gif)
+  :border-color #A03D32 #76180D #76180D #A03D32
+
+.tertiary
+  :background-image url(/images/btn_tertiary_bg.gif)
+  :padding .1em .8em
+  :border-color #daddde #92989a #92989a #daddde
+  
+.box
+  :padding 1.5em
+  :margin-bottom 1.5em
+  :background= !light_blue
+#left_column
+  +column(7)
+  
+.spinner
+  :background url( /images/spinner.gif ) no-repeat
+  :width 16px
+  :height 16px
+.error
+  +bold
+  :color red
+  :padding 2px 4px
+  
+.ext
+  :background url(/images/external_bg.gif) no-repeat right center
+  :padding-right 18px

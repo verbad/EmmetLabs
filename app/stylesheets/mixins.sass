@@ -1,0 +1,91 @@
+=inline
+  :display block
+  :float left
+  
+=dashed-border
+  :background
+    :color transparent
+    :image url(/images/border_dashed.gif)
+    :repeat repeat-x
+    :position center bottom
+  :padding-bottom 3px
+  :display block
+
+=clean
+  :list-style-type none
+  :padding 0
+  :margin 0
+
+=ir
+  :text-indent -9999px
+  :display block
+  :background-repeat no-repeat
+  :background-position left center
+
+=icon
+  :padding 2px 6px 2px 24px
+  :background
+    :position 5px 4px
+    :repeat no-repeat
+
+=lightweight-icon
+  +icon
+  +small
+  :text-decoration none
+  :background-position left center
+  :cursor pointer
+  :float right
+  :padding-left 10px
+  :margin-top 6px
+  :clear none
+
+=img-border
+  :padding 2px
+  :background #fff
+  :border
+    :width 1px
+    :style solid
+    :color= !light_gray
+
+=btn
+  +sans-serif
+  +bold
+  :font-size 13px
+  :background
+    :position center bottom
+    :repeat repeat-x
+  :border 1px solid #FFFFFF
+  :color #FFFFFF!important
+  :cursor pointer
+  :text-decoration none
+  :float right
+  :display block
+  :width auto
+
+=toolbtn
+  +btn
+  :padding 0 4px
+  :border-color= !medium_gray
+  :color= !link_color
+  :text-decoration none
+
+=top-padding-layout
+  :padding-top 30px
+  :clear both
+  :position relative
+  
+=gutter-layout
+  +top-padding-layout
+  +column(22)
+  +prepend(1)
+  +append(1)
+  +last
+
+=three-col-left
+  +column(7)
+
+=three-col-center
+  +column(12)
+=three-col-right
+  +column(5)
+  +last

@@ -1,0 +1,40 @@
+#directed_relationship
+  - relationship = @directed_relationship.relationship
+  #permalink=link_to "Permalink", pretty_directed_relationship_path(@directed_relationship), :class => 'edit'
+  = directed_relationship_title @directed_relationship    
+
+  #primary_column
+    - if current_user.nil?
+      .notice.access
+        %p
+          Welcome to Emmet. Please
+          = link_to "login", login_path
+          or
+          = link_to "register", login_path
+          to contribute to this page.
+    - elsif !current_user.account_verified? 
+      .notice.access
+        %p
+          Welcome to Emmet. Please confirm your account or
+          = link_to("resend new verification email", email_address_verification_requests_path(current_user, current_user.primary_email_address), {:method => :post})
+          in order to contribute to this page.
+
+    = render :partial => 'relationship_summaries/show', :locals => {:relationship => relationship}
+    = render :partial => 'relationships/show', :locals => {:relationship => relationship, :visible => true}
+
+    = render :partial => 'relationship_comments/index', :locals => {:relationship => relationship}
+    = render :partial => 'photos/photos', :locals => {:photoable => @directed_relationship.relationship}
+    = render :partial => 'relationship_bibliographies/show', :locals => {:relationship => relationship}
+    = render :partial => 'type', :locals => {:directed_relationship => @directed_relationship, :relationship_categories => @relationship_categories }
+
+  #secondary_column
+    - if relationship.photos.empty?
+      #primary_photo
+        - if current_user_valid?
+          = render :partial => 'photos/new_photo', :locals => {:photoable => relationship, :id => 'add_first_photo', :show => true}
+    - else
+      = render :partial => 'photos/primary_photo', :locals => {:photoable => relationship}
+    #synopses
+      = render :partial => 'nodes/synopsis', :locals => { :node => relationship.related_nodes.first }
+      = render :partial => 'nodes/synopsis', :locals => { :node => relationship.related_nodes.last }
+    = render :partial => 'amazon_search_results/loading'

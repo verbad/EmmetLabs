@@ -1,0 +1,18 @@
+<%= error_messages_for 'user' %>
+<% form_for :user, :url => user.new_record?? users_path : user_path(user), :html => {:method => user.new_record?? :post : :put} do |f| %>
+
+  <%= render :partial => '/users/email_field', :locals => {:user => user, :f => f} %>
+  <% if user.new_record? %>
+    <p><label for="user_password">Password</label><br/>
+    <%= f.password_field :password %></p>
+    <p><label for="user_password">Confirm Password</label><br/>
+    <%= f.password_field :password_confirmation %></p>
+  <% end %>
+  <p><label for="user_unique_name">Unique Name</label><br/>
+  <%= text_field_tag 'user[unique_name]', user.unique_name %></p>
+  <%= submit_tag "Submit", :id=>"submit" %>
+  <% if user.needs_to_accept_tos? %>
+    Check this box if you accept the terms of service:
+    <%= f.check_box :accept_terms_of_service, :id => 'accept_terms_of_service' %><br/>
+  <% end %>
+<% end %>

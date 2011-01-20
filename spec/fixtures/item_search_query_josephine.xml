@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ItemSearchResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2005-10-05">
+  <OperationRequest>
+    <HTTPHeaders>
+      <Header Name="UserAgent"
+              Value="Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11"></Header>
+    </HTTPHeaders>
+    <RequestId>0J1C9J55RQB61DABSX2M</RequestId>
+    <Arguments>
+      <Argument Name="SearchIndex" Value="All"></Argument>
+      <Argument Name="ItemPage" Value="1"></Argument>
+      <Argument Name="Service" Value="AWSECommerceService"></Argument>
+      <Argument Name="Keywords" Value="josephine baker"></Argument>
+      <Argument Name="SubscriptionId" Value="0DTQ5AAFKR6KRRM94JR2"></Argument>
+      <Argument Name="ResponseGroup" Value="Medium"></Argument>
+      <Argument Name="Operation" Value="ItemSearch"></Argument>
+    </Arguments>
+    <RequestProcessingTime>0.14461088180542</RequestProcessingTime>
+  </OperationRequest>
+  <Items>
+    <Request>
+      <IsValid>True</IsValid>
+      <ItemSearchRequest>
+        <ItemPage>1</ItemPage>
+        <Keywords>josephine baker</Keywords>
+        <ResponseGroup>Medium</ResponseGroup>
+        <SearchIndex>All</SearchIndex>
+      </ItemSearchRequest>
+    </Request>
+    <TotalResults>616</TotalResults>
+    <TotalPages>62</TotalPages>
+    <Item>
+      <ASIN>B00005AQML</ASIN>
+      <DetailPageURL>
+        http://www.amazon.com/gp/redirect.html%3FASIN=B00005AQML%26tag=ws%26lcode=xm2%26cID=2025%26ccmID=165953%26location=/o/ASIN/B00005AQML%253FSubscriptionId=0DTQ5AAFKR6KRRM94JR2
+      </DetailPageURL>
+      <SalesRank>17613</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/01SWNMVKNML.jpg</URL>
+        <Height Units="pixels">60</Height>
+        <Width Units="pixels">40</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/21NAFXAK9ZL.jpg</URL>
+        <Height Units="pixels">140</Height>
+        <Width Units="pixels">93</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/519PFD9WQYL.jpg</URL>
+        <Height Units="pixels">475</Height>
+        <Width Units="pixels">316</Width>
+      </LargeImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/01SWNMVKNML.jpg</URL>
+            <Height Units="pixels">60</Height>
+            <Width Units="pixels">40</Width>
+          </SmallImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/21NAFXAK9ZL.jpg</URL>
+            <Height Units="pixels">140</Height>
+            <Width Units="pixels">93</Width>
+          </MediumImage>
+          <LargeImage>
+            <URL>http://ecx.images-amazon.com/images/I/519PFD9WQYL.jpg</URL>
+            <Height Units="pixels">475</Height>
+            <Width Units="pixels">316</Width>
+          </LargeImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Actor>Lynn Whitfield</Actor>
+        <Actor>Rubén Blades</Actor>
+        <Actor>David Dukes</Actor>
+        <Actor>Louis Gossett Jr.</Actor>
+        <Actor>Craig T. Nelson</Actor>
+        <AspectRatio>1.85:1</AspectRatio>
+        <AudienceRating>R (Restricted)</AudienceRating>
+        <Binding>DVD</Binding>
+        <Director>Brian Gibson</Director>
+        <EAN>9780783118543</EAN>
+        <Format>Closed-captioned</Format>
+        <Format>Color</Format>
+        <Format>Dolby</Format>
+        <Format>DVD-Video</Format>
+        <Format>Full Screen</Format>
+        <Format>Widescreen</Format>
+        <Format>NTSC</Format>
+        <ISBN>0783118546</ISBN>
+        <Label>Hbo Home Video</Label>
+        <Languages>
+          <Language>
+            <Name>English</Name>
+            <Type>Subtitled</Type>
+          </Language>
+          <Language>
+            <Name>French</Name>
+            <Type>Subtitled</Type>
+          </Language>
+          <Language>
+            <Name>Spanish</Name>
+            <Type>Subtitled</Type>
+          </Language>
+          <Language>
+            <Name>English</Name>
+            <Type>Original Language</Type>
+            <AudioFormat>Dolby Digital 5.1</AudioFormat>
+          </Language>
+        </Languages>
+        <ListPrice>
+          <Amount>998</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$9.98</FormattedPrice>
+        </ListPrice>
+        <Manufacturer>Hbo Home Video</Manufacturer>
+        <MPN>D90571D</MPN>
+        <NumberOfItems>1</NumberOfItems>
+        <PackageDimensions>
+          <Height Units="hundredths-inches">60</Height>
+          <Length Units="hundredths-inches">740</Length>
+          <Weight Units="hundredths-pounds">10</Weight>
+          <Width Units="hundredths-inches">560</Width>
+        </PackageDimensions>
+        <ProductGroup>DVD</ProductGroup>
+        <Publisher>Hbo Home Video</Publisher>
+        <RegionCode>1</RegionCode>
+        <ReleaseDate>2001-06-05</ReleaseDate>
+        <RunningTime Units="minutes">131</RunningTime>
+        <Studio>Hbo Home Video</Studio>
+        <TheatricalReleaseDate>1991-03-16</TheatricalReleaseDate>
+        <Title>The Josephine Baker Story</Title>
+        <UPC>026359057120</UPC>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>365</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$3.65</FormattedPrice>
+        </LowestNewPrice>
+        <LowestUsedPrice>
+          <Amount>542</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$5.42</FormattedPrice>
+        </LowestUsedPrice>
+        <LowestCollectiblePrice>
+          <Amount>1349</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$13.49</FormattedPrice>
+        </LowestCollectiblePrice>
+        <TotalNew>50</TotalNew>
+        <TotalUsed>28</TotalUsed>
+        <TotalCollectible>2</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <EditorialReviews>
+        <EditorialReview>
+          <Source>Amazon.com</Source>
+          <Content>You know how it goes. You hear about what a sensation someone like Josephine Baker was in her prime
+            (in her case, the 1920s and '30s), how she pushed boundaries in such delicate areas as race and sex, how she
+            both thrilled and scandalized Paris with her exotic dancing and personal behavior. You have all these loose
+            strands of legend and random fact, your curiosity is running high, and then you hear that a feature film is
+            being made about the very subject. You watch, and then wonder: what was the big deal about Josephine Baker?
+            The problem with this 1991 TV movie is the same as with a number of HBO films from the 1980s and early '90s:
+            it isn't particularly well written, the production looks rushed, and the entire point is obscured in a whirl
+            of biographical material that doesn't sufficiently develop into insightful, organic unity. What &lt;I&gt;The
+            Josephine Baker Story&lt;/I&gt; does do, however, is provide a reference point from which to begin an
+            appreciation of Baker's life. A poor, African American girl from St. Louis, Baker found fame and wealth in
+            Europe as a dancer whose partially nude, unbridled performances invoked wit, sexual liberation, and
+            passion--without, somehow, seeming vulgar or obscene. As Baker, Lynn Whitfield gets into the uninhibited
+            spirit of things, free with her body and enthusiastic about re-creating many of her character's performances
+            (yes, the famed Banana Dance is a highlight). The film superficially suggests that Baker was celebrated as
+            an expressive artist, a healthy force of nature rather than a lewd exhibitionist, but it doesn't go far
+            enough down that road to tell us why she matters. Somewhat better is the script's contrasting emphasis on
+            Baker's celebrity overseas and her second-class status as a black woman in America. In the end, the film's
+            real accomplishment is underscoring how racism truly determines the course of an individual's life, and the
+            way Baker understood that both from the vantage point of a refugee and a victim. &lt;I&gt;--Tom Keogh&lt;/I&gt;</Content>
+        </EditorialReview>
+        <EditorialReview>
+          <Source>Description</Source>
+          <Content>Before Madonna, before Marilyn, there was Josephine. Outrageous, shocking, sensational, she travelled
+            the world to become one of the most loved, truly international stars. ' 'Sizzling hot.' ' (USA Today) ' 'A
+            knockout!' ' (Washington Post)
+          </Content>
+        </EditorialReview>
+      </EditorialReviews>
+    </Item>
+    <Item>
+      <ASIN>B000005BA9</ASIN>
+      <DetailPageURL>
+        http://www.amazon.com/gp/redirect.html%3FASIN=B000005BA9%26tag=ws%26lcode=xm2%26cID=2025%26ccmID=165953%26location=/o/ASIN/B000005BA9%253FSubscriptionId=0DTQ5AAFKR6KRRM94JR2
+      </DetailPageURL>
+      <SalesRank>30798</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/11CM8W9BYCL.jpg</URL>
+        <Height Units="pixels">50</Height>
+        <Width Units="pixels">50</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/2144V253H5L.jpg</URL>
+        <Height Units="pixels">130</Height>
+        <Width Units="pixels">130</Width>
+      </MediumImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/11CM8W9BYCL.jpg</URL>
+            <Height Units="pixels">50</Height>
+            <Width Units="pixels">50</Width>
+          </SmallImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/2144V253H5L.jpg</URL>
+            <Height Units="pixels">130</Height>
+            <Width Units="pixels">130</Width>
+          </MediumImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Artist>Josephjne Baker</Artist>
+        <Binding>Audio CD</Binding>
+        <EAN>0602267510324</EAN>
+        <Label>Arkadia Chansons</Label>
+        <ListPrice>
+          <Amount>1399</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$13.99</FormattedPrice>
+        </ListPrice>
+        <Manufacturer>Arkadia Chansons</Manufacturer>
+        <NumberOfDiscs>1</NumberOfDiscs>
+        <PackageDimensions>
+          <Height Units="hundredths-inches">54</Height>
+          <Length Units="hundredths-inches">555</Length>
+          <Weight Units="hundredths-pounds">18</Weight>
+          <Width Units="hundredths-inches">497</Width>
+        </PackageDimensions>
+        <ProductGroup>Music</ProductGroup>
+        <Publisher>Arkadia Chansons</Publisher>
+        <ReleaseDate>1997-07-15</ReleaseDate>
+        <Studio>Arkadia Chansons</Studio>
+        <Title>Josephine Baker: J'ai Deux Amours</Title>
+        <UPC>602267510324</UPC>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>729</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$7.29</FormattedPrice>
+        </LowestNewPrice>
+        <LowestUsedPrice>
+          <Amount>649</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$6.49</FormattedPrice>
+        </LowestUsedPrice>
+        <TotalNew>23</TotalNew>
+        <TotalUsed>11</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <EditorialReviews>
+        <EditorialReview>
+          <Source>Album Description</Source>
+          <Content>Chanteuse, cabaret star, and cause celebre, Josephine Baker (1906-1975) was born in St. Louis and
+            made famous in Paris, while still in her teens. Called "the Most Beautiful of Panthers," she captivated
+            audiences with performances that were both humorous and deductive. Remastered from original recordings. the
+            songs showcase Josephine in all her glory.
+          </Content>
+        </EditorialReview>
+      </EditorialReviews>
+    </Item>
+    <Item>
+      <ASIN>0815411723</ASIN>
+      <DetailPageURL>
+        http://www.amazon.com/gp/redirect.html%3FASIN=0815411723%26tag=ws%26lcode=xm2%26cID=2025%26ccmID=165953%26location=/o/ASIN/0815411723%253FSubscriptionId=0DTQ5AAFKR6KRRM94JR2
+      </DetailPageURL>
+      <SalesRank>389626</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/11DXJ2NVEAL.jpg</URL>
+        <Height Units="pixels">75</Height>
+        <Width Units="pixels">50</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/21FSPH7WW6L.jpg</URL>
+        <Height Units="pixels">160</Height>
+        <Width Units="pixels">106</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/5153524AD5L.jpg</URL>
+        <Height Units="pixels">500</Height>
+        <Width Units="pixels">331</Width>
+      </LargeImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SwatchImage>
+            <URL>http://ecx.images-amazon.com/images/I/014GJ3P334L.jpg</URL>
+            <Height Units="pixels">30</Height>
+            <Width Units="pixels">20</Width>
+          </SwatchImage>
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/11DXJ2NVEAL.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">50</Width>
+          </SmallImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/21FSPH7WW6L.jpg</URL>
+            <Height Units="pixels">160</Height>
+            <Width Units="pixels">106</Width>
+          </MediumImage>
+          <LargeImage>
+            <URL>http://ecx.images-amazon.com/images/I/5153524AD5L.jpg</URL>
+            <Height Units="pixels">500</Height>
+            <Width Units="pixels">331</Width>
+          </LargeImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Author>Jean-Claude Baker</Author>
+        <Binding>Paperback</Binding>
+        <DeweyDecimalNumber>792.8028092</DeweyDecimalNumber>
+        <EAN>9780815411727</EAN>
+        <Edition>1st Cooper Square Press ed</Edition>
+        <ISBN>0815411723</ISBN>
+        <Label>Cooper Square Press</Label>
+        <ListPrice>
+          <Amount>2195</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$21.95</FormattedPrice>
+        </ListPrice>
+        <Manufacturer>Cooper Square Press</Manufacturer>
+        <NumberOfItems>1</NumberOfItems>
+        <NumberOfPages>592</NumberOfPages>
+        <PackageDimensions>
+          <Height Units="hundredths-inches">142</Height>
+          <Length Units="hundredths-inches">898</Length>
+          <Weight Units="hundredths-pounds">172</Weight>
+          <Width Units="hundredths-inches">583</Width>
+        </PackageDimensions>
+        <ProductGroup>Book</ProductGroup>
+        <PublicationDate>2001-09-25</PublicationDate>
+        <Publisher>Cooper Square Press</Publisher>
+        <Studio>Cooper Square Press</Studio>
+        <Title>Josephine Baker: The Hungry Heart</Title>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>1204</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$12.04</FormattedPrice>
+        </LowestNewPrice>
+        <LowestUsedPrice>
+          <Amount>806</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$8.06</FormattedPrice>
+        </LowestUsedPrice>
+        <LowestCollectiblePrice>
+          <Amount>2195</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$21.95</FormattedPrice>
+        </LowestCollectiblePrice>
+        <TotalNew>24</TotalNew>
+        <TotalUsed>10</TotalUsed>
+        <TotalCollectible>3</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <EditorialReviews>
+        <EditorialReview>
+          <Source>Book Description</Source>
+          <Content>This revelatory biography of Folies Bergere dancer Josephine Baker (1906-1975) is a study of
+            struggle, truimph and tragedy.
+          </Content>
+        </EditorialReview>
+      </EditorialReviews>
+    </Item>
+    <Item>
+      <ASIN>B000OQDX40</ASIN>
+      <DetailPageURL>
+        http://www.amazon.com/gp/redirect.html%3FASIN=B000OQDX40%26tag=ws%26lcode=xm2%26cID=2025%26ccmID=165953%26location=/o/ASIN/B000OQDX40%253FSubscriptionId=0DTQ5AAFKR6KRRM94JR2
+      </DetailPageURL>
+      <SalesRank>44268</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/11QXdFEAqSL.jpg</URL>
+        <Height Units="pixels">75</Height>
+        <Width Units="pixels">55</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/21DeoHbeHZL.jpg</URL>
+        <Height Units="pixels">160</Height>
+        <Width Units="pixels">118</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/516osLHzctL.jpg</URL>
+        <Height Units="pixels">500</Height>
+        <Width Units="pixels">370</Width>
+      </LargeImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SwatchImage>
+            <URL>http://ecx.images-amazon.com/images/I/01Ijrj41ZVL.jpg</URL>
+            <Height Units="pixels">30</Height>
+            <Width Units="pixels">22</Width>
+          </SwatchImage>
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/11QXdFEAqSL.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">55</Width>
+          </SmallImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/21DeoHbeHZL.jpg</URL>
+            <Height Units="pixels">160</Height>
+            <Width Units="pixels">118</Width>
+          </MediumImage>
+          <LargeImage>
+            <URL>http://ecx.images-amazon.com/images/I/516osLHzctL.jpg</URL>
+            <Height Units="pixels">500</Height>
+            <Width Units="pixels">370</Width>
+          </LargeImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Actor>Josephine Baker</Actor>
+        <AspectRatio>1.33:1</AspectRatio>
+        <AudienceRating>NR (Not Rated)</AudienceRating>
+        <Binding>DVD</Binding>
+        <EAN>0738329050924</EAN>
+        <Format>Box set</Format>
+        <Format>Black &amp; White</Format>
+        <Format>Closed-captioned</Format>
+        <Format>DVD-Video</Format>
+        <Format>Subtitled</Format>
+        <Format>NTSC</Format>
+        <Label>Kino Video</Label>
+        <Languages>
+          <Language>
+            <Name>French</Name>
+            <Type>Original Language</Type>
+          </Language>
+          <Language>
+            <Name>English</Name>
+            <Type>Subtitled</Type>
+          </Language>
+        </Languages>
+        <ListPrice>
+          <Amount>5995</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$59.95</FormattedPrice>
+        </ListPrice>
+        <Manufacturer>Kino Video</Manufacturer>
+        <MPN>D5092D</MPN>
+        <NumberOfItems>3</NumberOfItems>
+        <PackageDimensions>
+          <Height Units="hundredths-inches">58</Height>
+          <Length Units="hundredths-inches">710</Length>
+          <Weight Units="hundredths-pounds">18</Weight>
+          <Width Units="hundredths-inches">542</Width>
+        </PackageDimensions>
+        <ProductGroup>DVD</ProductGroup>
+        <Publisher>Kino Video</Publisher>
+        <RegionCode>1</RegionCode>
+        <ReleaseDate>2007-05-15</ReleaseDate>
+        <Studio>Kino Video</Studio>
+        <Title>The Josephine Baker Collection (Zou Zou / Princess Tam Tam / Siren of the Tropics)</Title>
+        <UPC>738329050924</UPC>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>3779</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$37.79</FormattedPrice>
+        </LowestNewPrice>
+        <LowestUsedPrice>
+          <Amount>3853</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$38.53</FormattedPrice>
+        </LowestUsedPrice>
+        <TotalNew>38</TotalNew>
+        <TotalUsed>13</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+    </Item>
+    <Item>
+      <ASIN>B000003FH0</ASIN>
+      <DetailPageURL>
+        http://www.amazon.com/gp/redirect.html%3FASIN=B000003FH0%26tag=ws%26lcode=xm2%26cID=2025%26ccmID=165953%26location=/o/ASIN/B000003FH0%253FSubscriptionId=0DTQ5AAFKR6KRRM94JR2
+      </DetailPageURL>
+      <SalesRank>94256</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/11ft9xM8o9L.jpg</URL>
+        <Height Units="pixels">75</Height>
+        <Width Units="pixels">74</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/21UxJbhbdUL.jpg</URL>
+        <Height Units="pixels">160</Height>
+        <Width Units="pixels">158</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/51r9Ok2CeML.jpg</URL>
+        <Height Units="pixels">500</Height>
+        <Width Units="pixels">493</Width>
+      </LargeImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SwatchImage>
+            <URL>http://ecx.images-amazon.com/images/I/01q8OdaPUbL.jpg</URL>
+            <Height Units="pixels">30</Height>
+            <Width Units="pixels">30</Width>
+          </SwatchImage>
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/11ft9xM8o9L.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">74</Width>
+          </SmallImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/21UxJbhbdUL.jpg</URL>
+            <Height Units="pixels">160</Height>
+            <Width Units="pixels">158</Width>
+          </MediumImage>
+          <LargeImage>
+            <URL>http://ecx.images-amazon.com/images/I/51r9Ok2CeML.jpg</URL>
+            <Height Units="pixels">500</Height>
+            <Width Units="pixels">493</Width>
+          </LargeImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Artist>Josephine Baker</Artist>
+        <Binding>Audio CD</Binding>
+        <EAN>0090266166824</EAN>
+        <Label>RCA</Label>
+        <ListPrice>
+          <Amount>1198</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$11.98</FormattedPrice>
+        </ListPrice>
+        <Manufacturer>RCA</Manufacturer>
+        <MPN>61668</MPN>
+        <NumberOfDiscs>1</NumberOfDiscs>
+        <PackageDimensions>
+          <Height Units="hundredths-inches">40</Height>
+          <Length Units="hundredths-inches">550</Length>
+          <Weight Units="hundredths-pounds">20</Weight>
+          <Width Units="hundredths-inches">490</Width>
+        </PackageDimensions>
+        <ProductGroup>Music</ProductGroup>
+        <Publisher>RCA</Publisher>
+        <ReleaseDate>1995-01-10</ReleaseDate>
+        <Studio>RCA</Studio>
+        <Title>The Fabulous Josephine Baker</Title>
+        <UPC>090266166824</UPC>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>678</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$6.78</FormattedPrice>
+        </LowestNewPrice>
+        <LowestUsedPrice>
+          <Amount>391</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$3.91</FormattedPrice>
+        </LowestUsedPrice>
+        <LowestCollectiblePrice>
+          <Amount>1198</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$11.98</FormattedPrice>
+        </LowestCollectiblePrice>
+        <TotalNew>36</TotalNew>
+        <TotalUsed>17</TotalUsed>
+        <TotalCollectible>1</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+    </Item>
+    <Item>
+      <ASIN>6302555337</ASIN>
+      <DetailPageURL>
+        http://www.amazon.com/gp/redirect.html%3FASIN=6302555337%26tag=ws%26lcode=xm2%26cID=2025%26ccmID=165953%26location=/o/ASIN/6302555337%253FSubscriptionId=0DTQ5AAFKR6KRRM94JR2
+      </DetailPageURL>
+      <SalesRank>8754</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/01718NSD30L.jpg</URL>
+        <Height Units="pixels">60</Height>
+        <Width Units="pixels">33</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/21JZC1FJHDL.jpg</URL>
+        <Height Units="pixels">140</Height>
+        <Width Units="pixels">76</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/51MGZXX17QL.jpg</URL>
+        <Height Units="pixels">475</Height>
+        <Width Units="pixels">258</Width>
+      </LargeImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/01718NSD30L.jpg</URL>
+            <Height Units="pixels">60</Height>
+            <Width Units="pixels">33</Width>
+          </SmallImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/21JZC1FJHDL.jpg</URL>
+            <Height Units="pixels">140</Height>
+            <Width Units="pixels">76</Width>
+          </MediumImage>
+          <LargeImage>
+            <URL>http://ecx.images-amazon.com/images/I/51MGZXX17QL.jpg</URL>
+            <Height Units="pixels">475</Height>
+            <Width Units="pixels">258</Width>
+          </LargeImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Actor>Lynn Whitfield</Actor>
+        <Actor>Rubén Blades</Actor>
+        <Actor>David Dukes</Actor>
+        <Actor>Louis Gossett Jr.</Actor>
+        <Actor>Craig T. Nelson</Actor>
+        <AudienceRating>R (Restricted)</AudienceRating>
+        <Binding>VHS Tape</Binding>
+        <Director>Brian Gibson</Director>
+        <EAN>9786302555332</EAN>
+        <Format>Closed-captioned</Format>
+        <Format>Color</Format>
+        <Format>Dolby</Format>
+        <Format>NTSC</Format>
+        <ISBN>6302555337</ISBN>
+        <Label>Hbo Home Video</Label>
+        <Languages>
+          <Language>
+            <Name>English</Name>
+            <Type>Original Language</Type>
+            <AudioFormat>Analog</AudioFormat>
+          </Language>
+        </Languages>
+        <ListPrice>
+          <Amount>998</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$9.98</FormattedPrice>
+        </ListPrice>
+        <Manufacturer>Hbo Home Video</Manufacturer>
+        <NumberOfItems>1</NumberOfItems>
+        <PackageDimensions>
+          <Height Units="hundredths-inches">112</Height>
+          <Length Units="hundredths-inches">732</Length>
+          <Weight Units="hundredths-pounds">38</Weight>
+          <Width Units="hundredths-inches">419</Width>
+        </PackageDimensions>
+        <ProductGroup>Video</ProductGroup>
+        <Publisher>Hbo Home Video</Publisher>
+        <ReleaseDate>1994-12-12</ReleaseDate>
+        <RunningTime Units="minutes">129</RunningTime>
+        <Studio>Hbo Home Video</Studio>
+        <TheatricalReleaseDate>1991-03-16</TheatricalReleaseDate>
+        <Title>Josephine Baker Story</Title>
+        <UPC>026359057137</UPC>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>579</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$5.79</FormattedPrice>
+        </LowestNewPrice>
+        <LowestUsedPrice>
+          <Amount>66</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$0.66</FormattedPrice>
+        </LowestUsedPrice>
+        <LowestCollectiblePrice>
+          <Amount>1000</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$10.00</FormattedPrice>
+        </LowestCollectiblePrice>
+        <TotalNew>6</TotalNew>
+        <TotalUsed>21</TotalUsed>
+        <TotalCollectible>2</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <EditorialReviews>
+        <EditorialReview>
+          <Source>Amazon.com</Source>
+          <Content>You know how it goes. You hear about what a sensation someone like Josephine Baker was in her prime
+            (in her case, the 1920s and '30s), how she pushed boundaries in such delicate areas as race and sex, how she
+            both thrilled and scandalized Paris with her exotic dancing and personal behavior. You have all these loose
+            strands of legend and random fact, your curiosity is running high, and then you hear that a feature film is
+            being made about the very subject. You watch, and then wonder: what was the big deal about Josephine Baker?
+            The problem with this 1991 TV movie is the same as with a number of HBO films from the 1980s and early '90s:
+            it isn't particularly well written, the production looks rushed, and the entire point is obscured in a whirl
+            of biographical material that doesn't sufficiently develop into insightful, organic unity. What &lt;I&gt;The
+            Josephine Baker Story&lt;/I&gt; does do, however, is provide a reference point from which to begin an
+            appreciation of Baker's life. A poor, African American girl from St. Louis, Baker found fame and wealth in
+            Europe as a dancer whose partially nude, unbridled performances invoked wit, sexual liberation, and
+            passion--without, somehow, seeming vulgar or obscene. As Baker, Lynn Whitfield gets into the uninhibited
+            spirit of things, free with her body and enthusiastic about re-creating many of her character's performances
+            (yes, the famed Banana Dance is a highlight). The film superficially suggests that Baker was celebrated as
+            an expressive artist, a healthy force of nature rather than a lewd exhibitionist, but it doesn't go far
+            enough down that road to tell us why she matters. Somewhat better is the script's contrasting emphasis on
+            Baker's celebrity overseas and her second-class status as a black woman in America. In the end, the film's
+            real accomplishment is underscoring how racism truly determines the course of an individual's life, and the
+            way Baker understood that both from the vantage point of a refugee and a victim. &lt;I&gt;--Tom Keogh&lt;/I&gt;</Content>
+        </EditorialReview>
+      </EditorialReviews>
+    </Item>
+    <Item>
+      <ASIN>B0000WCTKC</ASIN>
+      <DetailPageURL>
+        http://www.amazon.com/gp/redirect.html%3FASIN=B0000WCTKC%26tag=ws%26lcode=xm2%26cID=2025%26ccmID=165953%26location=/o/ASIN/B0000WCTKC%253FSubscriptionId=0DTQ5AAFKR6KRRM94JR2
+      </DetailPageURL>
+      <SalesRank>167002</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/0150XK9EHVL.jpg</URL>
+        <Height Units="pixels">75</Height>
+        <Width Units="pixels">60</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/1119XJ50MSL.jpg</URL>
+        <Height Units="pixels">160</Height>
+        <Width Units="pixels">128</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/31EZPQVHTVL.jpg</URL>
+        <Height Units="pixels">425</Height>
+        <Width Units="pixels">339</Width>
+      </LargeImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SwatchImage>
+            <URL>http://ecx.images-amazon.com/images/I/01WVCW52QZL.jpg</URL>
+            <Height Units="pixels">30</Height>
+            <Width Units="pixels">24</Width>
+          </SwatchImage>
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/0150XK9EHVL.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">60</Width>
+          </SmallImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/1119XJ50MSL.jpg</URL>
+            <Height Units="pixels">160</Height>
+            <Width Units="pixels">128</Width>
+          </MediumImage>
+          <LargeImage>
+            <URL>http://ecx.images-amazon.com/images/I/31EZPQVHTVL.jpg</URL>
+            <Height Units="pixels">425</Height>
+            <Width Units="pixels">339</Width>
+          </LargeImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Binding>Kitchen</Binding>
+        <Brand>Art.com</Brand>
+        <Feature>Print Title: Black Thunder, Josephine Baker</Feature>
+        <Feature>Artist: Paul Colin</Feature>
+        <Feature>Size: 10 x 12 inches</Feature>
+        <Feature>Please visit www.amazon.com/artdotcom to check for promotions from time to time.</Feature>
+        <ItemDimensions>
+          <Height Units="hundredths-inches">1200</Height>
+          <Length Units="hundredths-inches">1200</Length>
+          <Width Units="hundredths-inches">1000</Width>
+        </ItemDimensions>
+        <Label>Art.com</Label>
+        <Manufacturer>Art.com</Manufacturer>
+        <ProductGroup>Kitchen</ProductGroup>
+        <Publisher>Art.com</Publisher>
+        <Studio>Art.com</Studio>
+        <Title>Black Thunder, Josephine Baker Dance Art Poster Print by Paul Colin, 10x12</Title>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>799</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$7.99</FormattedPrice>
+        </LowestNewPrice>
+        <TotalNew>1</TotalNew>
+        <TotalUsed>0</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <EditorialReviews>
+        <EditorialReview>
+          <Source>Product Description</Source>
+          <Content>Art.com is the world's largest retailer of art prints, posters, photographs, and framed artwork. With
+            our huge selection of over 400,000 prints, you'll easily find the perfect piece for your home, office, or
+            classroom. Our art is printed on quality paper. When you order framed artwork, the piece is built by our
+            team of in-house professionals. Visit our Amazon store today at www.amazon.com/artdotcom to find Special
+            Offers and search for products based on 'Artist Name' and 'Subject Categories' such as Movie, Music,
+            Vintage, TV, Children, Travel, Kitchen, Museum Art, Animals, Floral, Motivational, and Sports. Art.com is
+            dedicated to providing you with high quality products and service by offering you 100% satisfaction
+            guaranteed. We ship internationally to over 80 countries. Decorate your home today with your favorite
+            pictures that express and celebrate your distinct tastes.
+          </Content>
+        </EditorialReview>
+      </EditorialReviews>
+    </Item>
+    <Item>
+      <ASIN>0252031571</ASIN>
+      <DetailPageURL>
+        http://www.amazon.com/gp/redirect.html%3FASIN=0252031571%26tag=ws%26lcode=xm2%26cID=2025%26ccmID=165953%26location=/o/ASIN/0252031571%253FSubscriptionId=0DTQ5AAFKR6KRRM94JR2
+      </DetailPageURL>
+      <SalesRank>178219</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/11CK00558SL.jpg</URL>
+        <Height Units="pixels">75</Height>
+        <Width Units="pixels">50</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/21BZG3GAG1L.jpg</URL>
+        <Height Units="pixels">160</Height>
+        <Width Units="pixels">107</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/5167PJYWN8L.jpg</URL>
+        <Height Units="pixels">500</Height>
+        <Width Units="pixels">333</Width>
+      </LargeImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SwatchImage>
+            <URL>http://ecx.images-amazon.com/images/I/01J3K0HG67L.jpg</URL>
+            <Height Units="pixels">30</Height>
+            <Width Units="pixels">20</Width>
+          </SwatchImage>
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/11CK00558SL.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">50</Width>
+          </SmallImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/21BZG3GAG1L.jpg</URL>
+            <Height Units="pixels">160</Height>
+            <Width Units="pixels">107</Width>
+          </MediumImage>
+          <LargeImage>
+            <URL>http://ecx.images-amazon.com/images/I/5167PJYWN8L.jpg</URL>
+            <Height Units="pixels">500</Height>
+            <Width Units="pixels">333</Width>
+          </LargeImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Author>Bennetta Jules-Rosette</Author>
+        <Binding>Hardcover</Binding>
+        <DeweyDecimalNumber>792.8028092</DeweyDecimalNumber>
+        <EAN>9780252031571</EAN>
+        <Edition>1</Edition>
+        <ISBN>0252031571</ISBN>
+        <Label>University of Illinois Press</Label>
+        <ListPrice>
+          <Amount>6000</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$60.00</FormattedPrice>
+        </ListPrice>
+        <Manufacturer>University of Illinois Press</Manufacturer>
+        <NumberOfItems>1</NumberOfItems>
+        <NumberOfPages>392</NumberOfPages>
+        <PackageDimensions>
+          <Height Units="hundredths-inches">120</Height>
+          <Length Units="hundredths-inches">910</Length>
+          <Weight Units="hundredths-pounds">180</Weight>
+          <Width Units="hundredths-inches">620</Width>
+        </PackageDimensions>
+        <ProductGroup>Book</ProductGroup>
+        <PublicationDate>2007-04-23</PublicationDate>
+        <Publisher>University of Illinois Press</Publisher>
+        <Studio>University of Illinois Press</Studio>
+        <Title>Josephine Baker in Art and Life: THE ICON AND THE IMAGE</Title>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>5996</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$59.96</FormattedPrice>
+        </LowestNewPrice>
+        <LowestUsedPrice>
+          <Amount>4184</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$41.84</FormattedPrice>
+        </LowestUsedPrice>
+        <TotalNew>13</TotalNew>
+        <TotalUsed>5</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <EditorialReviews>
+        <EditorialReview>
+          <Source>Book Description</Source>
+          <Content>&lt;div&gt;Josephine Baker (1906-1975) was a dancer, singer, actress, author, politician, militant,
+            and philanthropist, whose images and cultural legacy have survived beyond the hundredth anniversary of her
+            birth. Neither an exercise in postmodern deconstruction nor simple biography, &lt;u&gt;Josephine Baker in
+            Art and Life&lt;/u&gt; presents a critical cultural study of the life and art of the Franco-American
+            performer whose appearances as the savage dancer Fatou shocked the world. &lt;br&gt; &lt;br&gt; Although the
+            study remains firmly anchored in Josephine Baker&amp;rsquo;s life and times, presenting and challenging
+            carefully researched biographical facts, it also offers in-depth analyses of the images that she constructed
+            and advanced. Bennetta Jules-Rosette explores Baker&amp;rsquo;s far-ranging and dynamic career from a
+            sociological and cultural perspective, using the tools of sociosemiotics to excavate the narratives, images,
+            and representations that trace the story of her life and fit together as a cultural production.&lt;br&gt;&lt;/div&gt;</Content>
+        </EditorialReview>
+      </EditorialReviews>
+    </Item>
+    <Item>
+      <ASIN>B0009CTTX8</ASIN>
+      <DetailPageURL>
+        http://www.amazon.com/gp/redirect.html%3FASIN=B0009CTTX8%26tag=ws%26lcode=xm2%26cID=2025%26ccmID=165953%26location=/o/ASIN/B0009CTTX8%253FSubscriptionId=0DTQ5AAFKR6KRRM94JR2
+      </DetailPageURL>
+      <SalesRank>64747</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/11641RX27TL.jpg</URL>
+        <Height Units="pixels">75</Height>
+        <Width Units="pixels">53</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/314GTSEJGDL.jpg</URL>
+        <Height Units="pixels">160</Height>
+        <Width Units="pixels">112</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/51NSNTMTYTL.jpg</URL>
+        <Height Units="pixels">500</Height>
+        <Width Units="pixels">351</Width>
+      </LargeImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SwatchImage>
+            <URL>http://ecx.images-amazon.com/images/I/01G7R5DX13L.jpg</URL>
+            <Height Units="pixels">30</Height>
+            <Width Units="pixels">21</Width>
+          </SwatchImage>
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/11641RX27TL.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">53</Width>
+          </SmallImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/314GTSEJGDL.jpg</URL>
+            <Height Units="pixels">160</Height>
+            <Width Units="pixels">112</Width>
+          </MediumImage>
+          <LargeImage>
+            <URL>http://ecx.images-amazon.com/images/I/51NSNTMTYTL.jpg</URL>
+            <Height Units="pixels">500</Height>
+            <Width Units="pixels">351</Width>
+          </LargeImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Actor>Josephine Baker</Actor>
+        <Actor>Pierre Batcheff</Actor>
+        <Actor>Régina Dalthy</Actor>
+        <Actor>Regina Thomas (II)</Actor>
+        <Actor>Georges Melchior</Actor>
+        <AspectRatio>1.33:1</AspectRatio>
+        <AudienceRating>NR (Not Rated)</AudienceRating>
+        <Binding>DVD</Binding>
+        <Director>Henri Étiévant</Director>
+        <Director>Mario Nalpas</Director>
+        <EAN>0738329039929</EAN>
+        <Format>Black &amp; White</Format>
+        <Format>Color</Format>
+        <Format>DVD-Video</Format>
+        <Format>Silent</Format>
+        <Format>NTSC</Format>
+        <Label>Kino Video</Label>
+        <Languages>
+          <Language>
+            <Name>English</Name>
+            <Type>Original Language</Type>
+          </Language>
+        </Languages>
+        <ListPrice>
+          <Amount>2995</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$29.95</FormattedPrice>
+        </ListPrice>
+        <Manufacturer>Kino Video</Manufacturer>
+        <NumberOfItems>1</NumberOfItems>
+        <PackageDimensions>
+          <Height Units="hundredths-inches">58</Height>
+          <Length Units="hundredths-inches">710</Length>
+          <Weight Units="hundredths-pounds">18</Weight>
+          <Width Units="hundredths-inches">542</Width>
+        </PackageDimensions>
+        <ProductGroup>DVD</ProductGroup>
+        <Publisher>Kino Video</Publisher>
+        <RegionCode>1</RegionCode>
+        <ReleaseDate>2005-06-21</ReleaseDate>
+        <RunningTime Units="minutes">86</RunningTime>
+        <Studio>Kino Video</Studio>
+        <TheatricalReleaseDate>1928</TheatricalReleaseDate>
+        <Title>Siren of the Tropics</Title>
+        <UPC>738329039929</UPC>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>1644</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$16.44</FormattedPrice>
+        </LowestNewPrice>
+        <LowestUsedPrice>
+          <Amount>1439</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$14.39</FormattedPrice>
+        </LowestUsedPrice>
+        <TotalNew>21</TotalNew>
+        <TotalUsed>11</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+    </Item>
+    <Item>
+      <ASIN>B000EBGFOU</ASIN>
+      <DetailPageURL>
+        http://www.amazon.com/gp/redirect.html%3FASIN=B000EBGFOU%26tag=ws%26lcode=xm2%26cID=2025%26ccmID=165953%26location=/o/ASIN/B000EBGFOU%253FSubscriptionId=0DTQ5AAFKR6KRRM94JR2
+      </DetailPageURL>
+      <SalesRank>134964</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/11i08Ip3faL.jpg</URL>
+        <Height Units="pixels">75</Height>
+        <Width Units="pixels">75</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/314RvN6RH8L.jpg</URL>
+        <Height Units="pixels">160</Height>
+        <Width Units="pixels">160</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/51y3D9OVkBL.jpg</URL>
+        <Height Units="pixels">455</Height>
+        <Width Units="pixels">455</Width>
+      </LargeImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SwatchImage>
+            <URL>http://ecx.images-amazon.com/images/I/01QrHCnzHGL.jpg</URL>
+            <Height Units="pixels">30</Height>
+            <Width Units="pixels">30</Width>
+          </SwatchImage>
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/11i08Ip3faL.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">75</Width>
+          </SmallImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/314RvN6RH8L.jpg</URL>
+            <Height Units="pixels">160</Height>
+            <Width Units="pixels">160</Width>
+          </MediumImage>
+          <LargeImage>
+            <URL>http://ecx.images-amazon.com/images/I/51y3D9OVkBL.jpg</URL>
+            <Height Units="pixels">455</Height>
+            <Width Units="pixels">455</Width>
+          </LargeImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Artist>Josephine Baker</Artist>
+        <Binding>Audio CD</Binding>
+        <EAN>5055122110651</EAN>
+        <Format>Import</Format>
+        <Label>Sepia Recordings</Label>
+        <ListPrice>
+          <Amount>1598</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$15.98</FormattedPrice>
+        </ListPrice>
+        <Manufacturer>Sepia Recordings</Manufacturer>
+        <NumberOfDiscs>1</NumberOfDiscs>
+        <PackageDimensions>
+          <Height Units="hundredths-inches">54</Height>
+          <Length Units="hundredths-inches">555</Length>
+          <Weight Units="hundredths-pounds">18</Weight>
+          <Width Units="hundredths-inches">497</Width>
+        </PackageDimensions>
+        <ProductGroup>Music</ProductGroup>
+        <Publisher>Sepia Recordings</Publisher>
+        <ReleaseDate>2006-03-13</ReleaseDate>
+        <Studio>Sepia Recordings</Studio>
+        <Title>A Centenary Tribute: Songs from 1930-1953</Title>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>1094</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$10.94</FormattedPrice>
+        </LowestNewPrice>
+        <LowestUsedPrice>
+          <Amount>1039</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$10.39</FormattedPrice>
+        </LowestUsedPrice>
+        <TotalNew>13</TotalNew>
+        <TotalUsed>3</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <EditorialReviews>
+        <EditorialReview>
+          <Source>Album Description</Source>
+          <Content>This CD celebrates the centenary of the extraordinary Josephine Baker, the American who conquered
+            first France, then the rest of Europe! The 27 tracks here span the years 1930-1953, including five numbers
+            that are appearing on CD for the first time. CD booklet includes French lyrics translated into English and
+            rare photos. Includes "Pretty Little Baby," "Dis Moi Josephine," "Love is a Dreamer," "I'm Feelin' Like a
+            Million,""Araid to Dream," "Besame Mucho," "Brazil," "Serenade Celeste," "You're the Greatest Love," and
+            more.
+          </Content>
+        </EditorialReview>
+      </EditorialReviews>
+    </Item>
+  </Items>
+</ItemSearchResponse>

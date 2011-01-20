@@ -1,0 +1,27 @@
+rdy_primary:
+  id: 1
+  user_id: 1
+  address: rdy@pivotallabs.com
+  verified: true
+  primary: true
+
+edward_primary:
+  id: 2
+  user_id: 2
+  address: edward@pivotallabs.com
+  verified: true
+  primary: true
+
+janice_primary:
+  id: 3
+  user_id: 3
+  address: clevergirl@gmail.com
+  verified: true
+  primary: true
+
+david_primary:
+  id: 4
+  user_id: 4
+  address: david@emmetlabs.com
+  verified: true
+  primary: true

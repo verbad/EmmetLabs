@@ -1,0 +1,147 @@
+.edit, .add
+  :float right
+  :clear none
+.save
+  +large
+.cancel,.save
+  :text-transform capitalize
+.cancel
+  :margin 3px 6px 0 0
+.cancel:hover, .save:hover
+  :text-decoration none
+  :color #fff
+.editable
+  :clear both
+  .spinner
+    :background-image url(/images/editable_spinner.gif)
+  .error
+    +bold
+    :color red
+    :margin 0 8px
+  .hd
+    +clearfix
+    :padding-top .8em
+    :border
+      :bottom 1px
+      :style solid
+      :color= !light_gray
+    h1
+      :float left
+      :padding-left 16px
+    h2
+      +sans-serif
+      +bold
+      +medium
+      :color= !dark_gray
+      :float left
+      :padding-bottom .1em
+      :margin-bottom 0
+      :padding-top 0
+      :margin-top 0
+      :padding-left 16px
+  .first
+    :border-bottom-width 0
+  .bd
+    :position relative
+    :padding 8px 8px 8px 16px
+    textarea
+      :max-height 120px
+    h1, h2
+      +sans-serif
+      +medium
+      :font-weight bold
+      :float none
+      :display block
+      :padding-left 0!important
+  .ft
+    +clearfix
+    :clear both
+    :background #eee
+    :padding 4px 8px 4px 4px
+    :position relative
+    :border
+      :width 1px 0
+      :style solid
+      :color= !light_gray
+    p.note
+      +icon
+      +small
+      +bold
+      :float left
+      :margin 4px 0 0 4px
+      :background-position left center
+      :padding-left 18px
+      :height 12px
+      :background-image url(/images/p_note_bg.gif)
+    .spinner
+      :background-image url(/images/save_spinner.gif)
+      :position absolute
+      :bottom 12px
+      :right 16px
+      :z-index 100
+    .save
+      :padding
+        :left 26px
+        :right 26px
+  p.new
+    :color= !medium_gray
+    a
+      :float left
+    ul
+      +clean
+      :margin 0
+  h6
+    :clear both
+    :padding .6em .2em
+  textarea
+    +sans-serif
+    +normal
+    :width 90%
+    :background= !light_yellow
+    :border 0
+    :color= !dark_gray
+    :padding-top 12px
+.active
+  :background= !light_yellow
+  .hd
+    :background #fff
+    :margin-bottom 0
+  .first
+    :border-bottom-width 1px
+  .edit
+    :color= !dark_gray
+    :cursor default
+
+.editing
+  :clear both
+  :padding-top 20px
+
+#summary
+  .editable
+    .hd
+      :padding-top 0
+    .bd
+      textarea
+        :height 35px
+      p
+        +bold
+        :font-size 16px
+        :line-height 18px
+        :margin-bottom 0
+        .edit
+          :font-weight normal
+          :display inline
+          :float none
+          :margin-left 10px
+#milestones
+  .bd
+    :padding-left 8px
+#article
+  .editable
+    .bd
+      textarea
+        :max-height 240px
+
+#permalink
+  .edit
+    :margin-right 10px

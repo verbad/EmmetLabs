@@ -1,0 +1,1 @@
+page.visual_effect :fade, "delete_#{@relationship.id}", :duration => 0.1

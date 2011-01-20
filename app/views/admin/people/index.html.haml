@@ -1,0 +1,18 @@
+%h1  All People
+%h2= "#{@people.total_entries} total"
+.pagetools
+  = will_paginate @people
+  %ol.show_counts
+    %li= show_pagination_count(25, @per_page, @page_number, @column_count)
+    %li= show_pagination_count(50, @per_page, @page_number, @column_count)
+    %li= show_pagination_count(100, @per_page, @page_number, @column_count)
+- per_column = @per_page / @column_count
+- (0..@column_count - 1).each do |column_index|
+  -  start_index = per_column * column_index
+  -  if start_index < @people.size
+    %ul.people
+      - @people[start_index, per_column].each do |person|
+        %li
+          = link_to "#{person.full_name} <small>(#{person.directed_relationships.size})</small>", admin_person_path(person), { :title => "#{person.full_name} (#{pluralize(person.directed_relationships.size, 'connection')})" }
+.pagetools
+  = will_paginate @people

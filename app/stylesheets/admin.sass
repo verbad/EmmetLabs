@@ -1,0 +1,116 @@
+html
+  body
+    ol#admin_nav
+      :background-color= !light_gray
+      :height 46px
+      :clear both
+      :margin 0
+      :position relative
+      :padding-left 40px
+      :border-bottom 1px solid #333
+      li
+        +clean
+        +bold
+        +medium
+        :text-transform capitalize
+        :position relative
+        :top 13px
+        :float left
+        :margin 0 2px
+        :padding 0
+        :color #333
+        a, a:hover, a:visited
+          :background= !light_blue
+          :position relative
+          :white-space nowrap
+          :border-bottom 1px solid #333
+          :padding
+            :top 9px
+            :bottom 7px
+            :left 12px
+            :right 12px
+          :margin
+            :left -12px
+            :right -12px
+          :border 1px solid #333
+          :border-left-color= !light_blue
+          :border-right-color= !light_blue
+        span
+          :background #fff
+          :display block
+          :top 0
+          :left 0
+          :color= #333
+          :border
+            :width 1px 1px 0 1px
+            :style solid
+            :color #333
+          :padding
+            :top 8px
+            :bottom 7px
+            :left 12px
+            :right 12px
+    #admin
+      .control
+        +bold
+        :margin 10px
+        :float left
+      h2
+        :clear both
+      .buttons
+        +clean
+        +inline
+        :float left
+        li
+          :float right
+          :display block
+          :margin 4px
+          a
+            :margin 0
+      table
+        :width 800px
+        :border
+          :width 0 1px 0 0 
+          :style dashed
+          :color= !light_gray
+        th
+          :color #333
+          :text-align center
+          :border
+            :width 1px 0 0 1px
+            :style dashed
+            :color= !light_gray
+        tr
+          :color= !dark_gray
+        tr:hover
+          :background #eef4ff
+        td
+          :padding 6px 10px
+          :border
+            :width 0 0 1px 1px
+            :style dashed
+            :color= !light_gray
+        td.actions
+          +span(10)
+          :text-align center
+          .edit, .delete
+            :float none
+          .delete
+            :margin-left 80px
+        .control
+          :height 15px
+          :padding-left 1.2em
+          :margin-top 2em
+        .view
+          :font-weight bold
+          :margin-right 6px
+        input
+          :float left
+          :width 180px
+      .people
+        +clean
+        +column(7)
+        :float left
+        li a
+          +dashed-border
+          :padding 6px

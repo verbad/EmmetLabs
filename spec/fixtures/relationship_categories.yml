@@ -1,0 +1,69 @@
+lover:
+  id: 1
+  name: Lover
+  metacategory_id: 2
+  
+mentor:
+  id: 2
+  name: Mentor
+  opposite_id: 3
+  metacategory_id: 2
+  
+student:
+  id: 3
+  name: Student
+  opposite_id: 2
+  metacategory_id: 2
+  
+colleague:
+  id: 4
+  name: Colleague
+  metacategory_id: 2
+  
+enemy:
+  id: 5
+  name: Enemy
+  metacategory_id: 2
+  
+parent:
+  id: 6
+  name: Parent
+  metacategory_id: 1
+  opposite_id: 7
+
+child:
+  id: 7
+  name: Child
+  metacategory_id: 1
+  opposite_id: 6
+
+friend:
+  id: 8
+  name: Friend
+  metacategory_id: 2
+  
+cousin:
+  id: 9
+  name: Cousin
+  metacategory_id: 1
+
+relative:
+  id: 10
+  name: Relative
+  metacategory_id: 1
+
+sibling:
+  id: 11
+  name: Sibling
+  metacategory_id: 1
+
+partner:
+  id: 12
+  name: Partner
+  metacategory_id: 1
+
+associate:
+  id: 13
+  name: Associate
+  metacategory_id: 2
+  

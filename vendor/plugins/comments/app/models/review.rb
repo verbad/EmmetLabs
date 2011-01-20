@@ -1,0 +1,3 @@
+class Review < Comment
+  
+end

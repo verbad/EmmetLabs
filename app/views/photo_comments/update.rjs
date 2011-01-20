@@ -1,0 +1,3 @@
+page.replace "photo_comment_#{@photo.id}", :partial => 'show', :locals => {:photo => @photo, :comment => @comment}
+page["photo_comment_#{@photo.id}_edit"].show
+page.replace_html "primary_photo_comment", m(@comment.text) if @photo.primary?

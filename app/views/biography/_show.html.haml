@@ -1,0 +1,31 @@
+#biography
+  #biography_readonly.editable{:style => person.errors.on(:biography).blank? && !person.new_record? ? nil : 'display:none'}
+
+    - if (person.biography_original.blank?)
+      .hd
+        %h2 Biography
+      .bd
+        - if current_user_valid?
+          %p.new= link_to_function 'add biography details', %Q|new Effect.Fade("biography_readonly", {duration: 0.3}); new Effect.Appear("biography_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("biography_editable").focus();\', 650);|, :class => 'add'
+    - else
+      .hd
+        %h2 Biography
+        - if current_user_valid?
+          = link_to_function 'edit', %Q|new Effect.Fade("biography_readonly", {duration: 0.3}); new Effect.Appear("biography_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("biography_editable").focus();\', 650);|, :class => 'edit'
+      .bd= m(person.biography_original)
+
+  - if current_user_valid?
+    #biography_editable.editable.active{:style => person.errors.on(:biography).blank? && !person.new_record? ? 'display:none' : nil}
+      - unless person.errors.on(:biography).blank?
+        #person_biography_error.error
+          = person.errors.on(:biography)
+
+      .hd
+        %h2 Biography
+      .bd
+        - remote_form_for :person, person, :url => person_biography_path(person), :html => {:method => :put, :name => 'biography_form'} do |f|
+          = f.text_area(:biography)  
+      .ft
+        #biography_spinner.spinner{:style => 'display: none'}
+        = link_to_function 'Save', '$("biography_spinner").show(); document.biography_form.onsubmit();', :class => 'save primary'
+        = link_to_function 'Cancel', %Q|document.biography_form.reset(); new Effect.Fade("biography_editable", {duration: 0.3}); if ($('person_biography_error')) new Effect.Fade("person_biography_error", {duration: 0.3}); new Effect.Appear("biography_readonly", {duration: 0.3, delay: 0.3});|, :class => 'cancel tertiary'

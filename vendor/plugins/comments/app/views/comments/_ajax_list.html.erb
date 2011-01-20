@@ -1,0 +1,23 @@
+<% if flash[:error] %>
+    <div class="error"><%= flash[:error] %></div>
+<% end %>
+
+<h3>Comments:</h3>
+
+<ul>
+<% @comment_list.each do |comment| %>
+<li>On <%= comment.created_at.to_s(:short)%>, <%= h(comment.author) %> said:<br />
+    <%= h(comment.text)%></li>
+<% end %>
+</ul>
+
+<% unless showing_more %>
+<div><%= show_more_comments_link("Show more") %></div>
+<% end %>
+
+Add comment: <br />
+<% form_remote_tag(add_comments_form_options) do %>
+    <%= comments_form_hidden_fields %>
+    <%= text_area_tag 'text' %>
+    <%= submit_tag "Add comment" %>
+<% end %>

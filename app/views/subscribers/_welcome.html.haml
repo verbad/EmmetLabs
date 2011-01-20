@@ -1,0 +1,13 @@
+.error_container
+  - if @subscriber && !@subscriber.valid?
+    - @subscriber.errors.full_messages.each do |error|
+      .error= error
+      
+  - remote_form_for(:subscriber, nil, :url => subscribers_path,  :html => {:name => 'subscriber_form'}) do |form|
+    %fieldset
+      - sign_up_button = capture_haml do
+        .primary Sign Up
+      = link_to_function sign_up_button, 'document.subscriber_form.onsubmit()', {:id => 'sign_up_button', :tabindex => '3'}
+      %label{:for => 'subscriber_email_address'} Want to know more?
+      = form.text_field(:email_address, :class => 'text', :value => 'Enter email address', :onclick => 'if (this.value=="Enter email address") {this.value="";}' )
+      = submit_tag 'sign up', :style => 'display: none'

@@ -1,0 +1,14 @@
+.DS_Store
+log/*.log
+tmp/**/*
+.svn
+public/assets/**/*
+public/stylesheets/compiled/*
+public/flash/*App.html
+public/flash/*.js
+public/flash/*.html
+db/schema.rb
+db/*.sql
+# vendor/desert
+# vendor/docdiff
+# vendor/flex_sdk

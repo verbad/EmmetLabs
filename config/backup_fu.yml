@@ -1,0 +1,6 @@
+# The app_name is used as the backup filename prefix
+app_name: emmet
+# You must create the s3_bucket specified below via an external tool like S3 Browser, etc
+s3_bucket: emmet_production_backup
+aws_access_key_id: 05QR64FNGJ1MPVS9KHR2
+aws_secret_access_key: u9OQ2bZTV39w3TfPK898Kq53R/sbD4R22N2s2r0d

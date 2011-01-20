@@ -1,0 +1,49 @@
+#directed_relationship
+  +clearfix
+  h1
+    :padding-left 15px
+    :padding-bottom 0
+    :margin-bottom .2em
+#synopses
+  :clear both
+.synopsis
+  :clear both
+  ol
+    :margin 1em 0 0 0
+    :padding-bottom 10px
+    li
+      +clean
+      +inline
+  ul
+    +clean
+    li.milestone
+      +small
+      +bold
+  p
+    :margin .2em 0
+#primary_photo
+  img
+    +img-border
+    :margin 0 auto
+    :display block
+#secondary_column
+  #primary_photo
+    :margin-bottom 10px
+  .box
+    :margin-left 10px
+
+ul.comments
+  +clean
+  li
+    :color= !dark_gray
+    .title
+      +dashed-border
+    .body
+      :padding-top 8px
+
+#relationship_details
+  .box
+    :background-color= !light_yellow
+  .continue 
+    +medium
+    +bold

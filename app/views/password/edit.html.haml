@@ -1,0 +1,15 @@
+#admin
+  %h1 Change Your Password
+  .error= error_messages_for 'user'
+  %table
+    - form_for :user, @user, :url => user_password_url(@user), :html => { :method => :put } do |f|
+      %tr
+        %th Current Password
+        %th New Password
+        %th Confirm Password
+        %th Actions
+      %tr
+        %td= f.password_field 'current_password'
+        %td= f.password_field 'password'
+        %td= f.password_field 'password_confirmation'
+        %td.actions= submit_tag "Change Password"

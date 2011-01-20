@@ -1,0 +1,52 @@
+The storage service is, well, not very well thought out at this point.
+
+There's lots of touchpoints and magic dependencies.
+
+(1) You need to pick your storage service.
+
+There are 3 options for your storage service:
+
+In Memory (test only): FakeStorageService
+
+Local (on disk): LocalDiskStorageService
+
+Amazon S3 (in the Amazon cloud): S3StorageService
+
+Each storage service is instantiated in your environment.rb for each environment.
+Here's an example of a fake one:
+
+POST_LOAD_BLOCKS << Proc.new {
+  silence_warnings {::STORAGE_SERVICE = FakeStorageService.new)}
+}
+
+
+Here's an example of a local disk one:
+
+POST_LOAD_BLOCKS << Proc.new {
+  silence_warnings {::STORAGE_SERVICE = LocalDiskStorageService.new('/u/apps/photos/', 'http://foo.com/')}
+}
+
+
+(2) If you're using S3, you need some extra stuff.
+
+- You need gems.
+  gem install aws-s3 --include-dependencies
+
+- You need keys. (also put these in each environment)
+  S3_ACCESS_KEY_FILENAME = RAILS_ROOT + "/../conf/dev.s3_access.key"
+  S3_SECRET_KEY_FILENAME = RAILS_ROOT + "/../conf/dev.s3_secret.key"
+
+  S3_BUCKET = "test.socialitis.pivotallabs.com"
+
+STORAGE SERVICE PUBLIC API:
+  - get(asset, version = nil)
+  - put(asset, data, version = nil)
+  - exists?(asset, version = nil)
+  - url_for(asset, version = nil)
+  - delete(asset, version = nil)
+
+Asset should respond to id and filename.
+Data could be a variety of things, but is most likely a string or IO object.
+Version is an optional parameter indicating what 'version' of the asset you'd like
+  to access.  Versions are namespaced separately from each other, and the 'null'
+  version is in a separate space from the other versions.

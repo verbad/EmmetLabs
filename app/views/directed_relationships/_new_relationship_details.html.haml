@@ -1,0 +1,24 @@
+#relationship_details
+  .box.synopsis
+    %h3= "#{directed_relationship.category.metacategory.name}: #{directed_relationship.category.name}"
+
+    %h4 Summary of their relationship
+    %p= @directed_relationship.relationship.summary
+
+    %strong.continue= link_to 'Continue to relationship story', pretty_directed_relationship_path(@directed_relationship)
+  
+    %ol
+      %li= link_to 'View Network', network_path(@directed_relationship.from), :class => 'network'
+      %li
+        :erb         
+          <%= link_to_function 'New Relationship', nil, { :class => 'add icon'} do |page|
+            page.replace_html 'choose_first_person', :partial => 'stories/choose_first_person'
+            page.replace_html 'relationship_panel', :partial => 'new_edit_relationship'
+            page.visual_effect :appear, 'choose_first_person', {:duration => 0.3}
+            page.visual_effect :fade, 'choose_second_person', {:duration => 0.3}
+            page.visual_effect :fade, "show_first_person_panel", {:duration => 0.3}
+            page.visual_effect :fade, "show_second_person_panel", {:duration => 0.3}
+            page.visual_effect :fade, "relationship_panel", {:duration => 0.3}
+            page.call "$('suggestable_query_first').focus"
+          end %>
+

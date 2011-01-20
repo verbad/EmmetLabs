@@ -1,0 +1,24 @@
+%h1 Emmet Users
+.control
+  = link_to 'Invite a new user', new_admin_user_path, :class => 'add'
+
+%table
+  %tr
+    %th= sort_by_link 'User Name', 'unique_name'
+    %th Email Address
+    %th= sort_by_link 'Creation Date', 'created_at_rev'
+    %th= sort_by_link 'Super Admin?', 'super_admin'
+    %th= sort_by_link 'Disabled?', 'disabled'
+    %th Actions
+  - @users.each do |user|
+    %tr
+      %td= link_to user.unique_name, admin_user_actions_path(:user_id => user.id)
+      %td= user.email_address
+      %td= user.created_at.to_s(:short)
+      %td= user.super_admin? ? 'Yes' : 'No'
+      %td= user.disabled? ? 'Yes' : 'No'
+      %td.actions
+        = link_to 'Edit User', edit_admin_user_path(user), :id => "edit_#{h(user.unique_name)}", :class => 'edit'
+        = link_to 'Delete', admin_user_path(user), :id => "delete_#{h(user.unique_name)}", :method => :delete, :confirm => 'You will not be able to undo this. Are you sure?', :class => 'delete'
+
+

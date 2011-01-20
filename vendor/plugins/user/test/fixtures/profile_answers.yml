@@ -1,0 +1,24 @@
+sign_answer_one_of_basic:
+  id: 1
+  profile_id: 1
+  question_id: 1
+  position: 1
+  value: Pisces
+sign_answer_two_of_basic:
+  id: 2
+  profile_id: 1
+  question_id: 1
+  position: 0
+  value: Virgo Rising
+age_answer_of_basic:
+  id: 3
+  profile_id: 1
+  question_id: 2
+  position: 1
+  value: 400
+display_name_answer_of_basic:
+  id: 4
+  profile_id: 1
+  question_id: 3
+  position: 1
+  value: Basic

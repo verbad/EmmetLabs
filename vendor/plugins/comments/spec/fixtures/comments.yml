@@ -1,0 +1,44 @@
+me_like_myself:
+  id: 1
+  type: Testimonial
+  author_id: 1
+  author_type: User
+  topic_id: 2
+  topic_type: User
+  text: Me like myself.  Me like myself very much.  Me play with myself.
+  created_at: <%= Time.local(2006, 'Jan', 1).to_mysql %>
+  updated_at: <%= Time.local(2006, 'Jan', 1).to_mysql %>
+
+eye_hate_myself:
+  id: 2
+  type: Testimonial
+  author_id: 3
+  author_type: User
+  topic_id: 2
+  topic_type: User
+  text: Eye really hate myself. Eye want to stab myself in the I.
+  created_at: <%= Time.local(2006, 'Jan', 2).to_mysql %>
+  updated_at: <%= Time.local(2006, 'Jan', 2).to_mysql %>
+
+eye_need_glasses:
+  id: 3
+  type: Review
+  author_id: 3
+  author_type: User
+  topic_id: 1
+  topic_type: CommentableShim
+  text: Eye need glasses badly.
+  rating: 4
+  created_at: <%= Time.local(2006, 'Jan', 2).to_mysql %>
+  updated_at: <%= Time.local(2006, 'Jan', 2).to_mysql %>
+
+myself_and_my_glasses:
+  id: 4
+  type: Comment
+  author_id: 2
+  author_type: User
+  topic_id: 1
+  topic_type: CommentableShim
+  text: My glasses are so cool they're pink.  But I don't rate nothing.
+  created_at: <%= Time.local(2006, 'Jan', 2).to_mysql %>
+  updated_at: <%= Time.local(2006, 'Jan', 2).to_mysql %>

@@ -1,0 +1,43 @@
+rdy_relationship_comment_1:
+  id: 1
+  type: Comment
+  author_id: 1
+  author_type: User
+  topic_id: 22
+  topic_type: Relationship
+  text: rdy comment 1
+  created_at: <%= Time.local(2006, 'Jan', 1).to_mysql %>
+  updated_at: <%= Time.local(2006, 'Jan', 1).to_mysql %>
+
+edward_relationship_comment_1:
+  id: 2
+  type: Comment
+  author_id: 2
+  author_type: User
+  topic_id: 22
+  topic_type: Relationship
+  text: edward comment 1
+  created_at: <%= Time.local(2006, 'Jan', 1).to_mysql %>
+  updated_at: <%= Time.local(2006, 'Jan', 1).to_mysql %>
+
+rdy_relationship_comment_2:
+  id: 3
+  type: Comment
+  author_id: 1
+  author_type: User
+  topic_id: 22
+  topic_type: Relationship
+  text: rdy comment 2
+  created_at: <%= Time.local(2006, 'Jan', 1).to_mysql %>
+  updated_at: <%= Time.local(2006, 'Jan', 1).to_mysql %>
+
+photo_1_comment:
+  id: 4
+  type: Comment
+  author_id: 1
+  author_type: User
+  topic_id: 1
+  topic_type: Asset
+  text: comment on a photo
+  created_at: <%= Time.local(2006, 'Jan', 1).to_mysql %>
+  updated_at: <%= Time.local(2006, 'Jan', 1).to_mysql %>

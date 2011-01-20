@@ -1,0 +1,7 @@
+basic_association_1:
+  id: 1
+  asset_id: 1
+  associate_id: 1
+  associate_type: Asset
+  primary: true
+  

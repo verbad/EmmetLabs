@@ -1,0 +1,27 @@
+#further_reading
+  - if current_user_valid?
+    #further_reading_field_editable.editable.active{:style => 'display:none'}
+      .hd
+        %h2 Further Reading 
+      .bd     
+        - remote_form_for(:entity, entity, :url => entity_further_reading_path(entity), :html => {:method => :put, :name => 'further_reading_field_form'}) do |f|
+          = f.text_area(:further_reading)      
+      .ft
+        %p.note= markdown_link
+        #further_reading_field_spinner.spinner{:style => 'display: none'}
+        = link_to_function 'save', '$("further_reading_field_spinner").show(); document.further_reading_field_form.onsubmit()', :class => 'save primary'
+        = link_to_function 'cancel', 'new Effect.Fade("further_reading_field_editable", {duration: 0.3}); document.further_reading_field_form.reset(); new Effect.Appear("further_reading_field_readonly", {duration: 0.3, delay: 0.3})', :class => 'cancel tertiary'
+  
+  #further_reading_field_readonly.editable
+    - if (entity.further_reading_original.blank?)
+      .hd
+        %h2 Further Reading
+      .bd
+        - if current_user_valid?
+          %p.new= link_to_function 'add further reading', 'new Effect.Fade("further_reading_field_readonly", {duration: 0.3}); new Effect.Appear("further_reading_field_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("entity_further_reading").focus();\', 650)', :class => 'add'
+    - else
+      .hd
+        %h2 Further Reading
+        - if current_user_valid?
+          = link_to_function 'edit', 'new Effect.Fade("further_reading_field_readonly", {duration: 0.3}); new Effect.Appear("further_reading_field_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("entity_further_reading").focus();\', 650)', :class => 'edit'
+      .bd= m(entity.further_reading_original)

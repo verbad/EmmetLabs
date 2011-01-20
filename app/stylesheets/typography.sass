@@ -1,0 +1,51 @@
+=emmet-typography
+  body
+    +sans-serif
+    :font-size 82.5%
+    :color #333
+    h1,h2
+      +sans-serif
+      +bold
+    h3,h4,h5,h6
+      +sans-serif
+    h1
+      +xx-large
+    h2
+      +x-large
+    h3
+      +large
+      +bold
+    h4
+      +medium
+      +bold
+    h5
+      +small
+      +bold
+    a
+      :outline none
+    a, a:visited
+      :color= !link_color
+      :text-decoration none
+    a:hover
+      :text-decoration underline
+      :color= !link_color - #333
+    p,li,blockquote,dd,dt
+      :line-height 1.3em
+    dd,dt
+      :margin 0
+    hr
+      :height 1px
+      :color= !light_gray
+      :background-color= !light_gray
+      :border 0
+      :margin 10px 5px
+
+#primary_column
+  h1
+    :padding 0 0 8px 16px
+    :margin-bottom 0
+#secondary_column
+  h3
+    :margin .2em 0
+  h4
+    :margin .6em 0 0 0

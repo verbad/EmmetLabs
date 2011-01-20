@@ -1,0 +1,9 @@
+--- 
+cwd: /u/apps/emmet-staging/current/
+port: "8300"
+environment: staging
+address: 127.0.0.1
+pid_file: log/mongrel.pid
+servers: 2
+user: pivotal
+group: pivotal

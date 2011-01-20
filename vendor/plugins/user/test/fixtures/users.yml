@@ -1,0 +1,41 @@
+valid_bob:
+  id: 1
+  encrypted_password: <%= User.encrypt("password", "change-me") %>
+  created_at: 2006-08-24 00:00:00 -07:00
+  updated_at: 2006-08-25 00:00:00 -07:00
+  unique_name: valid_bob
+  salt: change-me
+
+valid_huang:
+  id: 2
+  encrypted_password: <%= User.encrypt("password", "change-me-sucka") %>
+  created_at: 2006-08-24 00:00:00 -07:00
+  updated_at: 2006-08-25 00:00:00 -07:00
+  unique_name: valid_huang
+  salt: change-me-sucka
+
+unverified_user:
+  id: 3
+  encrypted_password: <%= User.encrypt("password", "change-me-tool") %>
+  created_at: 2006-08-24 00:00:00 -07:00
+  updated_at: 2006-08-25 00:00:00 -07:00
+  unique_name: unknown_johnson
+  salt: change-me-tool
+
+user_with_old_tos:
+  id: 4
+  encrypted_password: <%= User.encrypt("password", "change-me-tool") %>
+  created_at: 2006-08-24 00:00:00 -07:00
+  updated_at: 2006-08-25 00:00:00 -07:00
+  unique_name: old_tos
+  salt: change-me-tool
+
+admin:
+  id: 5
+  encrypted_password: <%= User.encrypt("password", "change-me-tool") %>
+  created_at: 2006-08-24 00:00:00 -07:00
+  updated_at: 2006-08-25 00:00:00 -07:00
+  unique_name: admin
+  salt: change-me-tool
+  super_admin: true
+

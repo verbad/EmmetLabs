@@ -1,0 +1,27 @@
+#hdr
+  #l
+    = render :partial => 'layouts/logo'
+  #r
+    - unless @hideHeader
+      #nav
+        %ol
+          %li.first= link_to 'Explore People', people_path
+          %li= link_to 'Become a Contributor', new_story_path
+      - if current_user.nil?
+        #links
+          = link_to "Sign In", login_path
+      - else
+        #user
+          %ol
+            %li
+              %span= "Hi, #{current_user.unique_name}"
+            %li= link_to 'Change Password', edit_user_password_path(current_user)
+            %li.user.last= link_to('Sign Out', login_path, :method => :delete)
+            = render :partial => 'layouts/super_user'
+      #form
+        - form_tag(search_results_path, :method => :get, :id => 'find') do
+          %fieldset
+            = text_field_tag(:search_query,  'Find interesting people&hellip;', :class => 'text', :tabindex => '1', :onclick => 'if (this.value=="Find interesting people&hellip;") {this.value="";}',:onblur => 'if (this.value=="") {this.value="Find interesting people&hellip;";}')
+            = submit_tag 'Search', :class => 'secondary', :tabindex => '2'
+          
+= yield :header

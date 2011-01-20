@@ -1,0 +1,56 @@
+photo_1_original:
+  id: 1
+  version: original
+  filename: "1.png"
+  asset_id: 1
+  state_id: 1
+  type: InternalAssetVersion
+photo_2_original:
+  id: 2
+  version: original
+  filename: "2.png"
+  asset_id: 2
+  state_id: 1
+  type: InternalAssetVersion
+photo_1_small:
+  id: 3
+  version: small
+  filename: "1.png"
+  asset_id: 1
+  state_id: 1
+  type: InternalAssetVersion
+photo_2_small:
+  id: 4
+  version: small
+  filename: "2.png"
+  asset_id: 2
+  state_id: 1
+  type: InternalAssetVersion
+photo_1_medium:
+  id: 5
+  version: medium
+  filename: "1.png"
+  asset_id: 1
+  state_id: 1
+  type: InternalAssetVersion
+photo_2_medium:
+  id: 6
+  version: medium
+  filename: "2.png"
+  asset_id: 2
+  state_id: 1
+  type: InternalAssetVersion
+photo_1_large:
+  id: 7
+  version: large
+  filename: "1.png"
+  asset_id: 1
+  state_id: 1
+  type: InternalAssetVersion
+photo_2_large:
+  id: 8
+  version: large
+  filename: "2.png"
+  asset_id: 2
+  state_id: 1
+  type: InternalAssetVersion

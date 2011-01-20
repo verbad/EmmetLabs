@@ -1,0 +1,24 @@
+#admin
+
+  %h1 "New Relationship Category"
+
+  %error= error_messages_for(:relationship_category)
+  - form_for(:relationship_category, :url => admin_relationship_categories_path) do |f|
+    %table
+      %tr
+        %th Name
+        %th Metacategory
+        %th Opposite (leave blank if symmetric)
+        %th Actions
+
+      %tr
+        %td=f.text_field(:name) 
+        %td= drop_down(:relationship_category, :metacategory_id, @relationship_metacategories)
+        %td 
+          %input{:name => "opposite", :size => 30 }
+        %td.actions
+          = link_to 'Cancel', admin_relationship_categories_path, :class => 'view'
+          = submit_tag("Save", :id=>"create")
+
+
+

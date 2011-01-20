@@ -1,0 +1,159 @@
+@import compass/reset
+@import blueprint/screen
+
+@import colors
+@import mixins
+@import typography
+@import mixins-typography
+@import elements
+
+!layout_grid_columns = 20
+!layout_grid_size = 790px
+
+html
+  +emmet-typography
+  +serif
+  :background #3a3933 url(/images/welcome_html_bg.gif) repeat-x top
+  body
+    a
+      :color= !link_color
+      :text-decoration none
+    a:hover
+      :text-decoration underline
+    fieldset
+      :padding 0
+      :border-width 0
+    #welcome
+      +container
+      :margin-top 60px
+      #hdr, #ftr
+        :background url(/images/welcome_hdr_bg.gif) repeat-x top
+        :height 80px
+        :text-align center
+        :margin 0 15px
+        #logo 
+          +serif
+          +xx-large
+          :padding-top 22px
+          a, a:hover
+            :color #fff
+            :text-decoration none
+      #ftr
+        :background-image url(/images/welcome_ftr_bg.gif)
+        :height 120px
+        ol
+          +clean
+          :margin-left 250px
+          li
+            +inline
+            :margin-top 14px
+            a
+              +normal
+              +serif
+              :display block
+              :letter-spacing 2px
+              :text-transform uppercase
+              :color #fff
+              :margin-right 12px
+              :margin-bottom 30px
+        li.current
+          a
+            :background-image url(/images/welcome_ftr_li_current.gif) no-repeat top center
+        p.copy, p.site
+          :display block
+          :clear both
+          :color #666
+          +small
+        p.site
+          +serif
+          +large
+          a
+            :color #eee
+      #content
+        +prepend(1)
+        +append(1)
+        +last
+        +clearfix
+        :padding
+          :top 20px
+          :bottom 20px
+        :background #fff url(/images/welcome_content_bg.gif) repeat-x top
+        :margin-bottom 0
+        .l
+          +column(10)
+          +append(1)
+        .r
+          +column(7)
+          +last
+        #top
+          +column(18)
+          +last
+          .l
+            +column(11)
+            +append(1)
+            :background url(/images/welcome_blockquote_bg.gif) no-repeat top left
+            blockquote
+              +x-large
+              +serif
+              :margin 0
+              :padding 12px 45px
+              :margin-bottom 18px
+              :background url(/images/welcome_blockquote_em_bg.gif) no-repeat bottom right
+            .box
+              :text-align center
+              +medium
+              :color #68625d
+              :padding 8px 12px
+              :background #e1dedd
+              :letter-spacing 1px
+              cite
+                +serif
+                :text-transform uppercase
+                :font-style normal
+              small
+                :display block
+                :margin-top 6px
+                +sans-serif
+                +bold
+          .r
+            +sans-serif
+            +column(6)
+            +last
+            h2
+              :text-align center
+              +small
+              :text-transform uppercase
+              :letter-spacing 1px
+            ul
+              +small
+        #bottom
+          +column(16)
+          +prepend(1)
+          +append(1)
+          +last
+          :margin-top 10px
+          :padding
+            :top 15px
+            :bottom 15px
+          :clear both
+          :color #231f20
+          :border-top 3px double #e1dedd
+          +sans-serif
+          h2, h3
+            +large
+            :margin-bottom 0
+            :padding-bottom 0
+          p
+            +normal
+            :margin-top 4px
+          .l
+            +column(7)
+            +append(1)
+            input
+              :width 190px
+          .r
+            +column(8)
+            +last
+            small
+              +bold
+              +small

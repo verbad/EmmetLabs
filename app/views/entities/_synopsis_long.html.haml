@@ -1,0 +1,9 @@
+.synopsis
+  .box
+    
+    %h4 Tags
+    %p= entity.tag_list
+          
+    - unless @hide_navigation
+      %ol
+        %li= link_to 'View Network', network_path(entity).to_s, :class => 'network'

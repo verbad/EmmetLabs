@@ -1,0 +1,25 @@
+if @index == 'first'
+  page.call 'show_start_over_link'
+  page.visual_effect :fade, 'choose_first_person', {:duration => 0.3}
+  page.replace_html "show_first_person_panel", :partial => 'nodes/synopsis', :locals => { :node => @node }
+  page.replace_html "first_name", @node.full_name
+  page.replace_html "first_name_param", hidden_field_tag(:person_id, @node.to_param)
+  page.replace_html "node_info", "from_node_id=#{@node.id}&from_node=#{@node.class}"                                                    
+  page.visual_effect :appear, "show_first_person_panel", {:duration => 0.3}
+  page.visual_effect :appear, 'choose_second_person', {:duration => 0.3}
+elsif @index == 'second'
+  page.call 'show_start_over_link'
+  page.visual_effect :fade, 'choose_second_person', {:duration => 0.3}
+  page.replace_html "show_second_person_panel", :partial => 'nodes/synopsis', :locals => { :node => @node }
+  page.replace_html "second_name", @node.full_name
+  page.replace_html "second_name_param", hidden_field_tag(:to_node_id, @node.to_param)
+  page.visual_effect :appear, "show_second_person_panel", {:duration => 0.3}
+  page.visual_effect :appear, "relationship_panel", {:duration => 0.3}
+  page.call 'update_summary_characters_remaining_relationship_summary'
+else
+  page.replace 'primary_photo', :partial => 'photos/primary_photo', :locals => {:photoable => @person}
+  if @person.photos.empty?
+    page.replace_html 'add_first_photo', :partial => 'photos/new_photo', :locals => {:id => 'add_first_photo', :show => false}
+    page.visual_effect :slide_down, 'add_first_photo', :duration => 0.3
+  end
+end

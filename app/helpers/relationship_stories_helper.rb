@@ -1,0 +1,2 @@
+module RelationshipStoriesHelper
+end

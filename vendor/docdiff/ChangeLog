@@ -1,0 +1,1192 @@
+------------------------------------------------------------------------
+r156 | hisashim | 2006-02-03 10:51:47 +0900 (Fri, 03 Feb 2006) | 1 line
+Changed paths:
+   M /trunk/index.html
+
+Fixed typo in index.html.
+------------------------------------------------------------------------
+r155 | hisashim | 2006-02-03 10:47:03 +0900 (Fri, 03 Feb 2006) | 1 line
+Changed paths:
+   M /trunk/index.html
+
+Updated index.html (fixed toc style).
+------------------------------------------------------------------------
+r154 | hisashim | 2006-02-03 10:41:34 +0900 (Fri, 03 Feb 2006) | 1 line
+Changed paths:
+   M /trunk/index.html
+
+Updated index.html on mailing list.
+------------------------------------------------------------------------
+r153 | hisashim | 2006-02-03 09:45:45 +0900 (Fri, 03 Feb 2006) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Updated 0.3.3 release dates to 2006-02-03.
+------------------------------------------------------------------------
+r152 | hisashim | 2006-02-03 09:27:16 +0900 (Fri, 03 Feb 2006) | 1 line
+Changed paths:
+   M /trunk/Makefile
+
+Separated "distclean" target, which deletes tarball, from "clean" target.
+------------------------------------------------------------------------
+r151 | hisashim | 2005-11-24 22:09:13 +0900 (Thu, 24 Nov 2005) | 1 line
+Changed paths:
+   M /trunk/index.html
+
+Modified index.html to use span for bilingualization.
+------------------------------------------------------------------------
+r150 | hisashim | 2005-11-17 07:56:36 +0900 (Thu, 17 Nov 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Fixed typo.
+------------------------------------------------------------------------
+r149 | hisashim | 2005-11-16 08:59:33 +0900 (Wed, 16 Nov 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Added a tip on comparing HTMLs and Word docs using w3m and wvWare.
+------------------------------------------------------------------------
+r148 | hisashim | 2005-11-15 04:23:40 +0900 (Tue, 15 Nov 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Added YASDiff in the resource section.
+------------------------------------------------------------------------
+r147 | hisashim | 2005-11-15 02:58:10 +0900 (Tue, 15 Nov 2005) | 1 line
+Changed paths:
+   M /trunk/docdiffwebui.html
+
+Tweaked the form size.
+------------------------------------------------------------------------
+r146 | hisashim | 2005-11-15 02:56:32 +0900 (Tue, 15 Nov 2005) | 1 line
+Changed paths:
+   M /trunk/index.html
+
+Tweaked CSS to use smaller font for caption.
+------------------------------------------------------------------------
+r145 | hisashim | 2005-10-14 16:43:26 +0900 (Fri, 14 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/Makefile
+
+Edited Makefile and added index.html and img/ to the distribution.
+------------------------------------------------------------------------
+r144 | hisashim | 2005-10-14 16:41:21 +0900 (Fri, 14 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/index.html
+
+Edited index a bit.
+------------------------------------------------------------------------
+r143 | hisashim | 2005-10-14 15:14:47 +0900 (Fri, 14 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/index.html
+
+Tweaked appearance of index.
+------------------------------------------------------------------------
+r142 | hisashim | 2005-10-14 15:13:40 +0900 (Fri, 14 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Fixed a bit (compare files -> compare text files).
+------------------------------------------------------------------------
+r141 | hisashim | 2005-10-14 13:42:15 +0900 (Fri, 14 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Tweaked CSS of readme (made headings prominent).
+------------------------------------------------------------------------
+r140 | hisashim | 2005-10-14 11:59:24 +0900 (Fri, 14 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Updated readme.
+------------------------------------------------------------------------
+r139 | hisashim | 2005-10-14 11:57:24 +0900 (Fri, 14 Oct 2005) | 1 line
+Changed paths:
+   A /trunk/img
+   A /trunk/img/docdiff-screenshot-format-html-digest-firefox.png
+   A /trunk/img/docdiff-screenshot-format-html-firefox.png
+   A /trunk/img/docdiff-screenshot-format-tty-cmdexe-en.png
+   A /trunk/img/docdiff-screenshot-format-tty-cmdexe-ja.png
+   A /trunk/img/docdiff-screenshot-format-tty-rxvtunicode-en.png
+   A /trunk/img/docdiff-screenshot-format-tty-rxvtunicode-ja.png
+   A /trunk/img/docdiff-screenshot-format-tty-xterm-en.png
+   A /trunk/img/docdiff-screenshot-format-tty-xterm-ja.png
+   A /trunk/img/docdiff-screenshot-resolution-linewordchar-xterm.png
+   A /trunk/index.html
+
+Added index.html and img/ for the DocDiff website.
+------------------------------------------------------------------------
+r138 | hisashim | 2005-10-14 02:49:39 +0900 (Fri, 14 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/docdiffwebui.html
+
+Web UI now opens new window to display result.  Improved Macintosh HIG compliance (default button outer).  Added link to DocDiff home.
+------------------------------------------------------------------------
+r137 | hisashim | 2005-10-12 01:36:35 +0900 (Wed, 12 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Updated readme.
+------------------------------------------------------------------------
+r136 | hisashim | 2005-10-12 01:21:13 +0900 (Wed, 12 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Added CVS/Subversion + zsh example and fixed headings in readme.
+------------------------------------------------------------------------
+r135 | hisashim | 2005-10-10 16:14:37 +0900 (Mon, 10 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/docdiffwebui.cgi
+
+Improved error message of webui.
+------------------------------------------------------------------------
+r134 | hisashim | 2005-10-10 14:56:54 +0900 (Mon, 10 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Updated readme.
+------------------------------------------------------------------------
+r133 | hisashim | 2005-10-10 14:56:37 +0900 (Mon, 10 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/Makefile
+
+Updated Makefile to include webui in distribution.
+------------------------------------------------------------------------
+r132 | hisashim | 2005-10-10 14:01:41 +0900 (Mon, 10 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/docdiffwebui.cgi
+   M /trunk/docdiffwebui.html
+
+Added timeout option, fixed tempfile name and some other stuff.
+------------------------------------------------------------------------
+r131 | hisashim | 2005-10-10 13:39:52 +0900 (Mon, 10 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/docdiff.rb
+
+Fixed arg test so that we can compare non-normal files, such as device file and named pipes (Thanks to Shugo Maeda).
+------------------------------------------------------------------------
+r130 | hisashim | 2005-10-10 13:28:16 +0900 (Mon, 10 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/docdiff.rb
+   M /trunk/docdiffwebui.cgi
+   M /trunk/viewdiff.rb
+
+Fixed arg test so that we can compare non-normal files, such as device file and named pipes (Thanks to Shugo Maeda).
+------------------------------------------------------------------------
+r129 | hisashim | 2005-10-09 15:07:56 +0900 (Sun, 09 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/docdiffwebui.cgi
+
+Fixed error handling of webui.
+------------------------------------------------------------------------
+r128 | hisashim | 2005-10-08 15:49:37 +0900 (Sat, 08 Oct 2005) | 1 line
+Changed paths:
+   M /trunk/docdiffwebui.html
+
+Tweaked style of webui.
+------------------------------------------------------------------------
+r127 | hisashim | 2005-10-08 13:07:41 +0900 (Sat, 08 Oct 2005) | 1 line
+Changed paths:
+   A /trunk/docdiffwebui.cgi
+   A /trunk/docdiffwebui.html
+
+Added Web UI sample (Caution: This is totally experimental and insecure!)
+------------------------------------------------------------------------
+r126 | hisashim | 2005-09-28 01:16:49 +0900 (Wed, 28 Sep 2005) | 1 line
+Changed paths:
+   M /trunk/testviewdiff.rb
+   M /trunk/viewdiff.rb
+
+Cleaned up viewdiff.rb, removing old stuff.
+------------------------------------------------------------------------
+r125 | hisashim | 2005-09-28 01:09:56 +0900 (Wed, 28 Sep 2005) | 1 line
+Changed paths:
+   M /trunk/testviewdiff.rb
+   M /trunk/viewdiff.rb
+
+Added tokenize_context_diff() to viewdiff.rb.
+------------------------------------------------------------------------
+r124 | hisashim | 2005-09-27 01:18:47 +0900 (Tue, 27 Sep 2005) | 1 line
+Changed paths:
+   M /trunk/testviewdiff.rb
+   M /trunk/viewdiff.rb
+
+Refactored viewdiff.rb (removed obsolete code, etc.).
+------------------------------------------------------------------------
+r123 | hisashim | 2005-09-27 00:38:39 +0900 (Tue, 27 Sep 2005) | 1 line
+Changed paths:
+   A /trunk/testviewdiff.rb
+   A /trunk/viewdiff.rb
+
+Added viewdiff.rb (not working yet, though).
+------------------------------------------------------------------------
+r122 | hisashim | 2005-08-13 13:22:15 +0900 (Sat, 13 Aug 2005) | 1 line
+Changed paths:
+   M /trunk/docdiff/view.rb
+
+Refactored escaping in view.rb (added escape_inside() and escape_outside()).
+------------------------------------------------------------------------
+r121 | hisashim | 2005-05-16 03:25:49 +0900 (Mon, 16 May 2005) | 1 line
+Changed paths:
+   M /trunk/docdiff/view.rb
+
+Fixed stupid error in View#apply_style_digest() (oops).
+------------------------------------------------------------------------
+r120 | hisashim | 2005-05-16 03:16:14 +0900 (Mon, 16 May 2005) | 1 line
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/testview.rb
+
+Refactored View#apply_style_digest().
+------------------------------------------------------------------------
+r119 | hisashim | 2005-05-15 22:29:17 +0900 (Sun, 15 May 2005) | 1 line
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/testview.rb
+
+Added View#difference_whole().  Will add difference_digest() later.
+------------------------------------------------------------------------
+r118 | hisashim | 2005-03-31 21:59:39 +0900 (Thu, 31 Mar 2005) | 1 line
+Changed paths:
+   M /trunk/docdiff.rb
+
+Fixed the comment at the beginning a bit.
+------------------------------------------------------------------------
+r117 | hisashim | 2005-03-31 21:57:46 +0900 (Thu, 31 Mar 2005) | 1 line
+Changed paths:
+   M /trunk/Makefile
+
+Cleaned up the test target a bit.
+------------------------------------------------------------------------
+r116 | hisashim | 2005-03-20 15:53:59 +0900 (Sun, 20 Mar 2005) | 1 line
+Changed paths:
+   M /trunk/docdiff.rb
+   M /trunk/testdocdiff.rb
+
+Modified auguments of DocDiff#run() so that you can give it misc options in a hash.
+------------------------------------------------------------------------
+r115 | hisashim | 2005-02-13 16:11:01 +0900 (Sun, 13 Feb 2005) | 1 line
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/readme.html
+   M /trunk/testdocdiff.rb
+   M /trunk/testview.rb
+
+Fixed HTML output to produce valid XHTML (thanks to Hiroshi OHKUBO).
+------------------------------------------------------------------------
+r111 | hisashim | 2005-02-12 23:33:27 +0900 (Sat, 12 Feb 2005) | 1 line
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/readme.html
+   M /trunk/testdocdiff.rb
+   M /trunk/testview.rb
+
+Replaced underscores(_) in CSS class names to hyphens(-) so that older UAs can understand them (thanks to Kazuhiro NISHIYAMA).
+------------------------------------------------------------------------
+r110 | hisashim | 2005-01-22 12:48:15 +0900 (Sat, 22 Jan 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Updated document. (diff-detail is now bugfixed. Thanks to OHKUBO Hiroshi.)
+------------------------------------------------------------------------
+r109 | hisashim | 2005-01-22 12:42:14 +0900 (Sat, 22 Jan 2005) | 1 line
+Changed paths:
+   M /trunk/Makefile
+   M /trunk/docdiff.rb
+   M /trunk/readme.html
+
+Incremented version, etc. to prepare for the next release (0.3.3).
+------------------------------------------------------------------------
+r108 | hisashim | 2005-01-03 14:39:33 +0900 (Mon, 03 Jan 2005) | 1 line
+Changed paths:
+   M /trunk/Makefile
+
+Fixed Makefile to generate proper readme.ja.html (removing style with title="en").
+------------------------------------------------------------------------
+r107 | hisashim | 2005-01-03 14:16:01 +0900 (Mon, 03 Jan 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Fixed minor problem in readme.
+------------------------------------------------------------------------
+r106 | hisashim | 2005-01-03 12:19:53 +0900 (Mon, 03 Jan 2005) | 1 line
+Changed paths:
+   M /trunk/Makefile
+
+Added readme.en.html, readme.ja.html and clean targets to Makefile.
+------------------------------------------------------------------------
+r105 | hisashim | 2005-01-03 11:44:58 +0900 (Mon, 03 Jan 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Updated and fixed document.
+------------------------------------------------------------------------
+r104 | hisashim | 2005-01-03 10:41:59 +0900 (Mon, 03 Jan 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Unfolded text in documentation (do not wrap long lines to fixed width).
+------------------------------------------------------------------------
+r103 | hisashim | 2005-01-03 10:25:47 +0900 (Mon, 03 Jan 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Added Japanese documentation.
+------------------------------------------------------------------------
+r102 | hisashim | 2005-01-03 00:38:12 +0900 (Mon, 03 Jan 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Updated document (as diff-detail.l still has a bug).
+------------------------------------------------------------------------
+r101 | hisashim | 2005-01-03 00:28:09 +0900 (Mon, 03 Jan 2005) | 1 line
+Changed paths:
+   M /trunk/readme.html
+
+Updated document.
+------------------------------------------------------------------------
+r100 | hisashim | 2005-01-02 23:38:52 +0900 (Sun, 02 Jan 2005) | 1 line
+Changed paths:
+   M /trunk/docdiff.rb
+
+Modified some help messages to be more precise and friendly.
+------------------------------------------------------------------------
+r99 | hisashim | 2005-01-02 22:48:51 +0900 (Sun, 02 Jan 2005) | 1 line
+Changed paths:
+   M /trunk/docdiff.rb
+
+Fixed error handling of encoding and eol auto-recognition.
+------------------------------------------------------------------------
+r98 | hisashim | 2005-01-02 12:18:49 +0900 (Sun, 02 Jan 2005) | 1 line
+Changed paths:
+   M /trunk/Makefile
+
+Modified Makefile to generate ChangeLog in reverse chronological order.
+------------------------------------------------------------------------
+r97 | hisashim | 2004-12-25 12:22:37 +0900 (Sat, 25 Dec 2004) | 1 line
+Changed paths:
+   M /trunk/Makefile
+   M /trunk/docdiff.rb
+   M /trunk/readme.html
+
+Switched revision control system from CVS to Subversion.  Modified Makefile and documents accordingly.
+------------------------------------------------------------------------
+r96 | hisashim | 2004-08-29 03:59:35 +0900 (Sun, 29 Aug 2004) | 2 lines
+Changed paths:
+   M /trunk/readme.html
+
+Updated document.
+
+------------------------------------------------------------------------
+r95 | hisashim | 2004-08-29 03:41:34 +0900 (Sun, 29 Aug 2004) | 2 lines
+Changed paths:
+   M /trunk/Makefile
+
+Fixed Makefile dist target to exclude CVS directries.  Updated version number in Makefile to 0.3.1.
+
+------------------------------------------------------------------------
+r94 | hisashim | 2004-08-29 03:25:14 +0900 (Sun, 29 Aug 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+
+Updated modification date and increased version number to 0.3.1.
+
+------------------------------------------------------------------------
+r93 | hisashim | 2004-08-29 03:22:06 +0900 (Sun, 29 Aug 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/encoding/en_ascii.rb
+
+Fixed indent.
+
+------------------------------------------------------------------------
+r92 | hisashim | 2004-08-29 03:18:42 +0900 (Sun, 29 Aug 2004) | 2 lines
+Changed paths:
+   M /trunk/readme.html
+
+Updated document.
+
+------------------------------------------------------------------------
+r91 | hisashim | 2004-08-28 13:06:16 +0900 (Sat, 28 Aug 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+
+Added -L (--label) option place holder, so that DocDiff can be used as an external diff program from Subversion (i.e. svn diff --diff-cmd=docdiff).
+
+------------------------------------------------------------------------
+r90 | hisashim | 2004-05-29 23:21:25 +0900 (Sat, 29 May 2004) | 2 lines
+Changed paths:
+   M /trunk/readme.html
+
+Updated readme.html for releasing 0.3.0, again.
+
+------------------------------------------------------------------------
+r89 | hisashim | 2004-05-29 22:16:00 +0900 (Sat, 29 May 2004) | 2 lines
+Changed paths:
+   M /trunk/readme.html
+
+Updated readme.html for releasing 0.3.0.
+
+------------------------------------------------------------------------
+r88 | hisashim | 2004-05-27 23:11:51 +0900 (Thu, 27 May 2004) | 2 lines
+Changed paths:
+   M /trunk/readme.html
+
+Fixed HTML syntax error in readme.html.
+
+------------------------------------------------------------------------
+r87 | hisashim | 2004-05-16 23:48:02 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   D /trunk/encoding
+
+Removed incorrect directory encoding and its contents.
+
+------------------------------------------------------------------------
+r86 | hisashim | 2004-05-16 23:42:25 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/Makefile
+
+Fixed Makefile to work.
+
+------------------------------------------------------------------------
+r85 | hisashim | 2004-05-16 23:32:52 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/Makefile
+
+Modified Makefile so that the distribution package include the latest ChangeLog using cvs2cl.
+
+------------------------------------------------------------------------
+r84 | hisashim | 2004-05-16 23:27:24 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/Makefile
+
+Fixed Makefile so that ChangeLog is included in distribution package.
+
+------------------------------------------------------------------------
+r83 | hisashim | 2004-05-16 23:11:19 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/readme.html
+
+Updated documentation about support for Windows.
+
+------------------------------------------------------------------------
+r82 | hisashim | 2004-05-16 22:54:50 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/charstring.rb
+
+Fixed iconv argument in charstring.rb from "utf8" to "utf-8", so that DocDiff can run on Windows (tested on Cygwin).
+
+------------------------------------------------------------------------
+r81 | hisashim | 2004-05-16 22:15:15 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/Makefile
+
+Updated Makefile.
+
+------------------------------------------------------------------------
+r80 | hisashim | 2004-05-16 22:12:16 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/Makefile
+
+Fixed Makefile so that tar works okay.
+
+------------------------------------------------------------------------
+r79 | hisashim | 2004-05-16 21:49:55 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/Makefile
+
+Fixed Makefile so that pwd is evaluated before "cd ..".
+
+------------------------------------------------------------------------
+r78 | hisashim | 2004-05-16 21:17:31 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff.conf.example
+   M /trunk/docdiff.rb
+   M /trunk/readme.html
+   M /trunk/testview.rb
+
+Added support for ~/.docdiff/docdiff.conf as a user config file. Updated documentation and example config file.
+
+------------------------------------------------------------------------
+r77 | hisashim | 2004-05-16 18:35:55 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/testview.rb
+
+Modified style and color of tty output.
+
+------------------------------------------------------------------------
+r76 | hisashim | 2004-05-16 17:41:35 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/testview.rb
+
+Modified output format of to_manued_digest() and to_wdiff_digest() to be more readable.
+
+------------------------------------------------------------------------
+r75 | hisashim | 2004-05-16 17:35:29 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/testview.rb
+
+Modified output format of to_tty_digest() in view.rb to be more readable.
+
+------------------------------------------------------------------------
+r74 | hisashim | 2004-05-16 17:24:12 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/testview.rb
+
+Modified view.rb so that prefix and postfix in digest mode include EOL characters.
+
+------------------------------------------------------------------------
+r73 | hisashim | 2004-05-16 16:53:34 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+
+Fixed a bug that digest prefix and postfix are broken in non-latin text due to invalid Regexp.new argument in prefix_pat() and postfix_pat().
+
+------------------------------------------------------------------------
+r72 | hisashim | 2004-05-16 16:27:25 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/testdocdiff.rb
+   M /trunk/testview.rb
+
+Modified HTML and CSS for digest mode to be more comprehensive using <blockquote>.
+
+------------------------------------------------------------------------
+r71 | hisashim | 2004-05-16 15:02:15 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/docdiff.conf.example
+   M /trunk/testdocdiff.rb
+
+Modified HTML CSS to be more flashy and thus more noticeable.  Fixed docdiff.conf.example a bit.
+
+------------------------------------------------------------------------
+r70 | hisashim | 2004-05-16 13:37:22 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/testview.rb
+
+Fixed unit test for HTML escape.
+
+------------------------------------------------------------------------
+r69 | hisashim | 2004-05-16 13:35:08 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+
+Fixed HTML escaping so that only succession of spaces are converted to &nbsp;s. Latin text should now wrap around correctly.
+
+------------------------------------------------------------------------
+r68 | hisashim | 2004-05-16 04:04:58 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/docdiff.rb
+   M /trunk/testview.rb
+
+Removed HTML4-related code.
+
+------------------------------------------------------------------------
+r67 | hisashim | 2004-05-16 04:01:00 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/testview.rb
+
+Commented out HTML4-related code from docdiff/view.rb.
+
+------------------------------------------------------------------------
+r66 | hisashim | 2004-05-16 03:55:46 +0900 (Sun, 16 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/testdocdiff.rb
+
+Tweaked CSS a bit.
+
+------------------------------------------------------------------------
+r65 | hisashim | 2004-05-14 01:37:48 +0900 (Fri, 14 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/docdiff.rb
+   M /trunk/testdocdiff.rb
+   M /trunk/testview.rb
+
+Changed all keyword "html" to "html4" and "xhtml" to "html". Now XHTML is the default for HTML.
+
+------------------------------------------------------------------------
+r64 | hisashim | 2004-05-14 01:12:50 +0900 (Fri, 14 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/docdiff.rb
+   M /trunk/testview.rb
+
+Changed all keyword "terminal" to "tty" (--terminal to --tty, to_terminal() to to_tty(), etc.)
+
+------------------------------------------------------------------------
+r63 | hisashim | 2004-05-13 23:13:08 +0900 (Thu, 13 May 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/docdiff.rb
+   M /trunk/testdocdiff.rb
+
+Fixed a bug that sometimes charset (encoding) is missing from XHTML header.
+
+------------------------------------------------------------------------
+r62 | hisashim | 2004-04-26 02:01:05 +0900 (Mon, 26 Apr 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/testdocdiff.rb
+   M /trunk/testview.rb
+
+Refactored View#to_xxx().
+
+------------------------------------------------------------------------
+r61 | hisashim | 2004-04-26 00:46:16 +0900 (Mon, 26 Apr 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/testview.rb
+
+Refactored View#to_xxx_digest(), though View#to_xxx() are still messy.
+
+------------------------------------------------------------------------
+r60 | hisashim | 2004-04-23 18:14:47 +0900 (Fri, 23 Apr 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/docdiff.rb
+   M /trunk/testdocdiff.rb
+   M /trunk/testview.rb
+
+Added context (prefix and postfix) to digest output.
+
+------------------------------------------------------------------------
+r59 | hisashim | 2004-04-19 03:34:29 +0900 (Mon, 19 Apr 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/testview.rb
+
+Modified View#to_html_digest and View#to_xhtml_digest output format to use <ul>.
+
+------------------------------------------------------------------------
+r58 | hisashim | 2004-04-19 02:24:24 +0900 (Mon, 19 Apr 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/testview.rb
+
+Added View#to_terminal_digest, View#to_html_digest, View#to_xhtml_digest and their tests (just for experiment).
+
+------------------------------------------------------------------------
+r57 | hisashim | 2004-04-11 23:35:18 +0900 (Sun, 11 Apr 2004) | 2 lines
+Changed paths:
+   M /trunk/readme.html
+
+Updated News section in readme.html.
+
+------------------------------------------------------------------------
+r56 | hisashim | 2004-04-11 15:22:25 +0900 (Sun, 11 Apr 2004) | 2 lines
+Changed paths:
+   M /trunk/Makefile
+
+Fixed Makefile so that "tar:" target should work on non-Unix systems whose path delimiter is not "/"(slash) but "\"(backslash).
+
+------------------------------------------------------------------------
+r55 | hisashim | 2004-04-11 15:04:09 +0900 (Sun, 11 Apr 2004) | 2 lines
+Changed paths:
+   M /trunk/Makefile
+
+Fixed Makefile so that tar use working directory's basename instead of hard-coded "docdiff".
+
+------------------------------------------------------------------------
+r54 | hisashim | 2004-04-11 01:11:00 +0900 (Sun, 11 Apr 2004) | 2 lines
+Changed paths:
+   M /trunk/Makefile
+   M /trunk/docdiff.rb
+   M /trunk/readme.html
+
+Added target "tar:" to Makefile; added table of contents, news and todo to readme.html; fixed date in docdiff.rb.
+
+------------------------------------------------------------------------
+r53 | hisashim | 2004-04-10 19:10:43 +0900 (Sat, 10 Apr 2004) | 2 lines
+Changed paths:
+   M /trunk/readme.html
+
+Incorporated license body (COPYING) into readme.html.
+
+------------------------------------------------------------------------
+r52 | hisashim | 2004-04-10 18:27:47 +0900 (Sat, 10 Apr 2004) | 2 lines
+Changed paths:
+   A /trunk/readme.html
+
+Added document (readme.html).
+
+------------------------------------------------------------------------
+r51 | hisashim | 2004-04-10 18:25:53 +0900 (Sat, 10 Apr 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+
+Changed the license from Ruby's to modified BSD style.
+
+------------------------------------------------------------------------
+r50 | hisashim | 2004-02-12 12:29:22 +0900 (Thu, 12 Feb 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+
+Fixed help message (default output format is not manued but html now).
+
+------------------------------------------------------------------------
+r49 | hisashim | 2004-02-07 18:51:37 +0900 (Sat, 07 Feb 2004) | 2 lines
+Changed paths:
+   A /trunk/docdiff.conf.example
+   M /trunk/docdiff.rb
+
+Changed default output format from manued to html.  Added example config file.
+
+------------------------------------------------------------------------
+r48 | hisashim | 2004-02-07 18:39:34 +0900 (Sat, 07 Feb 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+
+Fixed a bug with DocDiff#process_config_file.  User config file seems to work now.
+
+------------------------------------------------------------------------
+r47 | hisashim | 2004-02-07 18:24:28 +0900 (Sat, 07 Feb 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/docdiff.rb
+
+Fixed minor bugs: --xhtml produced HTML output; HTML/XHTML escaping did not work when header option is on.
+
+------------------------------------------------------------------------
+r46 | hisashim | 2004-02-07 18:01:58 +0900 (Sat, 07 Feb 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/view.rb
+   M /trunk/testview.rb
+
+Added kludge to escape HTML/XHTML/Manued special characters.
+
+------------------------------------------------------------------------
+r45 | hisashim | 2004-01-28 21:18:57 +0900 (Wed, 28 Jan 2004) | 2 lines
+Changed paths:
+   A /trunk/sample/humpty_dumpty01.ascii.lf
+   A /trunk/sample/humpty_dumpty02.ascii.lf
+
+Added sample text files.
+
+------------------------------------------------------------------------
+r44 | hisashim | 2004-01-28 14:33:36 +0900 (Wed, 28 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/charstring.rb
+   M /trunk/testcharstring.rb
+
+Tweaked CharString.guess_encoding_using_iconv a bit to avoid mis-detection of EUC-JP.
+
+------------------------------------------------------------------------
+r43 | hisashim | 2004-01-28 12:42:44 +0900 (Wed, 28 Jan 2004) | 2 lines
+Changed paths:
+   A /trunk/sample/01.en.ascii.cr
+   A /trunk/sample/01.en.ascii.crlf
+   A /trunk/sample/01.en.ascii.lf
+   D /trunk/sample/01.en.txt
+   A /trunk/sample/01.ja.eucjp.lf
+   A /trunk/sample/01.ja.sjis.cr
+   A /trunk/sample/01.ja.sjis.crlf
+   D /trunk/sample/01.ja.txt
+   A /trunk/sample/01.ja.utf8.crlf
+   A /trunk/sample/02.en.ascii.cr
+   A /trunk/sample/02.en.ascii.crlf
+   A /trunk/sample/02.en.ascii.lf
+   D /trunk/sample/02.en.txt
+   A /trunk/sample/02.ja.eucjp.lf
+   A /trunk/sample/02.ja.sjis.cr
+   A /trunk/sample/02.ja.sjis.crlf
+   D /trunk/sample/02.ja.txt
+   A /trunk/sample/02.ja.utf8.crlf
+
+Changed sample text file names and added some more encodings/eols.
+
+------------------------------------------------------------------------
+r42 | hisashim | 2004-01-26 20:49:56 +0900 (Mon, 26 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/testdocdiff.rb
+
+Fixed inconsistent tests.
+
+------------------------------------------------------------------------
+r41 | hisashim | 2004-01-26 20:46:06 +0900 (Mon, 26 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+
+Fixed bugs in main procedure which were not covered by unit tests.
+
+------------------------------------------------------------------------
+r40 | hisashim | 2004-01-26 19:53:47 +0900 (Mon, 26 Jan 2004) | 2 lines
+Changed paths:
+   A /trunk/sample
+   A /trunk/sample/01.en.txt
+   A /trunk/sample/01.ja.txt
+   A /trunk/sample/02.en.txt
+   A /trunk/sample/02.ja.txt
+
+Added sample text files.
+
+------------------------------------------------------------------------
+r39 | hisashim | 2004-01-26 18:49:31 +0900 (Mon, 26 Jan 2004) | 2 lines
+Changed paths:
+   A /trunk/docdiff/encoding
+   A /trunk/docdiff/encoding/en_ascii.rb
+   A /trunk/docdiff/encoding/ja_eucjp.rb
+   A /trunk/docdiff/encoding/ja_sjis.rb
+   A /trunk/docdiff/encoding/ja_utf8.rb
+
+Re-added docdiff/encoding and its content to the repository which I mistakenly removed.
+
+------------------------------------------------------------------------
+r38 | hisashim | 2004-01-26 18:24:06 +0900 (Mon, 26 Jan 2004) | 2 lines
+Changed paths:
+   D /trunk/docdiff/encoding
+
+Removed encoding and its content from the repository which I forgot to remove last time.
+
+------------------------------------------------------------------------
+r37 | hisashim | 2004-01-26 18:10:21 +0900 (Mon, 26 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff/diff/editscript.rb
+   M /trunk/docdiff/diff/speculative.rb
+   M /trunk/docdiff/difference.rb
+   M /trunk/docdiff/view.rb
+   M /trunk/testview.rb
+
+Fixed library names to require.
+
+------------------------------------------------------------------------
+r36 | hisashim | 2004-01-26 17:46:45 +0900 (Mon, 26 Jan 2004) | 2 lines
+Changed paths:
+   D /trunk/difference.rb
+
+Removed difference.rb from the repository which I forgot to remove last time.
+
+------------------------------------------------------------------------
+r35 | hisashim | 2004-01-26 17:42:13 +0900 (Mon, 26 Jan 2004) | 2 lines
+Changed paths:
+   D /trunk/charstring.rb
+   A /trunk/docdiff
+   A /trunk/docdiff/charstring.rb
+   A /trunk/docdiff/diff
+   A /trunk/docdiff/diff/contours.rb
+   A /trunk/docdiff/diff/editscript.rb
+   A /trunk/docdiff/diff/rcsdiff.rb
+   A /trunk/docdiff/diff/shortestpath.rb
+   A /trunk/docdiff/diff/speculative.rb
+   A /trunk/docdiff/diff/subsequence.rb
+   A /trunk/docdiff/diff/unidiff.rb
+   A /trunk/docdiff/diff.rb
+   A /trunk/docdiff/difference.rb
+   A /trunk/docdiff/document.rb
+   A /trunk/docdiff/encoding
+   A /trunk/docdiff/encoding/en_ascii.rb
+   A /trunk/docdiff/encoding/ja_eucjp.rb
+   A /trunk/docdiff/encoding/ja_sjis.rb
+   A /trunk/docdiff/encoding/ja_utf8.rb
+   A /trunk/docdiff/view.rb
+   M /trunk/docdiff.rb
+   D /trunk/document.rb
+   M /trunk/testcharstring.rb
+   M /trunk/testdiff.rb
+   M /trunk/testdifference.rb
+   M /trunk/testdocdiff.rb
+   M /trunk/testdocument.rb
+   M /trunk/testview.rb
+   D /trunk/view.rb
+
+Imported akr diff library into repository.  Re-arranged directory structure.
+
+------------------------------------------------------------------------
+r34 | hisashim | 2004-01-26 00:43:56 +0900 (Mon, 26 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/charstring.rb
+   M /trunk/docdiff.rb
+   M /trunk/testdocdiff.rb
+   M /trunk/view.rb
+
+Added user interface to docdiff.rb.
+
+------------------------------------------------------------------------
+r33 | hisashim | 2004-01-23 13:22:50 +0900 (Fri, 23 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/charstring.rb
+   M /trunk/testcharstring.rb
+
+Gave up making scanned substrings have the same @encoding and @eol, due to speed issue.  Let application keep correct encoding and eol.
+
+------------------------------------------------------------------------
+r32 | hisashim | 2004-01-23 13:17:18 +0900 (Fri, 23 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/charstring.rb
+   M /trunk/testcharstring.rb
+
+Tried speeding up by changing CharString to be used by including, not extending.  But this is still very slow.
+
+------------------------------------------------------------------------
+r31 | hisashim | 2004-01-23 12:19:22 +0900 (Fri, 23 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/charstring.rb
+   M /trunk/testcharstring.rb
+
+Overrode String::scan and String::split in CharString, so that substrings also extend CharString and have the same @encoding and @eol.  But This makes everything very slow.
+
+------------------------------------------------------------------------
+r30 | hisashim | 2004-01-22 17:54:41 +0900 (Thu, 22 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+   M /trunk/testdocdiff.rb
+   M /trunk/testview.rb
+
+Added Japanese tests to testview.rb
+
+------------------------------------------------------------------------
+r29 | hisashim | 2004-01-21 17:25:44 +0900 (Wed, 21 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/Makefile
+   M /trunk/difference.rb
+   M /trunk/docdiff.rb
+   M /trunk/document.rb
+   M /trunk/encoding/en_ascii.rb
+   M /trunk/encoding/ja_eucjp.rb
+   M /trunk/encoding/ja_sjis.rb
+   M /trunk/encoding/ja_utf8.rb
+   M /trunk/testcharstring.rb
+   M /trunk/testdifference.rb
+   A /trunk/testview.rb
+   A /trunk/view.rb
+
+Pulled out displaying function from Difference to View, adding view.rb and testview.rb.  Quoted some regexps in encoding modules, to avoid warning about "[".
+
+------------------------------------------------------------------------
+r28 | hisashim | 2004-01-21 15:51:25 +0900 (Wed, 21 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/Makefile
+   M /trunk/charstring.rb
+   M /trunk/docdiff.rb
+   M /trunk/document.rb
+   M /trunk/encoding/en_ascii.rb
+   M /trunk/encoding/ja_eucjp.rb
+   M /trunk/encoding/ja_sjis.rb
+   M /trunk/encoding/ja_utf8.rb
+   M /trunk/testcharstring.rb
+   M /trunk/testdocdiff.rb
+   M /trunk/testdocument.rb
+
+Replaced "codeset" in symbol names to "encoding".  Made CharString.guess_encoding more strict using Iconv.
+
+------------------------------------------------------------------------
+r27 | hisashim | 2004-01-15 20:15:06 +0900 (Thu, 15 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/charstring.rb
+   M /trunk/docdiff.rb
+   M /trunk/document.rb
+   M /trunk/testcharstring.rb
+   M /trunk/testdocument.rb
+
+Moved codeset and eol auto detection from CharString to Document (not working correctly yet).
+
+------------------------------------------------------------------------
+r26 | hisashim | 2004-01-14 20:51:45 +0900 (Wed, 14 Jan 2004) | 2 lines
+Changed paths:
+   A /trunk/testdiff.rb
+
+Added testdiff.rb, although this is not really a test script but a script to study akr diff.
+
+------------------------------------------------------------------------
+r25 | hisashim | 2004-01-14 20:48:47 +0900 (Wed, 14 Jan 2004) | 2 lines
+Changed paths:
+   A /trunk/Makefile
+   M /trunk/charstring.rb
+   M /trunk/docdiff.rb
+   M /trunk/document.rb
+   M /trunk/testdocument.rb
+
+Added a Makefile to ease testing.
+
+------------------------------------------------------------------------
+r24 | hisashim | 2004-01-14 17:51:33 +0900 (Wed, 14 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+   M /trunk/document.rb
+   A /trunk/testdocdiff.rb
+   M /trunk/testdocument.rb
+
+Moved Document#compare_by_foo_with() methods to DocDiff#compare_by_foo().  Added testdocdiff.rb.
+
+------------------------------------------------------------------------
+r23 | hisashim | 2004-01-14 16:30:09 +0900 (Wed, 14 Jan 2004) | 2 lines
+Changed paths:
+   A /trunk/difference.rb
+   A /trunk/testdifference.rb
+
+Added difference.rb and testdifference.rb, which I forgot to add long time ago.
+
+------------------------------------------------------------------------
+r22 | hisashim | 2004-01-14 16:28:12 +0900 (Wed, 14 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+   A /trunk/document.rb
+   A /trunk/testdocument.rb
+
+Pulled out Document class from docdiff.rb to document.rb.
+
+------------------------------------------------------------------------
+r21 | hisashim | 2004-01-13 18:38:19 +0900 (Tue, 13 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/charstring.rb
+   M /trunk/testcharstring.rb
+
+Changed some method names in CharString; to_foo() -> split_to_foo()
+
+------------------------------------------------------------------------
+r20 | hisashim | 2003-09-16 15:45:22 +0900 (Tue, 16 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/encoding/en_ascii.rb
+   M /trunk/encoding/ja_eucjp.rb
+   M /trunk/encoding/ja_sjis.rb
+   M /trunk/encoding/ja_utf8.rb
+
+Fixed indentation, etc. of encoding/*.rb.
+
+------------------------------------------------------------------------
+r19 | hisashim | 2003-09-16 14:40:37 +0900 (Tue, 16 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/charstring.rb
+   A /trunk/encoding
+   A /trunk/encoding/en_ascii.rb
+   A /trunk/encoding/ja_eucjp.rb
+   A /trunk/encoding/ja_sjis.rb
+   A /trunk/encoding/ja_utf8.rb
+
+Separated encoding modules from charstring.rb to encoding/*.rb.
+
+------------------------------------------------------------------------
+r18 | hisashim | 2003-09-10 18:31:27 +0900 (Wed, 10 Sep 2003) | 2 lines
+Changed paths:
+   A /trunk/devutil
+   A /trunk/devutil/JIS0208.TXT
+   A /trunk/devutil/char_by_charclass.rb
+   A /trunk/devutil/charclass_by_char.rb
+   A /trunk/devutil/jis0208.rb
+   A /trunk/devutil/testjis0208.rb
+
+Added devutil directory, which contains utilities for development.
+
+------------------------------------------------------------------------
+r17 | hisashim | 2003-09-10 16:01:03 +0900 (Wed, 10 Sep 2003) | 2 lines
+Changed paths:
+   D /trunk/arrayplus.rb
+   A /trunk/charstring.rb
+   M /trunk/docdiff.rb
+   D /trunk/testarrayplus.rb
+   A /trunk/testcharstring.rb
+   D /trunk/teststringplus.rb
+
+Removed ArrayPlus and StringPlus, added CharString.
+
+------------------------------------------------------------------------
+r16 | hisashim | 2002-11-15 19:13:51 +0900 (Fri, 15 Nov 2002) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+   M /trunk/teststringplus.rb
+
+Add count_char() for English/ASCII.
+
+------------------------------------------------------------------------
+r15 | hisashim | 2002-11-15 14:15:17 +0900 (Fri, 15 Nov 2002) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+   M /trunk/teststringplus.rb
+
+Simplify to_word()'s word separation rule on English (and other latin langs).
+
+------------------------------------------------------------------------
+r14 | hisashim | 2002-10-18 12:19:56 +0900 (Fri, 18 Oct 2002) | 2 lines
+Changed paths:
+   M /trunk/arrayplus.rb
+   M /trunk/testarrayplus.rb
+
+Add subtract() method.
+
+------------------------------------------------------------------------
+r13 | hisashim | 2002-10-18 12:18:37 +0900 (Fri, 18 Oct 2002) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+
+Saving before major modification on to_word and other methods.
+
+------------------------------------------------------------------------
+r12 | hisashim | 2002-10-09 11:17:53 +0900 (Wed, 09 Oct 2002) | 2 lines
+Changed paths:
+   M /trunk/arrayplus.rb
+   M /trunk/testarrayplus.rb
+
+2002-10-09: Add methods: flatten, largest, longest, smallest, shortest, mode, median.
+
+------------------------------------------------------------------------
+r11 | hisashim | 2002-10-07 11:41:07 +0900 (Mon, 07 Oct 2002) | 2 lines
+Changed paths:
+   M /trunk/arrayplus.rb
+   M /trunk/testarrayplus.rb
+
+2002-10-07: Rename ArrayPlus::pick_indice to ArrayPlus::pick_indices (fixing typo).
+
+------------------------------------------------------------------------
+r10 | hisashim | 2002-10-06 01:57:17 +0900 (Sun, 06 Oct 2002) | 2 lines
+Changed paths:
+   A /trunk/arrayplus.rb
+   M /trunk/docdiff.rb
+   A /trunk/testarrayplus.rb
+   M /trunk/teststringplus.rb
+
+2002-10-06: Refactoring regexp.
+
+------------------------------------------------------------------------
+r9 | hisashim | 2002-09-25 01:02:18 +0900 (Wed, 25 Sep 2002) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+
+2002-09-23 add module English and Japanese to unify regexp construction within a language.
+
+------------------------------------------------------------------------
+r8 | hisashim | 2002-09-19 23:42:05 +0900 (Thu, 19 Sep 2002) | 2 lines
+Changed paths:
+   D /trunk/testsplittablestring.rb
+
+2002-09-18 removed old testsplittablestring.rb.
+
+------------------------------------------------------------------------
+r7 | hisashim | 2002-09-19 23:41:07 +0900 (Thu, 19 Sep 2002) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+   A /trunk/teststringplus.rb
+
+2002-09-18 updated docdiff.rb, and renamed testsplittablestring.rb to teststringplus.rb.
+
+------------------------------------------------------------------------
+r6 | hisashim | 2002-08-16 00:01:30 +0900 (Fri, 16 Aug 2002) | 2 lines
+Changed paths:
+   M /trunk/docdiff.rb
+
+2002-08-15 removed old unused code.
+
+------------------------------------------------------------------------
+r2 | hisashim | 2002-08-15 23:58:47 +0900 (Thu, 15 Aug 2002) | 2 lines
+Changed paths:
+   A /trunk/docdiff.rb
+   A /trunk/testsplittablestring.rb
+
+Initial revision
+
+------------------------------------------------------------------------
+r1 | (no author) | 2002-08-15 23:58:47 +0900 (Thu, 15 Aug 2002) | 1 line
+Changed paths:
+   A /branches
+   A /tags
+   A /trunk
+
+New repository initialized by cvs2svn.
+------------------------------------------------------------------------

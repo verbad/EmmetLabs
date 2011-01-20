@@ -1,0 +1,27 @@
+#FIXME: WTF? No wonder we can't figure out the photo stuff. It's at the bottom of this file!!!
+if @index == 'first'
+  page.call 'show_start_over_link'
+  page.visual_effect :fade, 'choose_first_person', {:duration => 0.3}
+  page.replace_html "show_first_person_panel", :partial => 'show_person'
+  page.replace_html "first_name", @person.full_name
+  page.replace_html "first_name_param", hidden_field_tag(:person_id, @person.to_param)
+  page.replace_html "second_suggestable_name_fields", :partial => 'people/autosuggest_name',
+                                                      :object => @person,
+                                                      :locals => { :index => 'second', :from_node_id => @person.id}
+  page.visual_effect :appear, "show_first_person_panel", {:duration => 0.3}
+  page.visual_effect :appear, 'choose_second_person', {:duration => 0.3}
+elsif @index == 'second'
+  page.call 'show_start_over_link'
+  page.visual_effect :fade, 'choose_second_person', {:duration => 0.3}
+  page.replace_html "show_second_person_panel", :partial => 'show_person'
+  page.replace_html "second_name", @person.full_name
+  page.replace_html "second_name_param", hidden_field_tag(:to_node_id, @person.to_param)
+  page.visual_effect :appear, "show_second_person_panel", {:duration => 0.3}
+  page.visual_effect :appear, "relationship_panel", {:duration => 0.3}
+else
+  page.replace 'primary_photo', :partial => 'photos/primary_photo', :locals => {:photoable => @person}
+  if @person.photos.empty?
+    page.replace_html 'add_first_photo', :partial => 'photos/new_photo', :locals => {:id => 'add_first_photo', :show => false}
+    page.visual_effect :slide_down, 'add_first_photo', :duration => 0.3
+  end
+end

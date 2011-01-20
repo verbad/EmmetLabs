@@ -1,0 +1,11 @@
+<div id="profile_photo_<%= photo.id %>">
+  <%= image_tag photo.versions[:original].url, :size => '50x50' %>
+  <% if current_user == user && !photo.instance_of?(DefaultPhoto) %>
+      <%= link_to 'Delete',
+                profile_photo_url(user, photo), :method => :delete %>
+      <% unless user.profile.primary_photo == photo %>
+        <%= link_to 'Set as primary photo',
+                profile_primary_photo_url(:user_id => user, :id => photo), :method => :put %>
+      <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,29 @@
+- relatives = @from_node ? @from_node.relatives : []
+
+%ul
+  - @node_suggestions.each do |node|
+    - directed_relationship = @from_node.directed_relationship_to(node) if @from_node
+    - related = relatives.include?(node)
+    %li{:id => "#{related ? 'unselectable' : 'selectable'}_#{node.to_param}"}
+      .person_name
+        - if related
+          %b= node.full_name
+        - else
+          = link_to "<b>#{node.full_name}</b>", "#"
+      
+      .summary
+        - if related
+          = "#{@from_node.full_name} and #{node.full_name} are already related. "
+          = link_to "See relationship &hellip; ", pretty_directed_relationship_path(directed_relationship).to_s
+      
+        = node.summary unless node.summary.blank?
+        
+      .clear_both
+  
+  %li#add_new_person_link= link_to 'This is a New Person', '#'
+  
+  - if @node_suggestions.size >= 5 && ! @show_all
+    %li.view_all
+      #more_results.extra
+        = link_to_function "See All #{@node_suggestions_count}&hellip;", "var query_parameters = 'query='+$('suggestable_query_#{@index}').value + '&from_node_id=#{@from_node.nil? ? nil : @from_node.id}&&from_node=#{@from_node.class}&show_all=true'; new Ajax.Request('/node_suggestions', {asynchronous:true, evalScripts:true, parameters:query_parameters, method:'get', onSuccess:autocompleter_#{@index}_updateChoices});"
+

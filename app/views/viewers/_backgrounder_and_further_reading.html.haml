@@ -1,0 +1,4 @@
+#backgrounder_field_readonly.editable
+  %h2 Backgrounder
+  =link_to_function 'edit', 'new Effect.Fade("backgrounder_field_readonly", {duration: 0.3}); new Effect.Appear("backgrounder_field_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("person_backgrounder").focus();\', 650)', :class => 'edit'
+  %div= m(entity.backgrounder_original)

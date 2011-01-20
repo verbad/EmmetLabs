@@ -1,0 +1,24 @@
+photo_association_1:
+  id: 1
+  asset_id: 1
+  associate_id: 1
+  associate_type: Person
+  type: AssetsAssociation
+  position: 1
+  primary: true
+photo_association_2:
+  id: 2
+  asset_id: 2
+  associate_id: 1
+  associate_type: Person
+  type: AssetsAssociation
+  position: 2
+  primary: false
+photo_association_3:
+  id: 3
+  asset_id: 3
+  associate_id: 1
+  associate_type: Relationship
+  type: AssetsAssociation
+  position: 1
+  primary: true

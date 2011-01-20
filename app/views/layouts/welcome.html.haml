@@ -1,0 +1,34 @@
+!!! Strict
+%html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", 'xml:lang' => "en" }
+  %head
+    %title= @content_for_title.nil? ? 'Emmet Labs' : "#{@content_for_title} | Emmet Labs"
+    %link{:rel => "shortcut icon", :href => "/images/favicon.ico", :type => "image/x-icon"}
+    
+    = javascript_include_merged('application')
+    
+    -# ### Uncomment to use SASS
+    = stylesheet_link_tag 'compiled/welcome', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/print', :media => 'print'
+    /[if IE]
+      = stylesheet_link_tag 'compiled/ie', :media => 'screen, projection'
+
+    = render :partial => 'layouts/js_onload'
+    = yield :head
+  %body
+    #container
+      #welcome
+        #hdr
+          #logo=link_to "emmet", "/"
+        #content
+          .notice= flash[:notice] if flash[:notice]
+          -# flash[:error].to_a.each {|error_message| div.error(error_message)} if flash[:error]
+          = yield
+        #ftr
+          %ol
+            %li.current=link_to "Company", "/company"
+            %li=link_to "Team", "/team"
+            %li=link_to "Contact", "/contact"
+            %li=link_to "Blog", 'http://blog.emmetlabs.com/'
+          %p.site=link_to "emmetlabs.com", "http://www.emmetlabs.com"
+          %p.copy Copyright &copy; 2009 Emmet Labs
+      = render :partial => 'layouts/analytics'

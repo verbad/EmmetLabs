@@ -1,0 +1,47 @@
+#name_field_readonly.editable{:style => person.errors.on(:calculated_dashified_full_name).blank? && !person.new_record? ? nil : 'display:none'}
+
+  - if person.new_record?
+    %h1 New Person
+  - else
+    .hd.first
+      %h1= person.full_name
+      - if current_user_valid?
+        = link_to_function 'edit', %Q|new Effect.Fade("name_field_readonly", {duration: 0.3}); new Effect.Appear("name_field_editable", {duration: 0.3, delay: 0.3}); update_summary_characters_remaining_person_summary(); setTimeout(\'$("person_first_name").focus();\', 650);|, :class => 'edit'
+
+- if current_user_valid?
+  #name_field_editable.editable.active{:style => person.errors.on(:calculated_dashified_full_name).blank? && !person.new_record? ? 'display:none' : nil}
+    - unless person.errors.on(:calculated_dashified_full_name).blank?
+      #person_name_error.error
+        = person.errors.on(:calculated_dashified_full_name)
+
+    - if person.new_record?
+      - method = :post
+      - url = people_path
+    - else
+      - method = :put
+      - url = person_path(person)
+
+    .hd.first
+      %h1= person.full_name
+    .bd
+      - form_for(person, :url =>url, :html => {:method => method, :name => 'name_field_form'}) do |f|
+        %fieldset#name
+          = hidden_field_tag(:profile_page, 'true')
+          %ol
+            %li
+              %label{:for => 'person_first_name'} First
+              = f.text_field(:first_name, :size => 22)
+            %li
+              %label{:for => 'person_middle_name'} Middle
+              = f.text_field(:middle_name, :size => 12)
+            %li
+              %label{:for => 'person_last_name'} Last
+              = f.text_field(:last_name, :size => 22)
+            %li
+              %label{:for => 'person_common_name'} Alias
+              = f.text_field(:common_name, :size => 45)
+      
+    .ft
+      #name_field_spinner.spinner{:style => 'display: none'}
+      = link_to_function 'save', '$("name_field_spinner").show(); document.name_field_form.submit();', :class => 'save primary'
+      = link_to_function 'cancel', %Q|new Effect.Fade("name_field_editable", {duration: 0.3}); if ($('person_name_error')) new Effect.Fade("person_name_error", {duration: 0.3}); document.name_field_form.reset(); new Effect.Appear("name_field_readonly", {duration: 0.3, delay: 0.3});|, :class => 'cancel tertiary'

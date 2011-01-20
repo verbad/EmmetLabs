@@ -1,0 +1,37 @@
+lipstick:
+  id: 1
+  full_name: Lipstick
+  calculated_dashified_full_name: Lipstick
+  backgrounder: Sarah Palin made it famous.
+  summary: Sometimes found on pigs
+  further_reading: 
+  author_id: 1
+  also_known_as: 
+
+two:
+  id: 2
+  full_name: MyString
+  calculated_dashified_full_name: MyString
+  backgrounder: MyText
+  summary: MyString
+  further_reading: MyText
+  author_id: 1
+  also_known_as: MyString
+
+id_collision:
+  id: 10240
+  full_name: Entity with ID Collsion
+  calculated_dashified_full_name: Entity-with-ID-Collision
+  backgrounder: find_person_or_entity_by_param needs to handle this case gracefully
+  summary: gory details
+  author_id: 1
+  also_known_as: simple solution
+
+full_collision:
+  id: 10241
+  full_name: Full Collision
+  calculated_dashified_full_name: Full-Collision
+  backgrounder: find_person_or_entity_by_param needs to handle this case gracefully
+  summary: gory details
+  author_id: 1
+  also_known_as: problem child

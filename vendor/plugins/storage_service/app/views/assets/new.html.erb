@@ -1,0 +1,12 @@
+<%= error_messages_for :asset %>
+
+<h1>Upload an Asset!</h1>
+<% form_for(:asset,
+:url => {:action => :create},
+:html => {:multipart => true}) do |form| %>
+    Path:
+    <%= form.text_field(:path) %> <br/>
+    File Path:
+    <%= form.file_field(:data) %>
+    <%= submit_tag "Upload!" %>
+<% end -%>

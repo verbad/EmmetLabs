@@ -1,0 +1,5 @@
+page.replace :directed_relationship, :partial => 'show'
+page.call "amazon_search", @directed_relationship.id
+if Rails.env.production?
+  page.call 'pageTracker._trackPageview', ajax_directed_relationship_path(@directed_relationship)
+end

@@ -1,0 +1,24 @@
+#start
+  %h1 Welcome to Emmet
+  = link_to 'Share a story', new_story_path, :class => 'primary'
+
+  %h2
+    = "Choose an Entity (#{@entities.total_entries} total)"
+    |
+    = link_to "see all people", people_path
+  - column_count = 3
+  - per_column = EntityAttributes::ClassMethods::EXPLORE_PER_PAGE / column_count
+  - (0..column_count - 1).each do |column_index|
+    - start_index = per_column * column_index
+    - if start_index < @entities.size
+      %ul
+        - @entities[start_index, per_column].each do |entity|
+          %li
+            = link_to "#{entity.full_name} <small>(#{entity.directed_relationships.size})</small>", network_path(entity).to_s, :title => "#{entity.full_name} (#{pluralize(entity.directed_relationships.size, 'connection')})"
+
+  = will_paginate @entities
+
+  %ul#show_counts
+    %li= show_pagination_count(25, @per_page, @page_number, @column_count)
+    %li= show_pagination_count(50, @per_page, @page_number, @column_count)
+    %li= show_pagination_count(100, @per_page, @page_number, @column_count)

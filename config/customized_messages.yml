@@ -1,0 +1,8 @@
+"Password Reset Token must belong to a user": "No account was found with that email address."
+"Unique name has already been taken.": "Username has already been taken."
+"The email address you provided is not valid": "The email address you provided is not valid."
+"The email address you provided is already taken": 'It seems like you already have an account. Perhaps you have <a href="http://localhost:3000/password_reset_requests/new">forgotten your password</a>? Otherwise, please use a different email address.'
+"Please confirm your password": "Confirm your password."
+"Unique name must be composed of letters, digits, underscores, or hyphens.": "Usernames must be composed of letters, digits, underscores, or hyphens."
+"Your address has been verified. Welcome!": "Thank you for verifying your address and welcome to our community!"
+"Your account has been created.": "Your account has been created and we have sent you a verification email."

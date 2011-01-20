@@ -1,0 +1,19 @@
+#amazon_ads_body{:style => 'display:none'}
+  .box
+    %h3 Recommendations from Amazon
+
+    %ul
+      = list_of @amazon_search_results[0..2] do |result|
+        - unless result.thumbnail_url.nil?
+          .thumbnail
+            = link_to image_tag(result.thumbnail_url, :title =>result.title, :alt=>result.title, :width=>75), result.affiliate_url, :target => '_blank'
+
+        .details{:class => (result.thumbnail_url.nil? ? 'amazon_ad_details_no_image' : nil)}
+          = link_to result.title, result.affiliate_url, :target => '_blank'
+          - if result.author
+            %div.author= " by #{result.author}"
+          - if result.binding
+            %div.binding= "(#{result.binding})"
+          - if result.formatted_price
+            %div.price= "Buy new: #{result.formatted_price}"
+

@@ -1,0 +1,10 @@
+photo_1:
+  id: 1
+  type: Photo
+  position: 1
+  original_filename: blah.jpg
+photo_2:
+  id: 2
+  type: Photo
+  position: 2
+  original_filename: blah.jpg

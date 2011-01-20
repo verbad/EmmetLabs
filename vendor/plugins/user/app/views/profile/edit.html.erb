@@ -1,0 +1,31 @@
+<% form_tag(user_profile_url(@user), {:method => :put, :multipart => true}) do %>
+  <label for="profile_first_name">First Name:</label><br/>
+  <%= text_field 'profile', 'first_name'  %>
+  <br>
+  <label for="profile_last_name">Last Name:</label><br/>
+  <%= text_field 'profile', 'last_name'  %>
+        
+  <table>
+    <tr>
+      <td>Primary Photo:</td>
+      <td>
+        <%= render :partial => 'profile_photos/profile_photo',
+             :locals => {:photo => @profile.primary_photo, :user => @user}%>
+      </td>
+    </tr>
+    <tr>
+      <td>Upload a file</td>
+      <td><%= file_field_tag 'profile[photo]' %></td>
+    </tr>
+  </table>
+  <%= submit_tag 'Save Changes', :id=>'commit' %>
+<% end %>
+
+<% if @profile.photos.size > 0 %>
+Your Photos:
+  <%= render :partial => 'profile/profile_photos',
+        :locals => {:photos => @profile.photos}
+  %>
+<% end %>
+<br/>
+

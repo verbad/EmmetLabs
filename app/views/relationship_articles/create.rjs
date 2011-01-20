@@ -1,0 +1,2 @@
+page.replace 'article', :partial => 'relationships/show', :locals => {:relationship => @relationship}
+crossed_boundary = (@relationship.article.stub? != @relationship.article.previous_revision.stub?) || (@relationship.article.blank? != @relationship.article.previous_revision.blank?)

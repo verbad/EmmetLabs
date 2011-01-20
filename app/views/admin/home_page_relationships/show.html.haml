@@ -1,0 +1,8 @@
+%h1 Current Home Page Relationship
+%table
+  %tr
+    %th Relationships
+    %th Actions
+  %tr
+    %td= "#{@directed_relationship.from.full_name} to #{@directed_relationship.to.full_name}"
+    %td= link_to 'Edit Current Relationship', edit_admin_home_page_relationships_path, :class => 'edit'

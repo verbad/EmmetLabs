@@ -1,0 +1,28 @@
+!!! Strict
+%html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", 'xml:lang' => "en" }
+  %head
+    %title= @content_for_title.nil? ? 'Emmet Labs' : "#{@content_for_title} | Emmet Labs"
+    %link{:rel => "shortcut icon", :href => "/images/favicon.ico", :type => "image/x-icon"}
+    
+    = javascript_include_merged('application')
+    
+    = stylesheet_link_tag 'compiled/screen', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/print', :media => 'print'
+    /[if IE]
+      = stylesheet_link_tag 'compiled/ie', :media => 'screen, projection'
+
+    /[if IE 6]
+      = stylesheet_link_tag 'compiled/ie6', :media => 'screen, projection'
+    
+    = render :partial => 'layouts/js_onload'
+    = yield :head
+  %body
+    #container
+      #main
+        = render :partial => 'layouts/header'
+  
+        .notice= flash[:notice] if flash[:notice]
+        -# flash[:error].to_a.each {|error_message| div.error(error_message)} if flash[:error]
+        = yield
+      = render :partial => 'layouts/footer'
+      = render :partial => 'layouts/analytics'

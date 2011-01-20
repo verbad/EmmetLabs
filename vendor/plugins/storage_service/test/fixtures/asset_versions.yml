@@ -1,0 +1,97 @@
+basic_1_resized_to_fit:
+  id: 1
+  version: resized_to_fit
+  filename: "1.png"
+  asset_id: 1
+  state_id: 1
+  type: InternalAssetVersion
+basic_1_scaled_down_to_fit:
+  id: 2
+  version: scaled_down_to_fit
+  filename: "1.png"
+  asset_id: 1
+  state_id: 2
+  type: InternalAssetVersion
+basic_1_original:
+  id: 3
+  version: original
+  filename: "1.png"
+  asset_id: 1
+  state_id: 1
+  type: InternalAssetVersion
+basic_2_resized_to_fit:
+  id: 4
+  version: resized_to_fit
+  filename: "2.png"
+  asset_id: 2
+  state_id: 1
+  type: InternalAssetVersion
+basic_2_scaled_down_to_fit:
+  id: 5
+  version: scaled_down_to_fit
+  filename: "2.png"
+  asset_id: 2
+  state_id: 2
+  type: InternalAssetVersion
+basic_2_original:
+  id: 6
+  version: original
+  filename: "2.png"
+  asset_id: 2
+  state_id: 1
+  type: InternalAssetVersion
+basic_3_resized_to_fit:
+  id: 7
+  version: resized_to_fit
+  filename: "3.png"
+  asset_id: 3
+  state_id: 1
+  type: InternalAssetVersion
+basic_3_scaled_down_to_fit:
+  id: 8
+  version: scaled_down_to_fit
+  filename: "3.png"
+  asset_id: 3
+  state_id: 2
+  type: InternalAssetVersion
+basic_3_original:
+  id: 9
+  version: original
+  filename: "3.png"
+  asset_id: 3
+  state_id: 1
+  type: InternalAssetVersion
+sub_asset_resized_to_fit:
+  id: 10
+  version: resized_to_fit
+  filename: "s.png"
+  asset_id: 4
+  state_id: 1
+  type: InternalAssetVersion
+sub_asset_scaled_down_to_fit:
+  id: 11
+  version: scaled_down_to_fit
+  filename: "s.png"
+  asset_id: 4
+  state_id: 2
+  type: InternalAssetVersion
+sub_asset_original:
+  id: 12
+  version: original
+  filename: "s.png"
+  asset_id: 4
+  state_id: 1
+  type: InternalAssetVersion
+external:
+  id: 13
+  version: external
+  asset_id: 1
+  state_id: 1
+  type: ExternalAssetVersion
+  uri: http://farm1.static.flickr.com/153/412862615_07cf3cb573.jpg
+reference_to_basic_1_resized_to_fit:
+  id: 14
+  version: fake
+  asset_id: 1
+  state_id: 1
+  type: ReferenceAssetVersion

@@ -1,0 +1,73 @@
+#login
+  +gutter-layout
+  +prepend(3)
+  +column(19)
+  h1
+    :margin-bottom 21px
+    :font-size 25px
+  fieldset
+    legend
+      :float none
+      :display block
+      :width 100%
+      :margin-bottom 8px
+    ol
+      li
+        :width 100%
+        input
+          :width 220px
+        label
+          :text-align left
+          :display block
+          :width 100%
+          span
+            +small
+            :color= !medium_gray
+  .error_container
+    p
+      +medium
+      +bold
+      :margin-bottom 4px
+    ul
+      :margin-bottom 6px
+    li.error
+      :list-style-type disc
+      :padding 0
+  #signup_form
+    +column(8)
+    li.check
+      :padding 10px 0
+      +small
+      input
+        :margin-top 0
+        :width 20px
+    input.primary
+      +large
+      :padding 6px 8px
+      :width auto
+      :margin-right 85px
+      :float right
+  #login_form
+    +prepend(1)
+    +column(7)
+    +append(1)
+    +last
+    fieldset
+      :padding 12px
+      legend
+        :padding-top 10px
+    ol
+      li
+        input
+          :display block
+          :clear left
+          :width 220px
+        input.primary
+          +medium
+          :margin-top 8px
+          :margin-right 10px
+          :padding 4px 6px
+          :width auto
+          :float right
+        em
+          :float left

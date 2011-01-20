@@ -1,0 +1,42 @@
+valid_bob_primary:
+  id: 1
+  user_id: 1
+  address: bob@example.com
+  verified: true
+  primary: true
+valid_bob_unverified:
+  id: 2
+  user_id: 1
+  address: bob2@example.com
+  verified: false
+  primary: false
+valid_bob_verified:
+  id: 3
+  user_id: 1
+  address: bob3@example.com
+  verified: true
+  primary: false
+huang:
+  id: 4
+  user_id: 2
+  address: second_valid_user@example.com
+  verified: true
+  primary: true
+unverified_user:
+  id: 5
+  user_id: 3
+  address: unverified_user@example.com
+  verified: false
+  primary: true
+user_with_old_tos:
+  id: 6
+  user_id: 4
+  address: old_tos@example.com
+  verified: true
+  primary: true
+admin:
+  id: 7
+  user_id: 5
+  address: admin@example.com
+  verified: true
+  primary: true

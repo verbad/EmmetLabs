@@ -1,0 +1,3 @@
+class Testimonial < Comment
+  
+end

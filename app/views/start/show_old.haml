@@ -1,0 +1,49 @@
+#home
+  #intro
+    %h1 Six billion people.<br />Inﬁnite stories.<br />Pull up a chair.
+    #brace {
+    %p Emmet Labs makes it easy to tell stories about how we're all connected, and to let people browse, search and add to those stories.
+    %h2.primary= link_to "Share a story", new_story_path
+    
+  #explore
+    #rotate
+      %img{:src => "images/explore_bg.gif", :alt => "Explore Connections"}
+
+      #rotate_left.thumb= image_tag @featured.from.primary_photo.versions[:small].url
+      #rotate_right.thumb= image_tag @featured.to.primary_photo.versions[:small].url 
+
+    #text
+    %h3= link_to("#{@featured.from.full_name} and #{@featured.to.full_name}", pretty_directed_relationship_path(@featured))
+    %p= @featured.relationship.summary
+        
+  #stories
+    %h4 Did you know&hellip;
+    %ol
+      = list_of @random_relationships do |relationship|
+        - link_text = capture_haml do
+          %strong= relationship.from
+          = relationship.category.name
+          %strong.last= relationship.to
+        = link_to link_text, pretty_directed_relationship_path(relationship)
+
+  #recent
+    %h4 Recently&hellip;
+    %ol.clean
+      - @recently.each do |entry|
+        %li
+          %span.label= entry.action == 'create' ? "new" : "updated"
+          - if entry.loggable_type == 'Relationship'
+            - rel = entry.loggable.directed_relationships.first
+            - link_text = capture_haml do
+              %span.connection= rel.from
+              %span= rel.to
+            = link_to link_text, pretty_directed_relationship_path(rel)
+          - else
+            = link_to entry.loggable.full_name, pretty_person_or_entity_path(entry.loggable)
+  #now
+    %dl
+      %dt Strongest Network
+      %dd= link_to @strongest_network.full_name, pretty_person_or_entity_path(@strongest_network)
+      %dt Most Active
+      %dd= link_to @most_active_person.full_name, pretty_person_or_entity_path(@most_active_person)
+    %span.view= link_to "View All", people_path

@@ -1,0 +1,49 @@
+!default_corner_radius = 10px
+
+// sets default rounded box styles for corner radius 6
+html
+  body
+    .dialog
+      :position relative
+      :margin 0px auto
+      :min-width 30px
+      :max-width 760px
+      :z-index 1
+      :margin-left = !default_corner_radius
+      .content, .t, .b, .b div
+        :position relative
+        :background transparent url(/images/rouned_login_bg.gif) no-repeat top right
+      .content
+        :padding-top 4px
+        :zoom 1
+      .t
+        :position absolute
+        :left 0px
+        :top 0px
+        :width = !default_corner_radius
+        :margin-left = !default_corner_radius * (-1)
+        :height 100%
+        :background-position top left
+      .b
+        :width 100%
+        :height = !default_corner_radius
+        :font-size 1px
+        :background-position bottom right
+        :clear both
+        div
+          :height = !default_corner_radius
+          :font-size 1px
+          :width = !default_corner_radius
+          :margin-left = !default_corner_radius * (-1)
+          :background-position bottom left
+      .hd, .bd, .ft
+        :position relative
+      // margins on any child elements will break formatting, eliminate all
+      h1,h2,h3,h4,h5,h6,p,ol,li
+        :margin 0
+        
+    // specify custom background images per element  
+    #login_form
+      .content, .t, .b, .b div
+        :background
+          :image url(/images/rounded_login_bg.gif)

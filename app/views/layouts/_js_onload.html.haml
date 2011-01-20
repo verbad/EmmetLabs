@@ -1,0 +1,9 @@
+:javascript
+  onload_functions = []
+
+  function execute_onload_functions() {
+    for (var i = 0; i < onload_functions.length; i++) {
+      onload_functions[i]();
+    }
+  }
+  window.onload = execute_onload_functions;

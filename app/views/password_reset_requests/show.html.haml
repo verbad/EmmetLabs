@@ -1,0 +1,18 @@
+#admin
+  - @token.errors.full_messages.each do |error|
+    .error= error
+
+  %h1 Change Password
+  %div To complete your password reset, please enter and confirm your new password.
+  - form_for :token, @token, :url => password_reset_request_path(@token).to_s, :html => { :method => :put } do |f|
+    %div
+      %label{:for=>"user_password"} New Password
+    %div= f.password_field 'password'
+    %br
+    %div
+      %label{:for=>"user_password"} Confirm Password
+    %div= f.password_field 'password_confirmation'
+    %br
+    %div= submit_tag "Change Password"
+
+

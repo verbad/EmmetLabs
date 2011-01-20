@@ -1,0 +1,202 @@
+html
+  +reset-html
+  +blueprint-typography
+  +emmet-typography
+  :background url(/images/html_bg.gif) repeat-y center
+  :height 100%
+  body
+    +container
+    :margin 0 auto
+    :height 100%
+    :min-height 100%
+    :position relative
+  #container
+    :min-height 100%
+    :position relative
+  #main
+    +clearfix
+    :display block
+    :padding-bottom 180px
+#hdr, #ftr
+  :background= !primary_logo
+  :position relative
+  .logo
+    +ir
+    +column(5)
+    :height 50px
+    :background-image url(/images/hdr_logo.gif)
+    :background-position bottom left
+    :z-index 9996
+    :cursor pointer
+    :position relative
+  ol
+    :margin 0
+    :padding 0
+    :float right
+    :clear right
+    li
+      +inline
+      :font-size 12px
+      :color= !secondary_logo
+      a
+        :color #fff
+        :padding-left 8px
+        :margin-left 4px
+        :background
+          :image url(/images/nav_a_bg.gif)
+          :repeat no-repeat
+          :position left center
+      a:hover
+        :text-decoration underline
+    li.clean a
+      :background-image none
+#hdr
+  :padding-top 0
+  :height 80px
+  .logo
+    :height 80px
+  #l
+    +column(5)
+  #r
+    +column(17)
+    +last
+    :position relative
+  #user
+    :height 40px
+    :padding-top 6px
+    ol
+      :float right
+      :clear none
+  #nav
+    +bold
+    +column(10)
+    +medium
+    :margin-top 48px
+    :color #fff
+    :position absolute
+    :bottom 3px
+    :left 0
+    ol
+      :float left
+      :margin-left 24px
+      li
+        :font-size 13px
+        a
+          :color= !secondary_logo
+          :background none
+        a:hover
+          :color #fff
+          :text-decoration none
+      li.first
+        :margin-left 2px
+        :border-right
+          :width 1px
+          :style solid
+          :color= !secondary_logo
+        a
+          :padding-right 8px
+  #form
+    form
+      +span(8)
+      :float right
+    input
+      :float left
+    input.text
+      :width 235px
+      :margin-right 4px
+      :display block
+  #links
+    :padding-top 12px
+    :padding-bottom 15px
+    :padding-left 620px
+    a
+      :color #fff
+      +bold
+    .error
+      +prepend(5)
+      :color #fff
+    input.text
+      :width 190px
+    form
+      +span(12)
+    .small
+      +small
+      :color= !secondary_logo
+      :clear both
+      :display block
+#ftr
+  :position absolute
+  :bottom 0
+  :left 0
+  :background #fff
+  #top
+    +gutter-layout
+  #bottom
+    :padding 18px 0 0 0
+    :clear both
+    :background= !light_gray
+  .logo
+    :background-image url(/images/ftr_logo.gif)
+    :background-position bottom left
+    :background-color #fff
+    :height 60px
+  ol
+    +clean
+    :float left
+    :margin-left 30px
+    :padding-bottom 20px
+    li
+      +inline
+      :color= !medium_gray
+      :margin-left 2px
+      a
+        +icon
+        :color= !dark_gray
+        :background
+          :image url(/images/ftr_li_a_bg.gif)
+          :position right center
+        :padding-right 8px
+        :padding-left 0
+      a:hover
+        :color #333
+  #sub
+    +clearfix
+    :clear both
+    :background #444
+    :width 100%
+    :padding 12px 0 0 0
+    ol
+      :padding-bottom 10px
+    li
+      a
+        :color #dedede
+        :background-image none
+        :font-weight bold
+      a:hover
+        :color #fff
+#content_page
+  +span(16)
+  +append(6)
+
+#error
+  +gutter-layout
+  h1
+    +dashed-border
+    +large
+    :padding-bottom 14px
+    :margin-bottom 12px
+.notice
+  +prepend(1)
+  +bold
+  +large
+  :clear both
+  :padding-top 20px
+  :color =!medium_gray
+
+.notice.access
+  :background url(/images/notice_bg.gif) repeat-x bottom
+  :border
+    :width 2px
+    :style solid
+    :color #ccc
+  :margin-left 15px

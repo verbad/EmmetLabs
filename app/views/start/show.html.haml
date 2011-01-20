@@ -1,0 +1,152 @@
+#home
+
+  #explore
+    #rotate
+      - link_text = capture_haml do 
+        %img{:src => "images/explore_bg.gif", :alt => "Explore Connections"}
+      = link_to link_text, pretty_directed_relationship_path(@featured)
+      #rotate_left.thumb= link_to image_tag(@featured.from.primary_photo.versions[:small].url), pretty_directed_relationship_path(@featured)
+      #rotate_right.thumb= link_to image_tag(@featured.to.primary_photo.versions[:small].url), pretty_directed_relationship_path(@featured)
+        
+    %p#brace {  
+    #text
+      %h2 Featured Relationship
+      %h3= link_to("#{@featured.from.full_name} and #{@featured.to.full_name}", pretty_directed_relationship_path(@featured))
+      %p= @featured.relationship.summary
+    
+  #banner
+    %p
+      %strong Explore
+      %span= @number_of_people
+      extraordinary biographies.
+      %span= number_with_delimiter(@number_of_words)
+      fine words making the connections.
+
+  #projects
+    %dl
+      %dt
+        Tudor England
+      %dd=link_to 'Henry VIII', '/network/King-Henry-VIII_109'
+      %dd=link_to 'Sir Francis Drake', '/network/Sir-Francis-Drake_407'
+
+      %dt
+        The Barrow Gang
+      %dd=link_to 'Clyde Barrow', '/network/Clyde-Barrow_432'
+      %dd=link_to 'Bonnie Parker', '/network/Bonnie-Parker_433'
+
+      %dt
+        Hitler
+      %dd=link_to 'Adolf Hitler', '/network/Adolf-Hitler_226'
+      %dd=link_to 'Joseph Stalin', '/network/Joseph-Stalin_219'
+      %dd=link_to 'Winston Churchill', '/network/Winston-Churchill_156'
+      
+    %dl
+      %dt
+        Jazz
+      %dd=link_to 'Louis Armstrong', '/network/Louis-Armstrong_450'
+      %dd=link_to 'Bessie Smith', '/network/Bessie-Smith_456'
+
+      %dt
+        Early Television
+      %dd=link_to 'Rod Serling', '/network/Rod-Serling_446'
+      %dd=link_to 'Charles Beaumont', '/network/Charles-Beaumont_447'
+
+      %dt
+        Candy Barons
+      %dd=link_to 'Milton Hershey', '/network/Milton-Hershey_448'
+    
+    %dl.last
+      %dt
+        Dracula
+      %dd=link_to 'Vlad Dracula', '/network/Vlad-Dracula_486'
+      %dd=link_to 'Niccolo Machiavelli', '/network/Niccolo-Machiavelli_489'
+
+      %dt
+        Science Fiction
+      %dd=link_to 'Isaac Asimov', '/network/Isaac-Asimov_183'
+      %dd=link_to 'Arthur C. Clarke', '/network/Arthur-C-Clarke_191'
+
+      %dt
+        Ancient Rome
+      %dd=link_to 'Augustus Caesar', '/network/Augustus-Caesar_315'
+      %dd=link_to 'Cleopatra', '/network/Cleopatra-VII-Philopater_309'
+  
+  #info
+    #twitter_div
+      %h3 Emmet Labs on Twitter:        
+      %ul#twitter_update_list
+      - link_text = capture_haml do
+        %span.ext Follow us on Twitter
+      =link_to link_text, "http://twitter.com/emmetlabs", :id=> "twitter-link", :class => 'primary'
+    
+    %script{:type=>"text/javascript", :src=>"http://twitter.com/javascripts/blogger.js"}
+    %script{:type=>"text/javascript", :src=>"http://twitter.com/statuses/user_timeline/emmetlabs.json?callback=twitterCallback2&amp;count=1"}
+    #login_form
+      .dialog
+        .content
+          .t
+          %h2 Get our newsletter
+        
+          -# TODO: Figure out why this doesn't work
+          -#= form_tag ('http://EmmetLabs.list-manage.com/subscribe/post') do
+          %form{:action => 'http://EmmetLabs.list-manage.com/subscribe/post', :method => 'POST'}
+            = hidden_field_tag :u, '4f0c73b12fd9db0d74d0cef2e'
+            = hidden_field_tag :id, '8ed0be78e6'
+            - label_text = capture_haml do
+              %strong{:style => 'display: none'} Email Address
+            = label_tag :MERGE0, label_text
+            = text_field_tag :MERGE0, 'Enter your email address&hellip;', {:size => 25, :class => 'text', :tabindex => '1', :onclick => 'if (this.value=="Enter your email address&hellip;") {this.value="";}',:onblur => 'if (this.value=="") {this.value="Enter your email address&hellip;";}' }
+            %div{:style => 'display: none'}
+              %h3 Preferred format
+              = radio_button_tag(:EMAILTYPE, 'html', true)
+              = label_tag :EMAILTYPE_html, 'HTML'
+              = radio_button_tag :EMAILTYPE, 'text'
+              = label_tag :EMAILTYPE_text, 'Text'
+              = radio_button_tag :EMAILTYPE, 'mobile'
+              = label_tag :EMAILTYPE_mobile, 'Mobile'
+            = submit_tag 'Subscribe', :class => 'btn primary'
+
+          .b
+            %div
+            
+            
+  #now
+    %dl
+      %dt Strongest networks&hellip;
+      - @strongest_networks.each do |node|
+        %dd= link_to node.full_name, pretty_person_or_entity_path(node)
+    %dl
+      %dt Most active&hellip;
+      - @most_active.each do |node|
+        %dd= link_to node.full_name, pretty_person_or_entity_path(node)
+
+    #what_is
+      %h3 What is Emmet?
+      %p Emmet Labs makes it easy to tell stories about how we're all connected, and to let people browse, search and add to those stories.
+      %h3 How can I contribute?
+      %p You can become a contributor by telling us about someone. It can be a famous person, a family member, or anyone from the past whom you know something about.
+  #content
+    #recent
+      %h4 Recently&hellip;
+      %ol.clean
+        - @recently.each do |entry|
+          %li
+            %span.label= entry.action == 'create' ? "new" : "updated"
+            - if entry.loggable_type == 'Relationship'
+              - rel = entry.loggable.directed_relationships.first
+              - link_text = capture_haml do
+                %span.connection= rel.from
+                %span= rel.to
+              = link_to link_text, pretty_directed_relationship_path(rel)
+            - else
+              = link_to entry.loggable.full_name, pretty_person_or_entity_path(entry.loggable)
+    #stories
+      %h4 Did you know&hellip;
+      %ol
+        = list_of @random_relationships do |relationship|
+          - link_text = capture_haml do
+            %strong= relationship.from
+            = relationship.opposite.category.name
+            %strong.last= relationship.to
+          = link_to link_text, pretty_directed_relationship_path(relationship)
+

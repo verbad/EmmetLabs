@@ -1,0 +1,182 @@
+#person_profile #person_profile_content {
+  float: left;
+  width: 700px;
+}
+
+#person_profile #left_column {
+  width: 250px;
+}
+
+#person_profile #person_profile_content #person_profile_content_inner {
+  margin-left: 2em;
+}
+
+#person_profile #left_column, #person_profile .tile {
+  margin-right: 0;
+}
+
+#name_field {
+  height: 5em;
+}
+
+#name_field .field_links {
+  height: 1em;
+}
+
+#person_profile h1, #person_profile h2 {
+  display: inline;
+}
+
+#person_profile h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.field_links {
+  padding-top: 16px;
+}
+
+#summary_column textarea,
+#tags_string_column textarea,
+#biography_column textarea
+{
+  width: 97%;
+}
+
+#person_profile .spinner {
+  float: left;
+}
+
+#person_profile #photos .spinner, #person_profile #add_first_photo .spinner {
+  float: right;
+}
+
+#summary {
+  min-height: 5.5em;
+}
+
+#summary #summary_field_readonly {
+  height: 4.5em;
+  line-height: 1.3em;
+}
+
+#tags {
+  min-height: 5em;
+}
+
+#summary textarea {
+  height: 3.5em;
+}
+
+.new_person_summary {
+  margin-top: 1.5em;
+}
+
+#tags textarea {
+  height: 4em;
+}
+
+#biography_field textarea {
+  height: 25em;
+}
+
+#tags_string_column, #biography_column, #summary_column {
+  float: left;
+  width: 90%;
+}
+
+.error_message {
+  color: red;
+  font-weight:bold;
+}
+
+#person_profile #milestones {
+  min-height: 250px;
+}
+
+
+
+#milestones li {
+  margin-bottom: 1em;
+}
+
+#milestones_readonly {
+  width: 100%;
+}
+
+#milestones_editable label {
+  vertical-align: middle;
+}
+
+#milestones .milestone_date {
+  float: left;
+  width: 19em;
+}
+
+#milestones .milestone_estimate {
+  float: left;
+  width: 9em;
+}
+
+#milestones .milestone_estimate label {
+  display: inline;
+}
+
+#milestones .milestone_type {
+  float: left;
+  width: 7em;
+}
+
+#milestones .milestone_type label {
+  text-align: right;
+  margin-right: 1em;
+  margin-top: 0.5em;
+}
+
+#milestones .milestone_name {
+  float: left;
+  width: 15em;
+}
+#milestones .milestone_remove {
+  float: left;
+  width: 5em;
+}
+
+#milestones .timeline_field_links {
+  text-align: left;
+  margin-top: 1em;
+}
+
+#milestones .edit_link {
+  margin-left: 0;
+}
+
+#milestones .links {
+  margin-bottom: 0.5em;
+}
+
+#person_profile .links img {
+  margin-right: 0.5em;
+}
+
+#milestones h2 {
+  display: block;
+  margin-bottom: 0;
+}
+
+#milestones_editable .remove_milestone {
+  margin-top: 1.4em;
+}
+
+#milestones #timeline_links {
+  float: left;
+  width: 8em;
+}
+
+#milestones .spinner {
+  margin-top: 2em;
+}
+div.milestone_column { clear: left;}
+div.milestone_column label { width: 60px; float: left; }
+div.milestone_column input { float: left;}
+li.milestone { font-size: .9em;font-weight: bold;}

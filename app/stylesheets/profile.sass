@@ -1,0 +1,56 @@
+#person
+  #primary_photo
+    :text-align center
+    img
+      :display block
+      :margin 0 auto
+#photos
+  :clear both
+#relationships
+  .group
+    +column(4)
+    +last
+    h3
+      +medium
+      :padding-top .6em
+      :margin-bottom .3em
+      :padding-left 4px
+    h4
+      +normal
+      +dashed-border
+      :padding-left 4px
+      :margin 8px 6px 0 0
+      :text-transform capitalize
+      :color= !medium_gray
+    ol
+      +clean
+      :padding-left 4px
+      :font-size .95em
+      :margin-top 4px
+    
+#article_revisions
+  h3
+    :font-size 1.1em
+    :font-weight bold
+  a.close
+    +ir
+    :float right
+    :height 20px
+    :width 20px
+    :background-image url(/images/close_bg.gif)
+  ol
+    li
+      :font-weight bold
+      :margin 4px 0
+      em
+        +small
+        :color= !medium_gray
+  .edit,.delete
+    :position relative
+    :top -4px
+    :cursor pointer
+  ul.comments
+    .title
+      :background-image none
+      :border-bottom 1px solid #444
+      

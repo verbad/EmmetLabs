@@ -1,0 +1,739 @@
+janis_to_jim:
+  id: 1
+  from_id: 1
+  to_id: 2
+  from_type: Person
+  to_type: Person
+  relationship_id: 1
+  category_id: 1
+
+jim_to_janis:
+  id: 2
+  from_id: 2
+  to_id: 1
+  from_type: Person
+  to_type: Person
+  relationship_id: 1
+  category_id: 1
+
+jim_to_elvis:
+  id: 3
+  from_id: 2
+  to_id: 3
+  from_type: Person
+  to_type: Person
+  relationship_id: 2
+  category_id: 2
+
+elvis_to_jim:
+  id: 4
+  from_id: 3
+  to_id: 2
+  from_type: Person
+  to_type: Person
+  relationship_id: 2
+  category_id: 3
+
+jim_to_marilyn:
+  id: 5
+  from_id: 2
+  to_id: 4
+  from_type: Person
+  to_type: Person
+  relationship_id: 3
+  category_id: 4
+
+marilyn_to_jim:
+  id: 6
+  from_id: 4
+  to_id: 2
+  from_type: Person
+  to_type: Person
+  relationship_id: 3
+  category_id: 4
+
+jim_to_jfk:
+  id: 7
+  from_id: 2
+  to_id: 5
+  from_type: Person
+  to_type: Person
+  relationship_id: 4
+  category_id: 5
+
+jfk_to_jim:
+  id: 8
+  from_id: 5
+  to_id: 2
+  from_type: Person
+  to_type: Person
+  relationship_id: 4
+  category_id: 5
+
+jfk_to_marilyn:
+  id: 9
+  from_id: 5
+  to_id: 4
+  from_type: Person
+  to_type: Person
+  relationship_id: 5
+  category_id: 6
+
+marilyn_to_jfk:
+  id: 10
+  from_id: 4
+  to_id: 5
+  from_type: Person
+  to_type: Person
+  relationship_id: 5
+  category_id: 7
+
+marilyn_to_janis:
+  id: 11
+  from_id: 4
+  to_id: 1
+  from_type: Person
+  to_type: Person
+  relationship_id: 6
+  category_id: 8
+
+janis_to_marilyn:
+  id: 12
+  from_id: 1
+  to_id: 4
+  from_type: Person
+  to_type: Person
+  relationship_id: 6
+  category_id: 8
+
+elvis_to_marilyn:
+  id: 13
+  from_id: 3
+  to_id: 4
+  from_type: Person
+  to_type: Person
+  relationship_id: 7
+  category_id: 9
+
+marilyn_to_elvis:
+  id: 14
+  from_id: 4
+  to_id: 3
+  from_type: Person
+  to_type: Person
+  relationship_id: 7
+  category_id: 9
+
+elvis_to_jfk:
+  id: 15
+  from_id: 3
+  to_id: 5
+  from_type: Person
+  to_type: Person
+  relationship_id: 8
+  category_id: 10
+
+jfk_to_elvis:
+  id: 16
+  from_id: 5
+  to_id: 3
+  from_type: Person
+  to_type: Person
+  relationship_id: 8
+  category_id: 10
+
+marilyn_to_abe:
+  id: 17
+  from_id: 4
+  to_id: 6
+  from_type: Person
+  to_type: Person
+  relationship_id: 9
+  category_id: 11
+
+abe_to_marilyn:
+  id: 18
+  from_id: 6
+  to_id: 4
+  from_type: Person
+  to_type: Person
+  relationship_id: 9
+  category_id: 11
+
+josephine_to_grace:
+  id: 19
+  from_id: 7
+  to_id: 12
+  from_type: Person
+  to_type: Person
+  relationship_id: 22
+  category_id: 8
+
+grace_to_josephine:
+  id: 20
+  from_id: 12
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 22
+  category_id: 8
+
+josephine_to_fitzgerald:
+  id: 21
+  from_id: 7
+  to_id: 13
+  from_type: Person
+  to_type: Person
+  relationship_id: 23
+  category_id: 8
+
+fitzgerald_to_josephine:
+  id: 22
+  from_id: 13
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 23
+  category_id: 8
+
+josephine_to_hemingway:
+  id: 23
+  from_id: 7
+  to_id: 14
+  from_type: Person
+  to_type: Person
+  relationship_id: 24
+  category_id: 8
+
+hemingway_to_josephine:
+  id: 24
+  from_id: 14
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 24
+  category_id: 8
+
+josephine_to_hughes:
+  id: 25
+  from_id: 7
+  to_id: 15
+  from_type: Person
+  to_type: Person
+  relationship_id: 25
+  category_id: 8
+
+hughes_to_josephine:
+  id: 26
+  from_id: 15
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 25
+  category_id: 8
+
+josephine_to_picasso:
+  id: 27
+  from_id: 7
+  to_id: 16
+  from_type: Person
+  to_type: Person
+  relationship_id: 26
+  category_id: 8
+
+picasso_to_josephine:
+  id: 28
+  from_id: 16
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 26
+  category_id: 8
+
+josephine_to_alex:
+  id: 29
+  from_id: 7
+  to_id: 17
+  from_type: Person
+  to_type: Person
+  relationship_id: 27
+  category_id: 13
+
+alex_to_josephine:
+  id: 30
+  from_id: 17
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 27
+  category_id: 13
+
+josephine_to_winchell:
+  id: 31
+  from_id: 7
+  to_id: 18
+  from_type: Person
+  to_type: Person
+  relationship_id: 28
+  category_id: 13
+
+winchell_to_josephine:
+  id: 32
+  from_id: 18
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 28
+  category_id: 13
+
+josephine_to_mcdonald:
+  id: 33
+  from_id: 7
+  to_id: 10
+  from_type: Person
+  to_type: Person
+  relationship_id: 20
+  category_id: 6
+
+mcdonald_to_josephine:
+  id: 34
+  from_id: 10
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 20
+  category_id: 7
+
+josephine_to_carson:
+  id: 35
+  from_id: 7
+  to_id: 11
+  from_type: Person
+  to_type: Person
+  relationship_id: 21
+  category_id: 6
+
+carson_to_josephine:
+  id: 36
+  from_id: 11
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 21
+  category_id: 7
+
+josephine_to_akio:
+  id: 37
+  from_id: 7
+  to_id: 19
+  from_type: Person
+  to_type: Person
+  relationship_id: 29
+  category_id: 7
+
+akio_to_josephine:
+  id: 38
+  from_id: 19
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 29
+  category_id: 6
+
+josephine_to_janot:
+  id: 39
+  from_id: 7
+  to_id: 20
+  from_type: Person
+  to_type: Person
+  relationship_id: 30
+  category_id: 7
+
+janot_to_josephine:
+  id: 40
+  from_id: 20
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 30
+  category_id: 6
+
+josephine_to_luis:
+  id: 41
+  from_id: 7
+  to_id: 21
+  from_type: Person
+  to_type: Person
+  relationship_id: 31
+  category_id: 7
+
+luis_to_josephine:
+  id: 42
+  from_id: 21
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 31
+  category_id: 6
+
+josephine_to_jarry:
+  id: 43
+  from_id: 7
+  to_id: 22
+  from_type: Person
+  to_type: Person
+  relationship_id: 32
+  category_id: 7
+
+jarry_to_josephine:
+  id: 44
+  from_id: 22
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 32
+  category_id: 6
+
+josephine_to_jean_claude:
+  id: 45
+  from_id: 7
+  to_id: 23
+  from_type: Person
+  to_type: Person
+  relationship_id: 33
+  category_id: 7
+
+jean_claude_to_josephine:
+  id: 46
+  from_id: 23
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 33
+  category_id: 6
+
+josephine_to_moise:
+  id: 47
+  from_id: 7
+  to_id: 24
+  from_type: Person
+  to_type: Person
+  relationship_id: 34
+  category_id: 7
+
+moise_to_josephine:
+  id: 48
+  from_id: 24
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 34
+  category_id: 6
+
+josephine_to_brahim:
+  id: 49
+  from_id: 7
+  to_id: 25
+  from_type: Person
+  to_type: Person
+  relationship_id: 35
+  category_id: 7
+
+brahim_to_josephine:
+  id: 50
+  from_id: 25
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 35
+  category_id: 6
+
+josephine_to_marianne:
+  id: 51
+  from_id: 7
+  to_id: 26
+  from_type: Person
+  to_type: Person
+  relationship_id: 36
+  category_id: 7
+
+marianne_to_josephine:
+  id: 52
+  from_id: 26
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 36
+  category_id: 6
+
+josephine_to_koffi:
+  id: 53
+  from_id: 7
+  to_id: 27
+  from_type: Person
+  to_type: Person
+  relationship_id: 37
+  category_id: 7
+
+koffi_to_josephine:
+  id: 54
+  from_id: 27
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 37
+  category_id: 6
+
+josephine_to_mara:
+  id: 55
+  from_id: 7
+  to_id: 28
+  from_type: Person
+  to_type: Person
+  relationship_id: 38
+  category_id: 7
+
+mara_to_josephine:
+  id: 56
+  from_id: 28
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 38
+  category_id: 6
+
+josephine_to_noel:
+  id: 57
+  from_id: 7
+  to_id: 29
+  from_type: Person
+  to_type: Person
+  relationship_id: 39
+  category_id: 7
+
+noel_to_josephine:
+  id: 58
+  from_id: 29
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 39
+  category_id: 6
+
+josephine_to_stellina:
+  id: 59
+  from_id: 7
+  to_id: 30
+  from_type: Person
+  to_type: Person
+  relationship_id: 40
+  category_id: 7
+
+stellina_to_josephine:
+  id: 60
+  from_id: 30
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 40
+  category_id: 6
+
+josephine_to_brady:
+  id: 61
+  from_id: 7
+  to_id: 31
+  from_type: Person
+  to_type: Person
+  relationship_id: 41
+  category_id: 12
+
+brady_to_josephine:
+  id: 62
+  from_id: 31
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 41
+  category_id: 12
+
+josephine_to_abatino:
+  id: 63
+  from_id: 7
+  to_id: 32
+  from_type: Person
+  to_type: Person
+  relationship_id: 42
+  category_id: 12
+
+abatino_to_josephine:
+  id: 64
+  from_id: 32
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 42
+  category_id: 12
+
+josephine_to_wells:
+  id: 65
+  from_id: 7
+  to_id: 33
+  from_type: Person
+  to_type: Person
+  relationship_id: 43
+  category_id: 12
+
+wells_to_josephine:
+  id: 66
+  from_id: 33
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 43
+  category_id: 12
+
+josephine_to_baker:
+  id: 67
+  from_id: 7
+  to_id: 34
+  from_type: Person
+  to_type: Person
+  relationship_id: 44
+  category_id: 12
+
+baker_to_josephine:
+  id: 68
+  from_id: 34
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 44
+  category_id: 12
+
+josephine_to_bouillion:
+  id: 69
+  from_id: 7
+  to_id: 35
+  from_type: Person
+  to_type: Person
+  relationship_id: 45
+  category_id: 12
+
+bouillion_to_josephine:
+  id: 70
+  from_id: 35
+  to_id: 7
+  from_type: Person
+  to_type: Person
+  relationship_id: 45
+  category_id: 12
+
+grace_to_prince_rainier:
+  id: 71
+  from_id: 12
+  to_id: 38
+  from_type: Person
+  to_type: Person
+  relationship_id: 48
+  category_id: 12
+
+prince_rainier_to_grace:
+  id: 72
+  from_id: 38
+  to_id: 12
+  from_type: Person
+  to_type: Person
+  relationship_id: 48
+  category_id: 12
+
+grace_to_jackie_o:
+  id: 73
+  from_id: 12
+  to_id: 37
+  from_type: Person
+  to_type: Person
+  relationship_id: 47
+  category_id: 8
+
+jackie_o_to_grace:
+  id: 74
+  from_id: 37
+  to_id: 12
+  from_type: Person
+  to_type: Person
+  relationship_id: 47
+  category_id: 8
+
+grace_to_angela_martin:
+  id: 75
+  from_id: 12
+  to_id: 36
+  from_type: Person
+  to_type: Person
+  relationship_id: 46
+  category_id: 8
+
+angela_martin_to_grace:
+  id: 76
+  from_id: 36
+  to_id: 12
+  from_type: Person
+  to_type: Person
+  relationship_id: 46
+  category_id: 8
+
+grace_to_rock_hudson:
+  id: 77
+  from_id: 12
+  to_id: 39
+  from_type: Person
+  to_type: Person
+  relationship_id: 49
+  category_id: 13
+
+rock_hudson_to_grace:
+  id: 78
+  from_id: 39
+  to_id: 12
+  from_type: Person
+  to_type: Person
+  relationship_id: 49
+  category_id: 13
+
+hughes_to_garvey:
+  id: 79
+  from_id: 15
+  to_id: 40
+  from_type: Person
+  to_type: Person
+  relationship_id: 50
+  category_id: 13
+
+garvey_to_hughes:
+  id: 80
+  from_id: 40
+  to_id: 15
+  from_type: Person
+  to_type: Person
+  relationship_id: 50
+  category_id: 13
+
+prince_rainier_to_prince_albert:
+  id: 81
+  from_id: 38
+  to_id: 41
+  from_type: Person
+  to_type: Person
+  relationship_id: 51
+  category_id: 13
+  
+prince_albert_to_prince_rainier:
+  id: 82
+  from_id: 41
+  to_id: 38
+  from_type: Person
+  to_type: Person
+  relationship_id: 51
+  category_id: 13
+
+  

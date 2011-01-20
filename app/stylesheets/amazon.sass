@@ -1,0 +1,40 @@
+#amazon_ads
+  :clear both
+  #finding_related
+    :padding 0 10px
+    p
+      +small
+      :color= !medium_gray
+      :font-style italic
+  #amazon_spinner
+    :float left
+    :margin-right 4px
+  .box
+    :background #eee
+  h2
+    :font-weight normal
+  ul
+    +clean
+    li
+      +clearfix
+      :padding-top 6px
+      :position relative
+      .thumbnail
+        :width 80px
+        :float left              
+        img
+          +img-border
+      .details
+        :width 170px
+        :float right
+        :padding-left 10px
+        :padding-top 4px
+        a
+          +bold
+          :display block
+        div
+          +small
+        .binding, .price
+          :color= !medium_gray
+        .price
+          +bold

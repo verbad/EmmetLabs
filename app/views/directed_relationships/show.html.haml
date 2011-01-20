@@ -1,0 +1,10 @@
+- content_for(:title) do
+  = @directed_relationship.from.full_name
+  &
+  = @directed_relationship.to.full_name
+
+= render :partial => 'relationship_javascript'
+= render :partial => 'wander_widget'
+
+= render :partial => 'show'
+

@@ -1,0 +1,24 @@
+ul.buttons 								{ margin-bottom: 60px;}
+ul.buttons li 						{ float: left; margin: 10px 10px 10px 0; display: block; }
+#admin h2 								{ clear: both; margin: .6em 0;}
+#admin table 							{ margin: .45em 0; }
+#admin table td,
+#admin table th 					{ padding: 1em; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+#admin table td.actions 	{ background-color: #eee; }
+#admin th 								{ background: #ffffbb;}
+#admin table 							{ border: 1px solid #ccc; border-right-width: 0;}
+#admin td.actions a:hover { text-decoration: none;}
+#admin table .cat 				{ text-transform: capitalize; width: 140px; font-style: bold;	border-left: 2px dotted #ccc!important; }
+#admin table .edit 				{ margin-right: 12px;}
+#admin .error h2 { display: none;}
+
+#admin .icon 							{ border: 1px solid #ccc; background-color: #fff; font-weight: bold; color: #888;}
+#admin a:hover .icon,
+#admin .icon:hover 				{ text-decoration: none; color: #000; border-color: #666; background-position: 5px -17px;}
+
+.add 				{ background-image: url(/images/admin_add.gif); }
+.edit 			{ background-image: url(/images/admin_edit.gif); }
+.delete 		{ background-image: url(/images/admin_delete.gif);}
+.control 		{ height: 15px; padding-left: 1.2em; font-size: 1.1em; margin-top: 2em;}
+.control .icon { padding-bottom: 5px;}
+.view 			{ font-weight: bold; margin-right: 6px;}

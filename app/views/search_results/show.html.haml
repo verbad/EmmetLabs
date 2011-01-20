@@ -1,0 +1,18 @@
+#search
+  %h1 Search Results
+  %h2= "Your search for #{@search_query} found #{@nodes.total_entries} matching entries"
+  .pagetools
+    = will_paginate @nodes
+    %ol.show_counts
+      %li= show_pagination_count(5, @per_page, @page_number, 1)
+      %li= show_pagination_count(10, @per_page, @page_number, 1)
+      %li= show_pagination_count(25, @per_page, @page_number, 1)
+
+    
+  %ul#results
+    = list_of @nodes do |node|
+      .thumbnail= link_to(image_tag(node.class.mangle_default_photo(node.primary_photo.versions[:small].url), :id => 'rotate_left', :class => 'thumb'), network_path(node))
+      .info
+        %strong= link_to(node.to_s, network_path(node))
+        %span= node.summary
+  .pagetools= will_paginate @nodes

@@ -1,0 +1,228 @@
+#login_area .error {
+  color: #fff;
+	width: 100%;
+	margin-left: 285px;
+}
+#login_area { padding-top: .8em;}
+#logins_form {
+  text-align: center;
+}
+#logins_form_inner, #subscriber_sign_up_inner {
+  text-align: left;
+  width: 345px;
+  background: #CC8368;
+  margin: auto;
+  margin-bottom: 2em;
+}
+
+#logins_form #occasional_updates {
+  width: 345px;
+  margin: auto;
+}
+
+#logins_form_inner .inner, #subscriber_sign_up_inner .inner {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+#login label, #subscriber_sign_up label {
+  font-size: 1.2em;
+  color: white;
+  float: left;
+  text-align: right;
+  margin-top: 0.35em;
+  margin-right: 0.5em;
+}
+#login label {
+  width: 5em;
+}
+
+.login_text_field {
+  width: 11em;
+  font-size: 13px;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+}
+
+#login h2 {
+  color: white;
+  font-size: 1.8em;
+  margin-bottom: 1em;
+}
+
+#login #forgot_password {
+  text-align: left;
+  width: 60px;
+  float: right;
+}
+
+#logins #thanks_for_signing_up {
+  color: white;
+}
+
+#logins #sign_up_button {
+  width: auto;
+  float: right;
+  background: #8B371B;
+  text-decoration: none;
+  margin-top: 1.9em;  
+}
+#welcome h1 {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: -.8em .5em 1.5em .5em;
+	font-size: 2.4em;
+	font-weight: bold;
+	color: #622523;
+}
+#welcome h2 { 
+	font-size: 1.4em;
+	margin: 0 0 .5em 0;
+	font-weight: bold;
+}
+#welcome p { 
+	line-height: 1.2em;
+	font-size: 1.1em;
+}
+#welcome ul { 
+	margin: .6em 0 0 0;
+	display: block;
+}
+#welcome #welcome_right li {
+	line-height: 1.2em;
+	margin: .4em 0;
+	padding: 0 0 0 1em;
+	font-size: 1.1em;
+	list-style-type: none;
+	background: url(/images/welcome_bullet.gif) no-repeat 0 4px;
+}
+#login  {
+	width: 380px;
+	float: right;
+	padding: .4em;
+	position: relative;
+}
+#login { width: 400px;}
+#login input.text {
+	color: #777;
+	width: 150px;
+	border-color: #cc8368;
+	margin: 0 6px 0 0;
+	float: left;
+}
+#login input.text:focus {
+	background-color: #fff;
+}
+#login .btn {
+  width: auto;
+  float: right;
+  text-decoration: none;
+	font-size: 1em;
+	margin-top: -1px;
+  padding-top: .2em;
+  margin-right: 6px;
+  padding-bottom: .2em;
+}
+#login .hint {
+	position: absolute;
+	top: 2.7em;
+	right: 8em;
+	color: #f5d0c2;
+}
+#login .hint a {
+	padding: 2px;
+	color: #f5d0c2;
+}
+#login .hint a:hover {
+	color: #faeae4;
+}
+#welcome_signup label {
+	float:left;
+	font-size:1.3em;
+	margin: 0.8em 0.5em 0 0;
+	text-align:right;
+	display: block;
+}
+#hero {
+	padding: 1em 0 0 0;
+}
+#hero img {
+	display:block;
+	margin: 0 auto;
+}
+#welcome_body {
+	width: 800px;
+	padding-top: 30px;
+	margin: -55px auto 0 auto;
+	background: url(/images/welcome_body_bg.jpg) repeat-y 11px;
+}
+#welcome_body:after {
+ 		content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+#welcome_left {
+	float: left;
+	width: 370px;
+  background: url(/images/welcome_left_bg.jpg) no-repeat left bottom;
+	height: 21em;
+	margin-right: -11px;
+}
+#welcome_left div.wrap {
+	padding: 0 1.6em 0 3.8em;
+}
+#welcome_right {
+	float:right;
+	width:430px;
+	background: url(/images/welcome_right_bg.jpg) no-repeat right bottom;
+	height: 21em;
+	margin-right: 0px;
+}
+#welcome_right div.wrap {
+	background: #d5edf6;
+	margin: 0 4em 0 2.4em;
+	padding: 2em 1.6em 2em 1.6em;
+}
+#welcome .button .button_text {
+	margin-left:1.4em;
+	margin-top:0.5em;
+}
+
+#welcome #subscriber_sign_up {
+	width: 450px;
+	position: relative;
+	margin: auto;	
+}
+#welcome #subscriber_sign_up label {
+	color: #333;
+	font-weight: bold;
+	font-size:1.2em;
+	margin-top: .6em;
+}
+#welcome #subscriber_sign_up #sign_up_button {
+  width: auto;
+  float: right;
+  text-decoration: none;
+	margin-bottom: -30px;
+}
+#welcome #subscriber_sign_up div.error {
+	color: #C00;
+	margin-left: 160px;
+}
+#subscriber_email_address {
+	width: 14.2em;
+	margin: .3em 1em 0 0;
+	clear: left;
+}
+#welcome #thanks_for_signing_up {
+	font-weight: bold;
+	font-size: 1.4em;
+	text-align: center;
+}
+#welcome #user_navigation { display: none;}
+#welcome #footer { position: relative;}
+#welcome #header .error { height: 20px;}
+#welcome #header #logo img { margin-bottom: -3px; }
+#welcome #footer_logo { margin-bottom: -3px;} 

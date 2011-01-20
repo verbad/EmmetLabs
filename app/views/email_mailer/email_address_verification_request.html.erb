@@ -1,0 +1,13 @@
+<p>Thank you for joining the Emmet Labs community!</p>
+
+<p>Please click this link to verify that you've signed up
+for this account:</p>
+
+<%= link_to(email_address_verification_request_url(@token.user, @token.email_address, @token), email_address_verification_request_url(@token.user, @token.email_address, @token)) %>
+
+<p>If that doesn't work you may need to copy the URL and 
+paste it into your browser's address field.</p>
+
+<p>Your Account has been created with the following information:<br/>
+User Name : <%= @token.user.unique_name %><br/>
+Email Address : <%= @token.user.email_address %></p>

@@ -1,0 +1,104 @@
+
+#person_tags li {
+  color: #0099CC;
+  width: 150px;
+}
+#header { 
+	background: #B9532E;
+	height: 75px;
+	margin: 0 0 30px 0;
+}
+#header #logo img {
+	margin: 0 0 0 1.5em;
+}
+#header #logo a { display: block; margin-top: 50px; height: 25px; width: 155px;}
+#footer_logo {
+  margin: 0 0 -3px 12px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  clear: both;
+  z-index: 998;
+	margin: 2em 0 0 0; 
+}
+#footer .inside {
+  background: #F1F1F1;
+	text-align: center;
+	padding: 1em 0;
+}
+#footer ol.inline { margin-left: 1em; }
+#footer ol.inline li { color: #aaa;border-width: 0; background: url(/images/footer_li_bg.gif) no-repeat right center; padding-right: 8px;}
+#footer ol.inline li.last { background: none;}
+#footer ol.inline a { color: #777;}
+#user_navigation { 
+	text-align: right;
+}
+#user_navigation * {
+	color: #fff;
+}
+#user_navigation ol.inline {
+	margin: .3em 0;
+	padding: .3em 0 0 0;
+	float: right;
+}
+#user_navigation ol.first {
+	border-left: 1px dotted #f2dfd8;
+}
+#user_navigation ol.last {
+	margin-right: .4em;
+}
+#user_navigation ol.inline li {
+	background: url(/images/usernavigation_a_bg.gif) no-repeat right center;
+	line-height: 0.6em;
+	border-width: 0;
+}
+#user_navigation ol.inline li.last {
+	background: none;
+}
+#user_navigation li a,
+#user_navigation li span {
+	font-size: 1em;
+	padding-right: 4px;
+	padding-left: 2px;
+	text-transform: capitalize;
+}
+#user_navigation li.greeting span { color: #f2dfd8; padding-left: 1em;}
+#user_navigation li.user { font-weight: bold;}
+#find fieldset {
+	margin: 0;
+	padding: 10px;
+	position: relative;
+}
+#find fieldset a { text-decoration: none;}
+#find fieldset input.text {
+	width: 280px;
+	float: left;
+	margin: .3em 0 0 0;
+	position: relative;
+	z-index: 99;
+	padding-top: 5px;
+	border-color: #f2dfd8;
+	padding-bottom: 5px;
+	color: #888;
+}
+#find input.text:focus {
+	border-color: #666;
+	color: #333;
+}
+#find fieldset .btn {
+	display: block; 
+	right: 0;
+	top: 0;	
+	width: auto;
+	padding: 2px 12px;
+	margin: 3px 0 0 0;
+	position: relative;
+	z-index: 100;
+}
+#find label {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #777;
+	display: none;
+}

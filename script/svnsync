@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby -w
+def svn_stat_files(status)
+  `svn status`.
+    select { |line| line =~ /^#{Regexp.escape(status)}/ }.
+    collect { |line| line[7..-1] }
+end
+
+def unfound_files
+  svn_stat_files('!')
+end
+
+def unversioned_files
+  svn_stat_files('?')  
+end
+
+unversioned_files.each do |file|
+  `svn add #{file}`
+end
+
+unfound_files.each do |file|
+  `svn rm #{file}`
+end
+
+
+

@@ -1,0 +1,32 @@
+rdy:
+  id: 1
+  encrypted_password: <%= User.encrypt("password", "emmet") %>
+  created_at: 2007-11-28 00:00:00 -07:00
+  unique_name: rdy
+  salt: emmet
+  terms_of_service_id: 1
+  super_admin: true
+edward:
+  id: 2
+  encrypted_password: <%= User.encrypt("password", "emmet") %>
+  created_at: 2007-11-28 00:00:00 -07:00
+  unique_name: edward
+  salt: emmet
+  terms_of_service_id: 1
+  super_admin: true
+janice:
+  id: 3
+  encrypted_password: <%= User.encrypt("password", "emmet") %>
+  created_at: 2007-11-28 00:00:00 -07:00
+  unique_name: janice
+  salt: emmet
+  terms_of_service_id: 1
+  super_admin: true
+david:
+  id: 4
+  encrypted_password: <%= User.encrypt("password", "emmet") %>
+  created_at: 2007-11-28 00:00:00 -07:00
+  unique_name: david
+  salt: emmet
+  terms_of_service_id: 1
+  super_admin: true

@@ -1,0 +1,102 @@
+html
+  body
+    fieldset
+      legend
+        +large
+        +bold
+      ol,li
+        +clean
+        li
+          :clear both
+          :margin 3px 0
+          :display block
+          :float left
+        label
+          :width 50px
+          :display block
+          :float left
+          :font-weight bold
+          :text-align right
+          :padding-right 6px
+        input
+          :float left
+          :display block
+        em
+          +small
+          :display block
+          :float right
+          :margin-top 4px
+          :clear both
+          :color= !dark_gray
+    #name
+      li
+        :display inline
+        :clear none
+    
+    #milestones_for_person,
+    #milestones_for_entity
+      :padding-top 20px
+      li
+        :width 100%
+        :border-bottom 1px solid #ddd
+        input, select
+          :margin-right 4px
+          :float left
+        label
+          :width 60px
+        .delete
+          :position relative
+          :top -4px
+      .milestone_name
+        input
+          :width 110px
+    #story
+      .editable
+        ol
+          :margin 12px 0
+          li.people
+            strong, select
+              :float left
+              :display block
+            strong
+              +icon
+              :margin-right 4px
+              :padding 0 0 0 18px
+              :background-image url(/images/person_strong_bg.gif)
+            .first
+              :background-position right center
+              :padding 0 18px 0 0
+          li
+            label
+              :width 100px
+        textarea
+          :background #fff
+          :border 1px solid #ccc
+          :padding 4px
+          :margin-left 10px
+        .ft
+          input
+            :float right
+    ol
+      +clean
+      :margin 12px 0
+      li.people
+        +clean
+        :height 10px
+        strong, select, span
+          :float left
+          :display block
+        strong
+          +icon
+          :margin-right 4px
+          :padding 0 0 0 18px
+          :background-image url(/images/person_strong_bg.gif)
+        span  
+          +bold
+          :color= !medium_gray
+        .first
+          :background-position right center
+          :padding 0 18px 0 0
+      li
+        label
+          :width 100px

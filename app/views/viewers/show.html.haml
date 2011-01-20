@@ -1,0 +1,50 @@
+- content_for(:title) do
+  = @node.new_record? ? 'New Person' : @node.full_name
+
+- unless @node.new_record?
+  - content_for :head do
+    :javascript
+      var photo_action_ids = null;
+      function notify_structure_changed() {
+        var url = "#{formatted_polymorphic_path([@node, :js])}";
+        new Ajax.Request(url, {asynchronous:true, evalScripts:true, method:'get'});
+      }
+
+#person
+  #primary_column
+    - if current_user.nil?
+      .notice.access
+        %p
+          Welcome to Emmet. Please
+          = link_to "login", login_path
+          or
+          = link_to "register", login_path
+          to contribute to this page.
+    - elsif !current_user.account_verified?
+      .notice.access
+        %p
+          Welcome to Emmet. Please confirm your account or
+          = link_to("resend new verification email", email_address_verification_requests_path(current_user, current_user.primary_email_address), {:method => :post})
+          in order to contribute to this page.
+    = render :partial => "#{@node.class.name.tableize}/name", :locals => {:"#{@node.class.name.underscore}" => @node}
+    - if @node.is_a?(Person)
+      = render :partial => "summary/show",      :locals => {:person => @node}
+      = render :partial => 'biography/show',    :locals => {:person => @node}
+    - else
+      = render :partial => 'entities/summary',          :locals => {:entity => @node}
+      = render :partial => 'entities/backgrounder',     :locals => {:entity => @node}
+      = render :partial => 'entities/further_reading',  :locals => {:entity => @node}
+    = render :partial => 'milestones/index',  :locals => {:node => @node}
+    #relationships.editable
+      = render :partial => 'directed_relationships/existing_relationships', :locals => {:node => @node, :show_add_relationship_link => true}
+
+    - unless @node.new_record?
+      = render :partial => 'photos/photos', :locals => {:photoable => @node}
+
+    = render :partial => 'tags/show', :locals => {:node => @node}
+
+  #secondary_column
+    = render :partial => 'photos/primary_photo', :locals => {:photoable => @node}
+    - if @node.photos.empty? && current_user_valid?
+      = render :partial => 'photos/new_photo', :locals => {:photoable => @node, :id => 'add_first_photo', :show => true}
+    = render :partial => "#{@node.class.name.tableize}/synopsis_long", :locals => {:"#{@node.class.name.underscore}" => @node}

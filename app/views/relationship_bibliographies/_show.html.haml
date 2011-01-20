@@ -1,0 +1,31 @@
+#bibliography
+  - if current_user_valid?
+    #bibliography_field_editable.editable.active{:style => 'display:none'}
+      .hd
+        %h2 References
+        = link_to_function 'edit', 'new Effect.Fade("bibliography_field_readonly", {duration: 0.3}); new Effect.Appear("bibliography_field_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("relationship_bibliography").focus();\', 650)', :class => 'edit'
+      .editing
+        - remote_form_for(:relationship, relationship, :url => relationship_relationship_bibliography_path(relationship, relationship), :html => {:method => :put, :name => 'bibliography_field_form'}) do |f|
+          #bibliography_column.bd
+            = f.text_area(:bibliography)
+          %div.ft
+            #bibliography_field_spinner.spinner{:style => 'display: none'}      
+            %p.note= markdown_link
+        
+            = link_to_function 'Save', '$("bibliography_field_spinner").show(); document.bibliography_field_form.onsubmit()', :class => 'save primary'
+            = link_to_function 'Cancel', 'new Effect.Fade("bibliography_field_editable", {duration: 0.3}); document.bibliography_field_form.reset(); new Effect.Appear("bibliography_field_readonly", {duration: 0.3, delay: 0.3})', :class => 'cancel tertiary'
+
+  #bibliography_field_readonly.editable
+    - if relationship.bibliography_original.blank?
+      .hd
+        %h2 References
+      .bd
+        %p.new
+          - if current_user_valid?
+            = link_to_function 'add a reference', 'new Effect.Fade("bibliography_field_readonly", {duration: 0.3}); new Effect.Appear("bibliography_field_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("relationship_bibliography").focus();\', 650)', :class => 'add'
+    - else
+      .hd
+        %h2 References
+        - if current_user_valid?
+          = link_to_function 'edit', 'new Effect.Fade("bibliography_field_readonly", {duration: 0.3}); new Effect.Appear("bibliography_field_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("relationship_bibliography").focus();\', 650)', :class => 'edit'
+      .bd= markdown relationship.bibliography_original

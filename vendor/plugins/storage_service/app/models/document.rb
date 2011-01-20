@@ -1,0 +1,3 @@
+class Document < Asset
+  
+end

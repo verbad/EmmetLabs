@@ -1,0 +1,25 @@
+- first_photo_added = @photoable.photos.size == 1 && @photo_error_message.nil?
+- first_photo_failed = @photoable.photos.empty?
+%html
+  %head
+    = javascript_include_merged('application')
+    %script{:type=> 'text/javascript'}
+      function page_loaded() {
+      - if first_photo_added
+        window.parent.notify_structure_changed();        
+      var new_html = document.getElementById('new_html').innerHTML;
+      = "var visible_div = window.parent.document.getElementById('#{first_photo_failed ? "add_first_photo" : "photos"}');"
+      top.Element.update(visible_div, new_html);
+      - if first_photo_added
+        var invisible_div = window.parent.document.getElementById('add_first_photo');
+        if (invisible_div) top.Element.update(invisible_div, '');
+      }
+    
+ 
+
+  %body{:onload=>'page_loaded()'}
+    #new_html
+      - if first_photo_failed
+        = render :partial => 'photos/new_photo', :locals => {:id => 'add_first_photo', :photoable => @photoable, :show => true}
+      - else
+        = render :partial => 'photos/index', :locals => { :photoable => @photoable }

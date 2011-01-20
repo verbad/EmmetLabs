@@ -1,0 +1,320 @@
+janis:
+  id: 1
+  first_name: Janis
+  last_name: Joplin
+  calculated_full_name: Janis Joplin
+  calculated_dashified_full_name: Janis-Joplin
+  summary: a summary
+
+jim:
+  id: 2
+  first_name: Jim
+  last_name: Morrison
+  calculated_full_name: Jim Morrison
+  calculated_dashified_full_name: Jim-Morrison
+  summary: a summary
+
+elvis:
+  id: 3
+  first_name: Elvis
+  last_name: Presley
+  calculated_full_name: Elvis Presley
+  calculated_dashified_full_name: Elvis-Presley
+  summary: a summary
+
+marilyn:
+  id: 4
+  first_name: Marilyn
+  last_name: Monroe
+  calculated_full_name: Marilyn Monroe
+  calculated_dashified_full_name: Marilyn-Monroe
+  summary: a summary
+
+jfk:
+  id: 5
+  first_name: John
+  middle_name: Fitzgerald
+  last_name: Kennedy
+  calculated_full_name: John Fitzgerald Kennedy
+  calculated_dashified_full_name: John-Fitzgerald-Kennedy
+  summary: a summary
+
+abe:
+  id: 6
+  first_name: Abraham
+  last_name: Lincoln
+  calculated_full_name: Abraham Lincoln
+  calculated_dashified_full_name: Abraham-Lincoln
+  summary: a summary
+
+josephine:
+  id: 7
+  first_name: Josephine
+  last_name: Baker
+  calculated_full_name: Josephine Baker
+  calculated_dashified_full_name: Josephine-Baker
+  biography: This is Josephine Baker's biography
+  summary: This is Josephine Baker's summary
+
+mcdonald:
+  id: 10
+  first_name: Carrie
+  last_name: McDonald
+  calculated_full_name: Carrie McDonald
+  calculated_dashified_full_name: Carrie-McDonald
+  summary: a summary
+
+carson:
+  id: 11
+  first_name: Eddie
+  last_name: Carson
+  calculated_full_name: Eddie Carson
+  calculated_dashified_full_name: Eddie-Carson
+  summary: a summary
+
+grace:
+  id: 12
+  first_name: Grace
+  last_name: Kelly
+  common_name: Grace of Monaco
+  calculated_full_name: Grace Kelly
+  calculated_dashified_full_name: Grace-Kelly
+  biography: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+  summary: princess of monaco
+
+fitzgerald:
+  id: 13
+  first_name: Francis
+  middle_name: Scott
+  last_name: Fitzgerald
+  common_name: F Scott Fitzgerald
+  calculated_full_name: Francis Scott Fitzgerald
+  calculated_dashified_full_name: Francis-Scott-Fitzgerald
+  summary: a summary
+
+hemingway:
+  id: 14
+  first_name: Ernest
+  last_name: Hemingway
+  common_name: Papa
+  calculated_full_name: Ernest Hemingway
+  calculated_dashified_full_name: Ernest-Hemingway
+  summary: a summary
+
+hughes:
+  id: 15
+  first_name: Langston
+  last_name: Hughes
+  calculated_full_name: Langston Hughes
+  calculated_dashified_full_name: Langston-Hughes
+  summary: a summary
+
+picasso:
+  id: 16
+  first_name: Pablo
+  last_name: Picasso
+  calculated_full_name: Pablo Picasso
+  calculated_dashified_full_name: Pablo-Picasso
+
+alex:
+  id: 17
+  first_name: Joe
+  last_name: Alex
+  calculated_full_name: Joe Alex
+  calculated_dashified_full_name: Joe-Alex
+  summary: a summary
+
+winchell:
+  id: 18
+  first_name: Walter
+  last_name: Winchell
+  calculated_full_name: Walter Winchell
+  calculated_dashified_full_name: Walter-Winchell
+  summary: a summary
+
+akio:
+  id: 19
+  common_name: Akio
+  calculated_full_name: Akio
+  calculated_dashified_full_name: Akio
+  summary: a summary
+
+janot:
+  id: 20
+  common_name: Janot
+  calculated_full_name: Janot
+  calculated_dashified_full_name: Janot
+  summary: a summary
+
+luis:
+  id: 21
+  common_name: Luis
+  calculated_full_name: Luis
+  calculated_dashified_full_name: Luis
+
+jarry:
+  id: 22
+  common_name: Jarry
+  calculated_full_name: Jarry
+  calculated_dashified_full_name: Jarry
+  summary: a summary
+
+jean_claude:
+  id: 23
+  common_name: Jean-Claude
+  calculated_full_name: Jean-Claude
+  calculated_dashified_full_name: Jean-Claude
+  summary: a summary
+
+moise:
+  id: 24
+  common_name: Moise
+  calculated_full_name: Moise
+  calculated_dashified_full_name: Moise
+  summary: a summary
+
+brahim:
+  id: 25
+  common_name: Brahim
+  calculated_full_name: Brahim
+  calculated_dashified_full_name: Brahim
+  summary: a summary
+
+marianne:
+  id: 26
+  common_name: Marianne
+  calculated_full_name: Marianne
+  calculated_dashified_full_name: Marianne
+  summary: a summary
+
+koffi:
+  id: 27
+  common_name: Koffi
+  calculated_full_name: Koffi
+  calculated_dashified_full_name: Koffi
+  summary: a summary
+
+mara:
+  id: 28
+  common_name: Mara
+  calculated_full_name: Mara
+  calculated_dashified_full_name: Mara
+  summary: a summary
+
+noel:
+  id: 29
+  common_name: Noel
+  calculated_full_name: Noel
+  calculated_dashified_full_name: Noel
+  summary: a summary
+
+stellina:
+  id: 30
+  common_name: Stellina
+  calculated_full_name: Stellina
+  calculated_dashified_full_name: Stellina
+  summary: a summary
+
+brady:
+  id: 31
+  common_name: Robert Brady
+  calculated_full_name: Robert Brady
+  calculated_dashified_full_name: Robert-Brady
+  summary: a summary
+
+abatino:
+  id: 32
+  common_name: Giuseppe Abatino
+  calculated_full_name: Giuseppe Abatino
+  calculated_dashified_full_name: Giuseppe-Abatino
+  summary: a summary
+
+wells:
+  id: 33
+  common_name: Willie Wells
+  calculated_full_name: Willie Wells
+  calculated_dashified_full_name: Willie-Wells
+  summary: a summary
+
+baker:
+  id: 34
+  common_name: Willie Baker
+  calculated_full_name: Willie Baker
+  calculated_dashified_full_name: Willie-Baker
+  summary: a summary
+
+bouillion:
+  id: 35
+  common_name: Jo Bouillion
+  calculated_full_name: Jo Bouillion
+  calculated_dashified_full_name: Jo-Bouillion
+
+angela_martin:
+  id: 36
+  common_name: Angela Martin
+  calculated_full_name: Angela Martin
+  calculated_dashified_full_name: Angela-Martin
+  summary: a summary
+
+jackie_o:
+  id: 37
+  first_name: Jacqueline
+  last_name: Onassis
+  common_name: Jackie O
+  calculated_full_name: Jacqueline Onassis
+  calculated_dashified_full_name: Jacqueline-Onassis
+  summary: a summary
+
+prince_rainier:
+  id: 38
+  common_name: Prince Rainier of Monaco
+  calculated_full_name: Prince Rainier of Monaco
+  calculated_dashified_full_name: Prince-Rainier-of-Monaco
+  summary: a summary
+
+rock_hudson:
+  id: 39
+  first_name: Rock
+  last_name: Hudson
+  calculated_full_name: Rock Hudson
+  calculated_dashified_full_name: Rock-Hudson
+  summary: a summary
+
+garvey:
+  id: 40
+  first_name: Marcus
+  last_name: Garvey
+  calculated_full_name: Marcus Garvey
+  calculated_dashified_full_name: Marcus-Garvey
+  summary: a summary
+
+prince_albert:
+  id: 41
+  common_name: Prince Albert of Monaco
+  calculated_full_name: Prince Albert of Monaco
+  calculated_dashified_full_name: Prince-Albert-of-Monaco
+  summary: a summary
+
+no_relationships:
+  id: 42
+  first_name: Loner
+  last_name: Lonely
+  calculated_full_name: Loner Lonely
+  calculated_dashified_full_name: Loner-Lonely
+  summary: a summary
+  
+id_collision:
+    id: 10240
+    first_name: Person
+    last_name: with ID Collision
+    calculated_full_name: Person with ID Collision
+    calculated_dashified_full_name: Person-with-ID-Collision
+    summary: gory details
+    
+full_collision:
+    id: 10241
+    first_name: Full
+    last_name: Collision
+    calculated_full_name: Full Collision
+    calculated_dashified_full_name: Full-Collision
+    summary: gory details

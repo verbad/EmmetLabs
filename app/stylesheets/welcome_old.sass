@@ -1,0 +1,66 @@
+html
+  #welcome
+    +column(20)
+    +prepend(2)
+    +append(2)
+    +last
+    :text-align center
+    :margin-top 30px
+    h1
+      :font-size 30px
+      :color= !darker_logo
+      :text-align center
+      :padding .4em 0 .8em 0
+      :position relative
+      :top -10px
+      :margin-bottom 0
+      :background
+        :image url(/images/welcome_body_bg.jpg)
+        :repeat repeat-y
+        :position center
+    h2
+      :font
+        :size 1.2em
+        :weight bold
+        :family Arial, Helvetica, serif
+    p
+      :margin .6em 0
+    #left, #right
+      +column(8)
+      +prepend(1)
+      +append(1)
+      :text-align left
+      :position relative
+      :top -10px
+      :height 270px
+      :background
+        :image url(/images/welcome_left_bg.jpg)
+        :repeat no-repeat
+        :position left bottom
+    #left
+      :left -6px
+    #right
+      +column(9)
+      +pull(1)
+      +last
+      :right -4px
+      :background
+        :image url(/images/welcome_right_bg.jpg)
+        :position right bottom
+      .box
+        :background #D5EDF6
+        :padding 20px
+    #subscriber_sign_up
+      +column(12)
+      +prepend(4)
+      +append(4)
+      :margin 20px 0 30px 0
+      label
+        :font
+          :size 1.2em
+          :weight bold
+      input.text
+        :margin 0 4px
+    #thanks
+      +medium
+      +bold

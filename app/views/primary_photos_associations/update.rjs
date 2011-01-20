@@ -1,0 +1,2 @@
+page.replace "photos", :partial => "photos/index", :locals => { :photoable => @photoable }
+page.replace "primary_photo", :partial => "photos/primary_photo", :locals => { :photoable => @photoable }

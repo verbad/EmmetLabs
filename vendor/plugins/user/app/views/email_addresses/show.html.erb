@@ -1,0 +1,6 @@
+<h1><%= @email_address %></h1>
+<% if @email_address.verified? %>
+  This email address has been verified! Congratulations.
+<% else %>
+  We have sent you a verification email. If you do not receive it within five minutes, <%= link_to 'Click here', new_email_address_verification_request_path(@user, @email_address) %> to request a new email.
+<% end %>

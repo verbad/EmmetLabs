@@ -1,0 +1,17 @@
+basic_1:
+  id: 1
+  type: TestPhoto
+  position: 1
+  original_filename: blah.jpg
+basic_2:
+  id: 2
+  type: TestPhoto
+  position: 2
+basic_3:
+  id: 3
+  type: TestPhoto
+  position: 3
+sub_asset:
+  id: 4
+  type: SubAsset
+  position: 1

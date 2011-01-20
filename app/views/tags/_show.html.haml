@@ -1,0 +1,21 @@
+- field_name = "#{node.class.name.underscore}"
+#tags
+  #tag_list_readonly.editable
+    .hd
+      %h2 Tags
+      - if current_user_valid?
+        = link_to_function 'edit', 'new Effect.Fade("tag_list_readonly", {duration: 0.3}); new Effect.Appear("tag_list", {duration: 0.3, delay: 0.3}); setTimeout(\'$("' + field_name + '_tag_list").focus();\', 650)', :class => 'edit'
+    .bd
+      %p= node.tag_list
+
+  - if current_user_valid?
+    #tag_list.editable.active{:style => 'display:none'}
+      - remote_form_for(:"#{field_name}", node, :url => polymorphic_path([node, Tag.new]), :html => {:method => :put, :name => 'tag_list_form'}) do |f|
+        .hd
+          %h2 Tags
+        .bd
+          = f.text_area(:tag_list)
+        .ft
+          #tag_list_spinner.spinner{:style => 'display: none'}
+          = link_to_function 'save', '$("tag_list_spinner").show(); document.tag_list_form.onsubmit();', :class => 'save primary'
+          = link_to_function 'cancel', 'new Effect.Fade("tag_list", {duration: 0.3}); document.tag_list_form.reset(); new Effect.Appear("tag_list_readonly", {duration: 0.3, delay: 0.3});', :class => 'cancel tertiary'

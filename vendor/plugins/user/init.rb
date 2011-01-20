@@ -1,0 +1,11 @@
+require_plugin 'ruby-guid-0.0.1'
+require_plugin 'storage_service'
+require_plugin 'enumerations_mixin'
+require_plugin 'ssl_requirement'
+require_plugin 'pivotal_core_bundle'
+require_plugin 'acts_as_paranoid'
+require "customized_messages"
+require "user_based_security"
+require "current_user"
+require "associations"
+require "url_writer_retardase_inhibitor"

@@ -1,0 +1,22 @@
+- error = relationship.errors.on(:summary)
+#summary
+  - if current_user_valid?
+    #summary_field_editable.editable.active{:style => ("display: none" if error.nil?)}
+      - remote_form_for(:relationship, relationship, :url => relationship_relationship_summary_path(relationship, relationship), :html => {:method => :put, :name => 'summary_field_form'}) do |f|
+        .bd
+          %span.error#summary_error_relationship_summary= "Failed to save: #{error}" unless error.nil?
+          = f.text_area :summary, :onkeyup => 'update_summary_characters_remaining_relationship_summary()'
+        .ft
+          #summary_field_spinner.spinner{:style => 'display: none'}
+          %p.note#summary_countdown_relationship_summary
+          = link_to_function 'save', '$("summary_field_spinner").show(); document.summary_field_form.onsubmit()', :class => 'save primary'
+          = link_to_function 'cancel', 'new Effect.Fade("summary_field_editable", {duration: 0.3}); document.summary_field_form.reset(); new Effect.Appear("summary_field_readonly", {duration: 0.3, delay: 0.3})', :class => 'cancel tertiary'
+
+  #summary_field_readonly.editable{:style => ("display: none" unless error.nil?)}
+    .bd
+      %p
+        = relationship.summary_original
+        - if current_user_valid?
+          = link_to_function 'edit', 'update_summary_characters_remaining_relationship_summary(); new Effect.Fade("summary_field_readonly", {duration: 0.3}); new Effect.Appear("summary_field_editable", {duration: 0.3, delay: 0.3}); setTimeout(\'$("relationship_summary").focus();\', 650)', :class => 'edit'
+
+= update_summary_js 'relationship_summary'

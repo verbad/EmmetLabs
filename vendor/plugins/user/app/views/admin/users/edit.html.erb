@@ -1,0 +1,12 @@
+<% @page_title = 'Edit Account' %>
+
+<%= error_messages_for 'user' %>
+<% form_for :user, :url => admin_user_path(@user), :html => {:method => :put} do |f| %>
+  <p><label for="user_unique_name">Unique Name</label><br/>
+  <%= f.text_field :unique_name %></p>
+  <p><label for="user_super_admin">Super Admin</label><br/>
+  <%= f.check_box :super_admin %><br/></p>
+  <p><label for="user_disabled">Disabled</label><br/>
+  <%= f.check_box :disabled %><br/></p>
+  <%= submit_tag "Submit", :id=>"submit" %>
+<% end %>

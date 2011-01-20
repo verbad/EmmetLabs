@@ -1,0 +1,55 @@
+#new_person.editable.active
+  .hd
+    %h2= @edit ? @person.full_name : 'New Person'
+  
+  - @person.errors.full_messages.each do |error|
+    .error= error
+
+  - if @edit
+    - url = person_path(@person).to_s
+    - method = 'put'
+  - else
+    - url = people_path.to_s
+    - method = 'post'
+
+  - remote_form_for(:person, @person, :url => url, :method => method) do |f|
+    = hidden_field_tag("index", index)
+    .bd
+      %fieldset
+        %ol
+          %li
+            %label{:for => 'person_first_name'} First name
+            = f.text_field(:first_name)
+          %li
+            %label{:for => 'person_middle_name'} Middle name
+            = f.text_field(:middle_name)
+          %li
+            %label{:for => 'person_last_name'} Last name
+            = f.text_field(:last_name)
+          %li  
+            %label{:for => 'person_common_name'} Also known as
+            = f.text_field(:common_name)
+    
+            %em Alias, Nickname, Common Name (comma seperated)
+          %li
+            .paragraph
+              %label{:for => 'person_summary'} Brief summary
+              = f.text_area(:summary, :onkeyup => 'update_summary_characters_remaining_person_summary()')
+
+              %span#summary_countdown_person_summary
+          %li
+            %label{:for => 'birth_year'} Year of Birth
+            = text_field_tag("birth[year]", 'YYYY', :size => 4, :id => "birth_year",:onclick => 'if (this.value=="YYYY") {this.value="";}')
+            = hidden_field_tag("birth[name]", '')
+            = hidden_field_tag("birth[estimate]", true)
+            = hidden_field_tag("birth[type_id]", Milestone::Type[:birth].id)
+
+            %label{:for => 'death_year'} Year of Death
+            = text_field_tag("death[year]", 'YYYY', :size => 4, :id => "death_year", :onclick => 'if (this.value=="YYYY") {this.value="";}')
+            = hidden_field_tag("death[name]", '')
+            = hidden_field_tag("death[type_id]", Milestone::Type[:death].id)
+            = hidden_field_tag("death[estimate]", true)
+            %em Estimates for birth and death years are fine.
+
+    .ft  
+      = submit_tag 'Save person'

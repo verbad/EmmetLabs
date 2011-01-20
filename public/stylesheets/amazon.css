@@ -1,0 +1,52 @@
+#amazon_ads_container  {
+  background: #F1F1F1;
+  min-height: 400px;
+  font-size: 11px;
+}
+
+#amazon_ads {
+  padding: 0.5em 1.1em 0.5em 1.1em;
+}
+
+#amazon_ads ul {
+  margin-top: 1.5em;
+}
+
+#amazon_ads li {
+	color: #666;
+}
+
+#amazon_ads a {
+  color: black;
+  font-size: 1.2em;
+	display: block;
+	font-weight: bold;
+}
+
+#amazon_ads h3 {
+	font-size: 1.1em;
+}
+
+.amazon_ad_thumbnail {
+  float: left;
+  margin-right: 1em;
+}
+
+.amazon_ad_details.amazon_ad_details_no_image {
+  width: 100%;
+}
+
+.amazon_ad_details_inner {
+  margin-left: 1em;
+  line-height: 1.3em;
+}
+
+#finding_related {
+	height: 400px;
+}
+
+#finding_related #amazon_spinner {
+  float: left;
+	width: 16px;
+	margin-right: 0.4em;
+}

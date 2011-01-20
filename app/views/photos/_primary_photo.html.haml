@@ -1,0 +1,8 @@
+#primary_photo
+  = image_tag photoable.class.mangle_default_photo(photoable.primary_photo.versions[:large].url)
+    
+  #primary_photo_comment.photo_comment
+    - unless photoable.photos.empty?
+      - if photoable.primary_photo.comment
+        %span.pointer
+        = m(photoable.primary_photo.comment.text) 

@@ -1,0 +1,21 @@
+.hd
+  %h2 Relationships
+  - if current_user_valid?
+    = link_to 'add relationship', polymorphic_path([node, :connections]), :class => 'add'
+.bd
+
+  - @meta_categories.each do |metacategory|
+    - directed_relationships_in_metacategory = node.directed_relationships.select { |directed_relationship| directed_relationship.category && directed_relationship.category.metacategory && directed_relationship.category.metacategory == metacategory }
+  
+    - unless directed_relationships_in_metacategory.empty?
+      .group
+        %h3= metacategory.name
+        - metacategory.categories.each do |category|
+          - directed_relationships_in_category = directed_relationships_in_metacategory.select { |directed_relationship| directed_relationship.category == category }.sort {|left, right| left.to.full_name <=> right.to.full_name}.sort {|left, right| left.to.full_name <=> right.to.full_name}
+      
+          - unless directed_relationships_in_category.empty?
+            %h4= category.name
+            %ol
+              - directed_relationships_in_category.each do |directed_relationship|
+                %li
+                  = link_to directed_relationship.to.full_name, pretty_directed_relationship_path(directed_relationship)

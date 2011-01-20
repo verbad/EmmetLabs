@@ -1,0 +1,31 @@
+#directed_relationship_categories_field
+  #directed_relationship_categories_readonly.editable
+    .hd
+      %h2 Relationship
+      - if current_user_valid?
+        = link_to_function 'edit', 'new Effect.Fade("directed_relationship_categories_readonly", {duration: 0.3}); new Effect.Appear("directed_relationship_categories_editable", {duration: 0.3, delay: 0.3});', :class => 'edit'
+    .bd
+      %ol
+        %li.people
+          %strong.first= "#{directed_relationship.from.full_name}"
+          %span
+            - if directed_relationship.category.metacategory
+              = "#{@directed_relationship.category.metacategory.name}:"
+            = directed_relationship.category.name
+          %strong=  "#{directed_relationship.to.full_name}"
+
+  - if current_user_valid?
+    #directed_relationship_categories_editable.editable.active{:style => 'display: none'}
+      .hd
+        %h2 Relationship
+      .bd
+        - remote_form_for(:directed_relationship, directed_relationship, :url => directed_relationship_directed_relationship_category_path(directed_relationship.to_param, directed_relationship.to_param), :html => {:method => 'put', :name =>'directed_relationship_categories_form'} ) do |f|
+          %ol
+            %li.people
+              %strong.first= "#{directed_relationship.from.full_name}"
+              = select( "directed_relationship", "category_id", RelationshipCategory.find(:all).collect {|rc| [ rc.to_display_name, rc.id ] })
+              %strong= "#{directed_relationship.to.full_name}"        
+      .ft
+        #directed_relationship_categories_spinner.spinner{:style => 'display: none'}
+        = link_to_function 'save', '$("directed_relationship_categories_spinner").show(); document.directed_relationship_categories_form.onsubmit()', :class => 'save primary'
+        = link_to_function 'cancel', 'new Effect.Fade("directed_relationship_categories_editable", {duration: 0.3}); document.directed_relationship_categories_form.reset(); new Effect.Appear("directed_relationship_categories_readonly", {duration: 0.3, delay: 0.3})', :class => 'cancel tertiary'

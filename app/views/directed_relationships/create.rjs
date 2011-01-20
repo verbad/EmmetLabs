@@ -1,0 +1,24 @@
+if @new
+  if @directed_relationship.valid? && @directed_relationship.relationship.valid?
+    page.replace_html 'relationship_panel', :partial =>'new_relationship_details', :locals => { :directed_relationship => @directed_relationship }
+    page.call 'hide_start_over_link'
+  else
+    page.replace_html 'new_relationship', :partial => 'directed_relationships/new_edit_relationship'
+    page.replace_html "first_name", @directed_relationship.from.full_name
+    page.replace_html "first_name_param", hidden_field_tag(:node_id, @directed_relationship.from.to_param)
+    page.replace_html "second_name", @directed_relationship.to.full_name
+    page.replace_html "second_name_param", hidden_field_tag(:to_node_id, @directed_relationship.to.to_param)
+    page.call :update_summary_characters_remaining_relationship_summary
+  end
+else
+  if @directed_relationship.valid? && @directed_relationship.relationship.valid?
+    page.replace_html 'directed_relationship_content_inner', :partial =>'relationship_details'
+    page.replace_html 'existing_relationships', :partial => 'existing_relationships', :locals => {:node => @from_node}
+    page.call 'hide_start_over_link'
+    page.replace_html 'node_synopsis', :partial => 'nodes/synopsis', :locals => {:node => @directed_relationship.to, :hide_navigation => true, :right_corner_partial => 'directed_relationships/start_over'}
+    page.visual_effect('Highlight', "directed_relationship_#{@directed_relationship.id}", {:duration => 2, :startcolor => "#D0837C"})
+  else
+    page.replace_html 'new_relationship', :partial => 'relationship'
+    page.call :update_summary_characters_remaining_relationship_summary
+  end
+end

@@ -1,0 +1,3 @@
+class NotAllowedError < StandardError
+  
+end

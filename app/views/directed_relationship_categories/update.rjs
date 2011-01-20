@@ -1,0 +1,2 @@
+@directed_relationship.reload
+page.replace 'directed_relationship_categories_field' , :partial => 'directed_relationships/type', :locals => {:directed_relationship => @directed_relationship,  :relationship_categories => @relationship_categories}

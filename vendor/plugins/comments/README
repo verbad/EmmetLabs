@@ -1,0 +1,147 @@
+= Comments Plugin
+
+The comments plugin provides a simple model for comments, testimonials and reviews.
+
+A comment is a text entity that an author has associated with some object in the system.
+
+Testimonials are comments associated with people.
+Reviews are comments with ratings.
+
+== Adding comments to your project
+
+* Add a migration to add the comments table:
+
+  class InstallCommentsPlugin < ActiveRecord::Migration
+    def self.up
+      migrate_plugin('comments', 3)
+    end
+
+    def self.down
+      migrate_plugin('comments', 0)
+    end
+  end
+
+* Your user should include this line:
+    include CanComment
+
+    This offers support for testimonials, comments, and reviews.
+
+* Any item that can be reviewed should include this line:
+    include CanBeReviewed
+
+* Any item that can be commented should include this line:
+    include CanBeCommentedOn
+
+
+== New user methods
+
+* testimonials_i_wrote
+* testimonials_about_me
+* add_testimonial_about(user, text)
+* remove_testimonial(testimonial)
+* reviews_i_wrote
+* add_review_about(reviewable, text, rating)
+* remove_review(review)
+* add_comment_about(commentable, text)
+* remove_comment(comment)
+
+== New reviewable methods
+* reviews
+* average_rating
+
+== New commentable methods
+* comments
+
+== TestimonialsController methods:
+
+create(body)
+
+update(id, body)
+
+delete(id)
+    
+== Methods available on a model with reviews
+
+* reviews
+
+* average_rating
+
+* add_review(review)
+
+* remove_review(review)
+
+== Future extensions of review (or acts_as_rateable, q.v.)
+
+* review.was_helpful_to?(user)
+
+* review.was_helpful_to=(new_state, user)
+
+* review.was_helpful
+     returns how many people thought it was, how many thought it wasn't. Details TBD.
+
+== Approval flows
+Should exist, and be optional.  Particularly for testimonials.
+
+== Endorsements (Future)
+
+We will also be adding the concept of "Was this helpful", and similar binary endorsements.
+Projects like PeoplesMD should use the endorsement concept instead of the ratable concept,
+since their endorsements are binary.
+
+== Callbacks
+
+The following callbacks are provided to allow interception of events. This will
+be used to connect pals to the notification plugin.
+
+=== Testimonials
+
+* after_create_testimonial(user, body)
+
+* after_remove_testimonial(testimonial)
+
+=== Reviews
+
+* after_create_review(user, body, rating)
+
+* after_remove_review(review)
+
+== How to take advantage of the pals controller
+
+
+== View helpers
+
+TBD.... Rewrite the examples below.
+
+* pal_link(user, pal, link=true)
+This creates a link to pal, decorated according to that users's relationship
+to user. If link is false, then no <a> link is rendered (but the image is still
+decorated.) There are 4 possible relationship types: User has pal. 'pal' has user
+as pal, but not vice versa. User and pal are pals of each other. And 'pal' and
+user aren't related at all. Each is render method can be overridden in your
+app. [Describe where.]
+
+* add_remove_pal_button(user)
+This creates a link with the add/remove button. Depending on the relationship
+with the user, the link will either add the user to the current_user's pals,
+or remove the user. The button will indicate the action based on the same 
+conditions.
+
+* pal_list_for(user, limit=nil, page=nil)
+This renders a partial of the list of pals associated with 'user'. If limit !=
+0, (i.e. is specified) then this list only shows the first 'limit' pals, and
+renders a 'more' button with a link to the pals/list page.
+
+All of these helpers support an options hash with additional parameters for customization:
+
+add_remove_pal_link(user, other_user, options = {})
+
+add_remove_pal_link(user, other_user,
+  :add_image => '/images/pal_add_button.png',
+  :remove_image => '/images/pal_remove_button.png',
+  :add_text => "Add 'em",
+  :remove_text => "Dump 'em",
+  :display_user_icon => false)
+  
+Options:
+  TODO: List all options here.
+

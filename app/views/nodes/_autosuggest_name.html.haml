@@ -1,0 +1,67 @@
+%div{:id => "#{index}_person_fields_container"} 
+  %div{:id => "#{index}_person_fields"}
+    %fieldset
+      %ol
+        %li
+          %label{:for => "suggestable_query_#{index}"} Name
+          = text_field_tag :query, nil, :id => "suggestable_query_#{index}", :class => 'text'
+
+#person_suggestions_container
+  .spinner{:id => "#{index}_person_suggestions_spinner", :style => 'display: none'}
+  .autocomplete{:id => "#{index}_choose_person_panel"}
+  %div{:id => "#{index}_add_person_panel", :style => 'display: none'}
+
+:javascript
+  var autocompleter_#{index} = new Ajax.Autocompleter(
+    "suggestable_query_#{index}",
+    "#{index}_choose_person_panel",
+    '/node_suggestions',
+    {
+      asynchronous:true,
+      evalScripts:true, method:'get',
+      parameters: 'index=#{index}', evalScripts:true, method:'get',
+      updateElement: #{index}_autocompleter_updateElement,
+      indicator: '#{index}_person_suggestions_spinner',
+      minChars: 3,
+      callback: function(element, entry) { return entry + "&" + $('node_info').textContent.replace(/^\s*|\s*$/g,'')}
+    }
+  );
+  var event_ids = [];
+  function #{index}_autocompleter_updateElement(selectedElement) {
+    if (selectedElement.id.indexOf('selectable') !=0) {
+     if (selectedElement.id.indexOf('add_new_person_link') == 0) {
+        #{index == 'first' ? 'add_first_person()' : 'add_second_person()'}
+      } else {
+        $('suggestable_query_#{index}').focus();
+        hide_start_over_link();
+      }
+      return;
+    }
+    var id = selectedElement.id.substring('selectable'.length+1);
+    show_start_over_link();
+    notify_person_chosen(id, false, "#{index}");
+  }
+  function autocompleter_#{index}_updateChoices(transport) {
+    autocompleter_#{index}.hasFocus = true;
+    autocompleter_#{index}.updateChoices(transport.responseText);
+  }
+  
+  function show_person_suggestions_spinner() {
+    $('person_suggestions_spinner').style.visibility='visible';
+  }
+
+  function hide_person_suggestions_spinner() {
+    $('person_suggestions_spinner').style.visibility='hidden';
+  }
+
+  function add_first_person() {
+    var query_parameters = 'index=first&query=' + $('suggestable_query_first').value;
+    new Ajax.Request('#{new_person_path}', {asynchronous:true, evalScripts:true, parameters:query_parameters, method:'get'});
+    return true;
+  }
+  
+  function add_second_person() {
+    var query_parameters = 'index=second&query=' + $('suggestable_query_second').value;
+    new Ajax.Request('#{new_person_path}', {asynchronous:true, evalScripts:true, parameters:query_parameters, method:'get'});
+    return true;
+  }

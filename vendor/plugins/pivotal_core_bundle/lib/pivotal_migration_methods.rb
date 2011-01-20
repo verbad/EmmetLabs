@@ -1,0 +1,1 @@
+require "pivotal_migration_methods/pivotal_migration_methods"

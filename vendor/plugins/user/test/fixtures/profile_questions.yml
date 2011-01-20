@@ -1,0 +1,18 @@
+sign:
+  id: 1
+  type: TextAreaProfileQuestion  
+  name: sign
+  display_name: What's your sign?
+  category_id: 2  
+age:
+  id: 2
+  type: TextFieldProfileQuestion
+  name: age
+  display_name: How old are you?
+  category_id: 2
+display_name:
+  id: 3
+  type: TextFieldProfileQuestion
+  name: display_name
+  display_name: Display name
+  category_id: 2

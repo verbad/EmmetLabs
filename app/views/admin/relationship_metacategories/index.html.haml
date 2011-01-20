@@ -1,0 +1,18 @@
+#admin
+  %h1 Relationship Metacategories
+
+  %ul.buttons
+    %li= link_to 'Edit Categories', admin_relationship_categories_path, :class => 'edit'
+    %li= link_to 'New Metacategory', new_admin_relationship_metacategory_path, :class => 'add'
+
+  %table
+    %tr
+      %th Metacategory
+      %th Actions
+  
+    - for relationship_metacategory in @relationship_metacategories
+      %tr
+        %td= relationship_metacategory.name
+        %td.actions
+          = link_to 'Edit', edit_admin_relationship_metacategory_path(relationship_metacategory), :class => 'edit'
+          = link_to 'Delete', admin_relationship_metacategory_path(relationship_metacategory), :confirm => 'You will not be able to undo this. Are you sure?', :method => :delete, :class => 'icon delete'

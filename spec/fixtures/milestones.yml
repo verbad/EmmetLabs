@@ -1,0 +1,78 @@
+josephine_married:
+  id: 1
+  node_id: 7
+  node_type: Person
+  year: 1907
+  month: 10
+  day: 5
+  name: Got married in Thailand
+  estimate: true
+josephine_graduated:
+  id: 2
+  node_id: 7
+  node_type: Person
+  year: 1918
+  month: 1
+  day: 10
+  name: Graduated from the school of hard knocks
+josephine_danced:
+  id: 3
+  node_id: 7
+  node_type: Person
+  year: 1930
+  month: 1
+  day: 10
+  name: Danced the tango in Rome
+josephine_ate_lunch:
+  id: 4
+  node_id: 7
+  node_type: Person
+  year: 1934
+  month: 1
+  day: 10
+  name: Had a light salad for lunch
+grace_became_princess:
+  id: 5
+  node_id: 12
+  node_type: Person
+  year: 1940
+  month: 1
+  day: 10
+  name: Became princess
+grace_born:
+  id: 6
+  node_id: 12
+  node_type: Person
+  year: 1929
+  month: 11
+  day: 12
+  type_id: 1
+  name: Philadelphia
+grace_died:
+  id: 7
+  node_id: 12
+  node_type: Person
+  year: 1982
+  month: 09
+  day: 14
+  type_id: 2
+  name: Monaco
+josephine_born:
+  id: 8
+  node_id: 7
+  node_type: Person
+  year: 1906
+  month: 6
+  day: 3
+  type_id: 1
+  name: Missouri
+josephine_died:
+  id: 9
+  node_id: 7
+  node_type: Person
+  year: 1975
+  month: 4
+  day: 12
+  type_id: 2
+  name: Paris
+  
